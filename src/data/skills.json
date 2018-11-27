@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Frontend",
+        "icon": "/images/frontend-icon.svg",
+        "value": [
+            "React/Redux/Angular",
+            "Javascript",
+            "Node.js",
+            "Webpack/Gulp/Grunt",
+            "HTML/CSS/SASS/LESS"
+        ]
+    },
+    {
+        "name": "Backend",
+        "icon": "/images/backend-icon.svg",
+        "value": [
+            "Python/Django",
+            "Ruby/Rails",
+            "PHP",
+            "PostgresSQL/MySQL",
+            "MongoDB"
+        ]
+    },
+    {
+        "name": "Others",
+        "icon": "/images/other-skills-icon.svg",
+        "value": [
+            "DevOps",
+            "Unit Testing",
+            "UX/Wireframing",
+            "Sketch/Balsamiq",
+            "Wordpress/Shopify"
+        ]
+    }
+]

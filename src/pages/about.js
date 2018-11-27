@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
-export default () =>
+export default ({ data }) =>
     <Layout>        
         <div className="header-intro theme-bg-primary text-white py-5">
             <div className="container">
@@ -23,53 +23,23 @@ export default () =>
                 <div className="section-intro mx-auto text-center mb-5 text-secondary">I have more than 8 years' experience building rich web applications for clients all over the world. Below is a quick overview of my main technical skill sets and tools I use. Want to find out more about my experience? <Link to="/resume/">Check out my online resume</Link>.</div>
                     <div className="skills-blocks mx-auto pt-5">
                         <div className="row">
-                            <div className="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
-                                <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
-                                    <h4 className="skills-cat text-center mb-3 mt-5">Frontend</h4>
-                                    <div className="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
-                                        <img alt="" className="skills-icon" src="/images/frontend-icon.svg" />
-                                    </div>
-                                    <ul className="skills-list list-unstyled text-secondary">
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>React/Redux/Angular</li>
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Javascript</li>
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Node.js</li>							        
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Webpack/Gulp/Grunt</li>
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>HTML/CSS/SASS/LESS</li>
-                                    </ul>
-                                </div>{/*//skills-block-inner*/}
-                            </div>{/*//skills-block*/}
-                            <div className="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
-                                <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
-                                    <h4 className="skills-cat text-center mb-3 mt-5">Backend</h4>
-                                    <div className="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
-                                        <img alt="" className="skills-icon" src="/images/backend-icon.svg" />
-                                    </div>
-                                    <ul className="skills-list list-unstyled text-secondary">
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Python/Django</li>
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Ruby/Rails</li>
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>PHP</li>
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>PostgresSQL/MySQL</li>
-                                        <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>MongoDB</li>
-                                    </ul>
-                            </div>{/*//skills-block-inner*/}
-                        </div>{/*//skills-block*/}
-                        <div className="skills-block col-12 col-lg-4">
-                            <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
-                                <h4 className="skills-cat text-center mb-3 mt-5">Others</h4>
-                                <div className="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
-                                    <img alt="" className="skills-icon" src="/images/other-skills-icon.svg" />
+                            {data.allSkillsJson.edges.map(( item ) => (
+                                <div className="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0" key={item.node.id}>
+                                    <div className="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
+                                        <h4 className="skills-cat text-center mb-3 mt-5">{item.node.name}</h4>
+                                        <div className="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
+                                            <img alt="" className="skills-icon" src={item.node.icon} />
+                                        </div>
+                                        <ul className="skills-list list-unstyled text-secondary">
+                                            {item.node.value.map(( ele, idx ) => (
+                                                <li className="mb-2" key={item.node.id+"_"+idx}><i className="fas fa-check mr-2 text-primary"></i>{ele}</li>
+                                            ))}
+                                        </ul>
+                                    </div>{/*//skills-block-inner*/}
                                 </div>
-                                <ul className="skills-list list-unstyled text-secondary">
-                                    <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>DevOps</li>
-                                    <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Unit Testing</li>
-                                    <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>UX/Wireframing</li>
-                                    <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Sketch/Balsamiq</li>
-                                    <li className="mb-2"><i className="fas fa-check mr-2 text-primary"></i>Wordpress/Shopify</li>
-                                </ul>
-                            </div>{/*//skills-block-inner*/}
-                        </div>{/*//skills-block*/}
-                    </div>{/*//row*/}
-                </div>
+                            ))}{/*//skills-block*/}
+                        </div>{/*//row*/}
+                    </div>
             </div>{/*//container*/}
         </section>{/*//skills-section*/}
         <section className="section-proof section bg-white py-5">
@@ -171,3 +141,18 @@ export default () =>
             </div>{/*///container*/}        
         </section>
     </Layout>
+
+export const query = graphql`
+  query {
+    allSkillsJson {
+        edges {
+            node {
+                id
+                name
+                icon
+                value
+            }
+        }
+    }
+  }
+`
