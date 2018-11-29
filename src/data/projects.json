@@ -1,0 +1,44 @@
+[
+    {
+        "name": "SaaS Product",
+        "for": "Client: Google",
+        "thumb": "/images/projects/project-1-thumb.jpg",
+        "logo": "/images/logos/logo-1.svg",
+        "logo_inv": "/images/logos/logo-1-inverse.svg",
+        "url": "/project0/",
+        "desc": "Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...",
+        "tech": [
+            "React/Redux/Angular",
+            "Javascript",
+            "Node.js"
+        ]
+    },
+    {
+        "name": "Webapp Development",
+        "for": "Client: Basecamp",
+        "thumb": "/images/projects/project-2-thumb.jpg",
+        "logo": "/images/logos/logo-2.svg",
+        "logo_inv": "/images/logos/logo-2-inverse.svg",
+        "url": "/project1/",
+        "desc": "Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...",
+        "tech": [
+            "Python/Django",
+            "Ruby/Rails",
+            "PHP"
+        ]
+    },
+    {
+        "name": "Mobile app development",
+        "for": "Client: Airbnb",
+        "thumb": "/images/projects/project-3-thumb.jpg",
+        "logo": "/images/logos/logo-3.svg",
+        "logo_inv": "/images/logos/logo-3-inverse.svg",
+        "url": "/project2/",
+        "desc": "Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...",
+        "tech": [
+            "DevOps",
+            "Unit Testing",
+            "UX/Wireframing"
+        ]
+    }
+]

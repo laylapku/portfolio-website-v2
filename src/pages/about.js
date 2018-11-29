@@ -32,7 +32,7 @@ export default ({ data }) =>
                                         </div>
                                         <ul className="skills-list list-unstyled text-secondary">
                                             {item.node.value.map(( ele, idx ) => (
-                                                <li className="mb-2" key={item.node.id+"_"+idx}><i className="fas fa-check mr-2 text-primary"></i>{ele}</li>
+                                                <li className="mb-2" key={item.node.id+"_skill_"+idx}><i className="fas fa-check mr-2 text-primary"></i>{ele}</li>
                                             ))}
                                         </ul>
                                     </div>{/*//skills-block-inner*/}
@@ -46,12 +46,9 @@ export default ({ data }) =>
             <div className="container">
                 <h3 className="section-title font-weight-bold text-center mb-5">Great clients I've worked with</h3>
                 <div className="logos row mb-5">
-                    <div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a className="logo-link" href="project.html"><img alt="" className="img-fluid svg-ie-fix" src="/images/logos/logo-1.svg" /></a></div>
-                    <div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a className="logo-link" href="project.html"><img alt="" className="img-fluid svg-ie-fix" src="/images/logos/logo-2.svg" /></a></div>
-                    <div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a className="logo-link" href="project.html"><img alt="" className="img-fluid svg-ie-fix" src="/images/logos/logo-3.svg" /></a></div>
-                    <div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a className="logo-link" href="project.html"><img alt="" className="img-fluid svg-ie-fix" src="/images/logos/logo-4.svg" /></a></div>
-                    <div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a className="logo-link" href="project.html"><img alt="" className="img-fluid svg-ie-fix" src="/images/logos/logo-5.svg" /></a></div>
-                    <div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a className="logo-link" href="project.html"><img alt="" className="img-fluid svg-ie-fix" src="/images/logos/logo-6.svg" /></a></div>
+                    {data.allProjectsJson.edges.map(( item ) => (
+						<div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4" key={item.node.id}><Link className="logo-link" to={item.node.url}><img alt="" className="img-fluid svg-ie-fix" src={item.node.logo} /></Link></div>
+                    ))}
                 </div>
             </div>
         </section>
@@ -59,81 +56,32 @@ export default ({ data }) =>
             <div className="container">
                 <h3 className="section-title font-weight-bold text-center mb-5">Featured Projects</h3>        
                 <div className="project-cards row mb-5">
-                    <div className="col-12 col-lg-4">
-                        <div className="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
-                            <div className="card-img-container position-relative">
-                                <img alt="" className="card-img-top rounded-0" src="/images/projects/project-1-thumb.jpg" />
-                                <div className="card-img-overlay overlay-logo text-center">
-                                    <div className="project-logo"><img alt="" className="img-fluid w-50" src="/images/logos/logo-1-inverse.svg" /></div>
+                    {data.allProjectsJson.edges.map(( item ) => (
+                        <div className="col-12 col-lg-4" key={item.node.id}>
+                            <div className="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
+                                <div className="card-img-container position-relative">
+                                    <img alt="" className="card-img-top rounded-0" src={item.node.thumb} />
+                                    <div className="card-img-overlay overlay-logo text-center">
+                                        <div className="project-logo"><img alt="" className="img-fluid w-50" src={item.node.logo_inv} /></div>
+                                    </div>
+                                    <Link className="card-img-overlay overlay-content text-left p-lg-4" to={item.node.url}>
+                                        <h5 className="card-title font-weight-bold">{item.node.for}</h5>
+                                        <p className="card-text">{item.node.desc}</p>
+                                    </Link>
                                 </div>
-                                <a className="card-img-overlay overlay-content text-left p-lg-4" href="project.html">
-                                    <h5 className="card-title font-weight-bold">Client: Google</h5>
-                                    <p className="card-text">Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...</p>
-                                </a>
-                            </div>
-                            <div className="card-body pb-0">
-                                <h4 className="card-title text-truncate text-center mb-0"><a href="project.html">SaaS Product</a></h4>
-                            </div>						
-                            <div className="card-footer border-0 text-center bg-white pb-4">
-                                <ul className="list-inline mb-0 mx-auto">
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">Angular</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">Django</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">MongoDB</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">HTML/CSS</span></li>
-                                </ul>
-                            </div>
-                        </div>{/*//card*/}
-                    </div>
-                    <div className="col-12 col-lg-4">
-                        <div className="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
-                            <div className="card-img-container position-relative">
-                                <img alt="" className="card-img-top rounded-0" src="/images/projects/project-2-thumb.jpg" />
-                                <div className="card-img-overlay overlay-logo text-center">
-                                    <div className="project-logo"><img alt="" className="img-fluid w-50" src="/images/logos/logo-2-inverse.svg" /></div>
+                                <div className="card-body pb-0">
+                                    <h4 className="card-title text-truncate text-center mb-0"><Link to={item.node.url}>{item.node.name}</Link></h4>
+                                </div>				
+                                <div className="card-footer border-0 text-center bg-white pb-4">
+                                    <ul className="list-inline mb-0 mx-auto">
+                                        {item.node.tech.map(( ele, idx ) => (
+                                            <li className="list-inline-item" key={item.node.id+"_tech_"+idx}><span className="badge badge-secondary badge-pill">{ele}</span></li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <a className="card-img-overlay overlay-content text-left p-lg-4" href="project.html">
-                                    <h5 className="card-title font-weight-bold">Client: Basecamp</h5>
-                                    <p className="card-text">Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...</p>
-                                </a>
-                            </div>
-                            <div className="card-body pb-0">
-                                <h4 className="card-title text-truncate text-center mb-0"><a href="project.html">Webapp Development</a></h4>
-                            </div>						
-                            <div className="card-footer border-0 text-center bg-white pb-4">
-                                <ul className="list-inline mb-0 mx-auto">
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">Rails</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">jQuery</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">PostgresSQL</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">HTML/LESS</span></li>
-                                </ul>
-                            </div>
-                        </div>{/*//card*/}
-                    </div>
-                    <div className="col-12 col-lg-4">
-                        <div className="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
-                            <div className="card-img-container position-relative">
-                                <img alt="" className="card-img-top rounded-0" src="/images/projects/project-3-thumb.jpg" />
-                                <div className="card-img-overlay overlay-logo text-center">
-                                    <div className="project-logo"><img alt="" className="img-fluid w-50" src="/images/logos/logo-3-inverse.svg" /></div>
-                                </div>
-                                <a className="card-img-overlay overlay-content text-left p-lg-4" href="project.html">
-                                    <h5 className="card-title font-weight-bold">Client: Airbnb</h5>
-                                    <p className="card-text">Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...</p>
-                                </a>
-                            </div>
-                            <div className="card-body pb-0">
-                                <h4 className="card-title text-truncate text-center mb-0"><a href="project.html">Mobile app development</a></h4>
-                            </div>						
-                            <div className="card-footer border-0 text-center bg-white pb-4">
-                                <ul className="list-inline mb-0 mx-auto">
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">React</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">Python</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">MySQL</span></li>
-                                    <li className="list-inline-item"><span className="badge badge-secondary badge-pill">Webpack</span></li>
-                                </ul>
-                            </div>
-                        </div>{/*//card*/}
-                    </div>
+                            </div>{/*//card*/}
+                        </div>							
+                    ))}							
                 </div>{/*//row*/}
                 <div className="text-center">
                     <Link className="btn btn-primary" to="/projects/">View all projects</Link>
@@ -143,16 +91,31 @@ export default ({ data }) =>
     </Layout>
 
 export const query = graphql`
-  query {
-    allSkillsJson {
-        edges {
-            node {
-                id
-                name
-                icon
-                value
+    query {
+        allSkillsJson {
+            edges {
+                node {
+                    id
+                    name
+                    icon
+                    value
+                }
+            }
+        }
+        allProjectsJson {
+            edges {
+                node {
+                    id
+                    name
+                    for
+                    thumb
+                    logo
+                    logo_inv
+                    url
+                    desc
+                    tech
+                }
             }
         }
     }
-  }
 `

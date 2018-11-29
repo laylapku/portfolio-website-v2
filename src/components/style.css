@@ -994,11 +994,11 @@ a.theme-btn-on-bg:active,
     background-color: #414b5a
 }
 
-.social-list-color a.stack-overflow {
+.social-list-color a.stackoverflow {
     background-color: #F3A83B
 }
 
-.social-list-color a.stack-overflow:hover {
+.social-list-color a.stackoverflow:hover {
     background-color: #ed920e
 }
 
@@ -1593,11 +1593,11 @@ body {
  * Author: Sean Lee
 */
 
-.social-list-color a.fcc {
+.social-list-color a.freecodecamp {
     background-color: #02B875
 }
 
-.social-list-color a.fcc:hover {
+.social-list-color a.freecodecamp:hover {
     background-color: #018655
 }
 

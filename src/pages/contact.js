@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
-export default () =>
+export default ({ data }) =>
 	<Layout>        
 		<div className="header-intro theme-bg-primary text-white py-5">
 	    <div className="container">
@@ -18,16 +18,9 @@ export default () =>
 				      <p className="text-left mb-3">I'm currently taking on freelance work. If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my <Link to="/projects/">project case studies</Link> and <Link to="/resume/">resume</Link>.</p>
 				      <h6 className="font-weight-bold text-center mb-3">You can also find me on the following channels</h6>
 				      <ul className="social-list-color list-inline mb-0">
-				        <li className="list-inline-item mb-3"><a className="twitter" href="#"><i className="fab fa-twitter fa-fw"></i></a></li>
-				        <li className="list-inline-item mb-3"><a className="linkedin" href="#"><i className="fab fa-linkedin-in fa-fw"></i></a></li>
-			          <li className="list-inline-item mb-3"><a className="github" href="//github.com/ilovepku"><i className="fab fa-github-alt fa-fw"></i></a></li>
-                <li className="list-inline-item mb-3"><a className="glitch" href="//glitch.com/@ilovepku"><i className="fab fa-node-js fa-fw"></i></a></li>
-                <li className="list-inline-item mb-3"><a className="fcc" href="//freecodecamp.org/ilovepku"><i className="fab fa-free-code-camp fa-fw"></i></a></li>
-			          <li className="list-inline-item mb-3"><a className="stack-overflow" href="#"><i className="fab fa-stack-overflow fa-fw"></i></a></li>
-			          <li className="list-inline-item mb-3"><a className="medium" href="#"><i className="fab fa-medium-m fa-fw"></i></a></li>
-			          <li className="list-inline-item mb-3"><a className="codepen" href="#"><i className="fab fa-codepen fa-fw"></i></a></li>
-		            <li className="list-inline-item mb-3"><a className="facebook" href="#"><i className="fab fa-facebook-f fa-fw"></i></a></li>
-		            <li className="list-inline-item mb-3"><a className="instagram" href="#"><i className="fab fa-instagram fa-fw"></i></a></li>
+								{data.allSocialsJson.edges.map(( item ) => (
+									<li className="list-inline-item mb-3" key={item.node.id}><a className={item.node.name} href={item.node.url}><i className={item.node.icon}></i></a></li>
+								))}	
 		          </ul>{/*//social-list*/}
 			      </div>			        
 		      </div>{/*//contact-intro*/}
@@ -55,3 +48,19 @@ export default () =>
       </div>{/*//container*/}
     </section>{/*//section*/}
   </Layout>
+
+export const query = graphql`
+  query {
+		allSocialsJson(skip: 1) {
+			edges {
+					node {
+							id
+							name
+							url
+							icon
+							disp
+					}
+			}
+		}
+  }
+`
