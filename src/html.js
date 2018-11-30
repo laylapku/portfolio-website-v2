@@ -12,9 +12,6 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          {/* Adding 3rd Party JS */}
-          <script type="text/javascript" src="/js/all.min.js"></script>
-          {/* Adding 3rd Party JS */}
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

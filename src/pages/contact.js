@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../components/layout"
 
 export default ({ data }) =>
@@ -19,7 +20,7 @@ export default ({ data }) =>
 							<h6 className="font-weight-bold text-center mb-3">You can also find me on the following channels</h6>
 							<ul className="social-list-color list-inline mb-0">
 								{data.allSocialsJson.edges.map((item) => (
-									<li className="list-inline-item mb-3" key={item.node.id}><a className={item.node.name} href={item.node.url}><i className={item.node.icon}></i></a></li>
+									<li className="list-inline-item mb-3" key={item.node.id}><a className={item.node.icon} href={item.node.url}><FontAwesomeIcon icon={['fab', item.node.icon]} /></a></li>
 								))}
 							</ul>{/*//social-list*/}
 						</div>
@@ -51,11 +52,10 @@ export default ({ data }) =>
 
 export const query = graphql`
   query {
-		allSocialsJson(skip: 1) {
+		allSocialsJson {
 			edges {
 					node {
 							id
-							name
 							url
 							icon
 							disp

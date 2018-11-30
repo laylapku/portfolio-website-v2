@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, Link, graphql } from "gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     Collapse,
     Navbar,
@@ -35,13 +36,13 @@ export default () =>
         render={data => (
             <header className="header">
                 <div className="top-bar theme-bg-primary-darken">
-                    <Example data={data} />
+                    <MyNavbar data={data} />
                 </div>
             </header>
         )}
     />
 
-class Example extends React.Component {
+class MyNavbar extends React.Component {
     constructor(props) {
         super(props);
 
@@ -62,7 +63,7 @@ class Example extends React.Component {
                 <Navbar className="navbar navbar-expand-lg navbar-dark position-relative" expand="md">
                     <ul className="social-list list-inline mb-0">
                         {this.props.data.allSocialsJson.edges.map((item) => (
-                            <li className="list-inline-item" key={item.node.id}><a className="text-white" href={item.node.url}><i className={item.node.icon}></i></a></li>
+                            <li className="list-inline-item" key={item.node.id}><a className="text-white" href={item.node.url}><FontAwesomeIcon icon={['fab', item.node.icon]} /></a></li>
                         ))}
                     </ul>{/*//social-list*/}
                     <NavbarToggler onClick={this.toggle} />

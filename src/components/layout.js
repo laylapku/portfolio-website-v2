@@ -1,18 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from "../components/header"
+import Header from "./header"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { addBackToTop } from 'vanilla-back-to-top'
 import "./bootstrap.css"
 import "./style.css"
-import { addBackToTop } from 'vanilla-back-to-top'
 
 export default ({ children }) => (
   <div>
+    <Scripts />
     <Header />
     {children}
     <CTA />
     <Footer />
   </div>
 )
+
+const Scripts = function () {
+  library.add(faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow, faHome);
+  return null;
+}
 
 const CTA = function () {
   return (

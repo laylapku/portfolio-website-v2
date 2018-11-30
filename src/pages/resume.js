@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../components/layout"
 
 export default ({ data }) =>
@@ -24,10 +25,11 @@ export default ({ data }) =>
                                     <li><a href="tel:+86-139-1106-6746"><i className="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>+86 139 1106 6746</a></li>
                                 </ul>
                             </div>{/*//primary-info*/}
-                            <div className="secondary-info ml-md-auto mt-2">
+                            <div className="secondary-info ml-md-auto">
                                 <ul className="resume-social list-unstyled">
+                                    <li className="mb-3"><a href="//sean-lee.glitch.me"><span className="fa-container text-center mr-2"><FontAwesomeIcon icon="home" /></span>sean-lee.glitch.me</a></li>
                                     {data.allSocialsJson.edges.map((item) => (
-                                        <li className="mb-3" key={item.node.id}><a href={item.node.url}><span className="fa-container text-center mr-2"><i className={item.node.icon}></i></span>{item.node.disp}</a></li>
+                                        <li className="mb-3" key={item.node.id}><a href={item.node.url}><span className="fa-container text-center mr-2"><FontAwesomeIcon icon={['fab', item.node.icon]} /></span>{item.node.disp}</a></li>
                                     ))}
                                 </ul>
                             </div>{/*//secondary-info*/}

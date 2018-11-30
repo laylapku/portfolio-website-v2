@@ -942,19 +942,19 @@ a.theme-btn-on-bg:active,
     background-color: #2d4373
 }
 
-.social-list-color a.github {
+.social-list-color a.github-alt {
     background-color: #576477
 }
 
-.social-list-color a.github:hover {
+.social-list-color a.github-alt:hover {
     background-color: #414b5a
 }
 
-.social-list-color a.stackoverflow {
+.social-list-color a.stack-overflow {
     background-color: #F3A83B
 }
 
-.social-list-color a.stackoverflow:hover {
+.social-list-color a.stack-overflow:hover {
     background-color: #ed920e
 }
 
@@ -1543,22 +1543,25 @@ body {
  * Author: Sean Lee
 */
 
-.social-list-color a.freecodecamp {
+/* Contact page social icon styles */
+.social-list-color a.free-code-camp {
     background-color: #02B875
 }
 
-.social-list-color a.freecodecamp:hover {
+.social-list-color a.free-code-camp:hover {
     background-color: #018655
 }
 
-.social-list-color a.glitch {
+.social-list-color a.node-js {
     background-color: #02B875
 }
 
-.social-list-color a.glitch:hover {
+.social-list-color a.node-js:hover {
     background-color: #018655
 }
 
+
+/* Back to top button styles */
 #back-to-top {
     transition: all 0.4s ease-in-out;
     background: #58677c;
