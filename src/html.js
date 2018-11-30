@@ -14,13 +14,6 @@ export default class HTML extends React.Component {
           />
           {/* Adding 3rd Party JS */}
           <script type="text/javascript" src="/js/all.min.js"></script>
-          <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
-          <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-          <script type="text/javascript" src="/js/back-to-top.js"></script>
-          <script type="text/javascript" src="/js/main.js"></script>
-          <script type="text/javascript" src="/js/imagesloaded.pkgd.min.js"></script> 
-          <script type="text/javascript" src="/js/isotope.pkgd.min.js"></script>
-          <script type="text/javascript" src="/js/isotope-custom.js"></script>
           {/* Adding 3rd Party JS */}
           {this.props.headComponents}
         </head>

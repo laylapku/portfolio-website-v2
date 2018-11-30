@@ -26,11 +26,11 @@ export default ({ data }) =>
                             </div>{/*//primary-info*/}
                             <div className="secondary-info ml-md-auto mt-2">
                                 <ul className="resume-social list-unstyled">
-                                    {data.allSocialsJson.edges.map(( item ) => (
-									    <li className="mb-3" key={item.node.id}><a href={item.node.url}><span className="fa-container text-center mr-2"><i className={item.node.icon}></i></span>{item.node.disp}</a></li>
-								    ))}	
+                                    {data.allSocialsJson.edges.map((item) => (
+                                        <li className="mb-3" key={item.node.id}><a href={item.node.url}><span className="fa-container text-center mr-2"><i className={item.node.icon}></i></span>{item.node.disp}</a></li>
+                                    ))}
                                 </ul>
-                            </div>{/*//secondary-info*/}                          
+                            </div>{/*//secondary-info*/}
                         </div>{/*//media-body*/}
                     </div>{/*//media*/}
                 </header>
@@ -40,15 +40,15 @@ export default ({ data }) =>
                         <div className="resume-section-content">
                             <p className="mb-0">Summarise your career here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. You can download this free resume/CV template here. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget.</p>
                         </div>
-                    </section>{/*//summary-section*/}                  
-                    <div className="row">              
+                    </section>{/*//summary-section*/}
+                    <div className="row">
                         <div className="col-lg-9">
                             <section className="resume-section experience-section mb-5">
                                 <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
                                 <div className="resume-section-content">
                                     <div className="resume-timeline position-relative">
-                                        {data.allExpJson.edges.map(( item ) => (               
-                                            <article className="resume-timeline-item position-relative" key={item.node.id}>									    
+                                        {data.allExpJson.edges.map((item) => (
+                                            <article className="resume-timeline-item position-relative" key={item.node.id}>
                                                 <div className="resume-timeline-item-header mb-2">
                                                     <div className="d-flex flex-column flex-md-row">
                                                         <h3 className="resume-position-title font-weight-bold mb-1">{item.node.role} <small className="text-muted">(Intern)</small></h3>
@@ -60,28 +60,28 @@ export default ({ data }) =>
                                                     <p>{item.node.desc}</p>
                                                     <h4 className="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
                                                     <ul className="list-inline">
-													    {item.node.tech.map(( ele, idx ) => (
-														    <li className="list-inline-item" key={item.node.id+"_tech_"+idx}><span className="badge badge-secondary badge-pill">{ele}</span></li>
-													    ))}
+                                                        {item.node.tech.map((ele, idx) => (
+                                                            <li className="list-inline-item" key={item.node.id + "_tech_" + idx}><span className="badge badge-secondary badge-pill">{ele}</span></li>
+                                                        ))}
                                                     </ul>
                                                 </div>{/*//resume-timeline-item-desc*/}
                                             </article>
-				                        ))}{/*//resume-timeline-item*/}
+                                        ))}{/*//resume-timeline-item*/}
                                     </div>{/*//resume-timeline*/}
                                 </div>
-                            </section>{/*//experience-section*/}              
+                            </section>{/*//experience-section*/}
                         </div>
-                        <div className="col-lg-3">                
+                        <div className="col-lg-3">
                             <section className="resume-section skills-section mb-5">
                                 <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
                                 <div className="resume-section-content">
-                                    {data.allSkillsJson.edges.map(( item ) => (
+                                    {data.allSkillsJson.edges.map((item) => (
                                         <div className="resume-skill-item" key={item.node.id}>
                                             <h4 className="resume-skills-cat font-weight-bold">{item.node.name}</h4>
                                             <ul className="list-inline">
-			                                    {item.node.value.map(( ele, idx ) => (
-				                                    <li className="list-inline-item" key={item.node.id+"_skill_"+idx}><span className="badge badge-light">{ele}</span></li>
-			                                    ))}
+                                                {item.node.value.map((ele, idx) => (
+                                                    <li className="list-inline-item" key={item.node.id + "_skill_" + idx}><span className="badge badge-light">{ele}</span></li>
+                                                ))}
                                             </ul>
                                         </div>
                                     ))}{/*//resume-skill-item*/}

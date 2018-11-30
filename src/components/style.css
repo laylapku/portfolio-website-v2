@@ -44,35 +44,6 @@ body {
     padding-bottom: 0.4em
 }
 
-#topcontrol {
-    transition: all 0.4s ease-in-out;
-    background: #58677c;
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-    z-index: 30;
-    width: 36px;
-    height: 36px;
-    border-radius: .25rem;
-    padding-top: 6px;
-    font-weight: 300
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-    #topcontrol {
-        transition: none
-    }
-}
-
-#topcontrol:hover {
-    background: #434e5e;
-    color: #fff
-}
-
-#topcontrol .fas {
-    font-size: 25px
-}
-
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
     .svg-ie-fix {
@@ -213,21 +184,6 @@ a.theme-btn-on-bg:active,
 
 .navbar-dark .navbar-nav .nav-link:active {
     color: #fff
-}
-
-#slide-line {
-    position: absolute;
-    bottom: 0;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 2px;
-    transition: all 0.4s ease-in-out
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-    #slide-line {
-        transition: none
-    }
 }
 
 .profile-image {
@@ -1065,9 +1021,6 @@ a.theme-btn-on-bg:active,
 }
 
 @media (max-width: 991.98px) {
-    #slide-line {
-        display: none !important
-    }
     .dropdown-menu {
         background: rgba(0, 0, 0, 0.05);
         color: #fff;
@@ -1168,9 +1121,6 @@ a.theme-btn-on-bg:active,
     .testimonial-item {
         width: 100%;
         margin-right: 0
-    }
-    #slide-line {
-        display: none !important
     }
 }
 
@@ -1607,4 +1557,37 @@ body {
 
 .social-list-color a.glitch:hover {
     background-color: #018655
+}
+
+#back-to-top {
+    transition: all 0.4s ease-in-out;
+    background: #58677c;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    z-index: 30;
+    width: 36px;
+    height: 36px;
+    border-radius: .25rem;
+    padding-top: 6px;
+    font-weight: 300
+}
+
+#back-to-top svg {
+    margin: auto
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    #back-to-top {
+        transition: none
+    }
+}
+
+#back-to-top:hover {
+    background: #434e5e;
+    color: #fff
+}
+
+#back-to-top .fas {
+    font-size: 25px
 }

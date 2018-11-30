@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Header from "../components/header"
 import "./bootstrap.css"
 import "./style.css"
+import { addBackToTop } from 'vanilla-back-to-top'
 
 export default ({ children }) => (
   <div>
@@ -13,7 +14,7 @@ export default ({ children }) => (
   </div>
 )
 
-const CTA = function() {
+const CTA = function () {
   return (
     <section className="section py-5 theme-bg-primary text-white">
       <div className="container">
@@ -32,7 +33,8 @@ const CTA = function() {
   );
 }
 
-const Footer = function() {
+const Footer = function () {
+  addBackToTop();
   return (
     <footer className="footer text-light text-center py-2">
       <div className="container">
