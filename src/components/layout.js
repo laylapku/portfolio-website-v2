@@ -5,7 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { addBackToTop } from 'vanilla-back-to-top'
-import "./bootstrap.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css"
 
 export default ({ children }) => (

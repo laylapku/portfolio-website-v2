@@ -1021,6 +1021,9 @@ a.theme-btn-on-bg:active,
 }
 
 @media (max-width: 991.98px) {
+    .nav-link:after {
+        content: none !important
+    }
     .dropdown-menu {
         background: rgba(0, 0, 0, 0.05);
         color: #fff;
@@ -1121,6 +1124,9 @@ a.theme-btn-on-bg:active,
     .testimonial-item {
         width: 100%;
         margin-right: 0
+    }
+    .nav-link:after {
+        content: none !important
     }
 }
 
@@ -1543,6 +1549,26 @@ body {
  * Author: Sean Lee
 */
 
+/* Link and button color override */
+
+a {
+    color: #6f6db2
+}
+
+a:hover {
+    color: #4b498a
+}
+
+.btn-primary {
+    background-color: #6f6db2;
+    border-color: #6f6db2
+}
+
+.btn-primary:hover {
+    background-color: #5856a3;
+    border-color: #54519b;
+}
+
 /* Contact page social icon styles */
 .social-list-color a.free-code-camp {
     background-color: #02B875
@@ -1593,4 +1619,31 @@ body {
 
 #back-to-top .fas {
     font-size: 25px
+}
+
+/* Sliding underline menu */
+.nav-item {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: rgba(255,255,255,0.8);;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.nav-link.active:after {
+    width: 100%;
+    background: #FFF
+}
+   
+.nav-link:hover:after {
+    width: 100%;
+    left: 0
 }
