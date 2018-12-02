@@ -12,27 +12,27 @@ import {
 export default () =>
     <StaticQuery
         query={graphql`
-          query {
-              allSocialsJson {
-                  edges {
-                      node {
-                          id
-                          url
-                          icon
-                      }
-                  }
-              }
-              allMenuJson {
-                  edges {
-                      node {
-                          id
-                          name
-                          url
-                      }
-                  }
-              }
-          }
-      `}
+            query {
+                allSocialsJson {
+                    edges {
+                        node {
+                            id
+                            url
+                            icon
+                        }
+                    }
+                }
+                allMenuJson {
+                    edges {
+                        node {
+                            id
+                            name
+                            url
+                        }
+                    }
+                }
+            }
+        `}
         render={data => (
             <header className="header">
                 <div className="top-bar theme-bg-primary-darken">

@@ -7,11 +7,7 @@
         "logo_inv": "/images/logos/logo-1-inverse.svg",
         "url": "/project0/",
         "desc": "Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...",
-        "tech": [
-            "React/Redux/Angular",
-            "Javascript",
-            "Node.js"
-        ]
+        "techs": "React/Redux/Angular Javascript Node.js"
     },
     {
         "name": "Webapp Development",
@@ -21,11 +17,7 @@
         "logo_inv": "/images/logos/logo-2-inverse.svg",
         "url": "/project1/",
         "desc": "Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...",
-        "tech": [
-            "Python/Django",
-            "Ruby/Rails",
-            "PHP"
-        ]
+        "techs": "Python/Django Ruby/Rails PHP"
     },
     {
         "name": "Mobile app development",
@@ -35,10 +27,6 @@
         "logo_inv": "/images/logos/logo-3-inverse.svg",
         "url": "/project2/",
         "desc": "Project summary goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...",
-        "tech": [
-            "DevOps",
-            "Unit Testing",
-            "UX/Wireframing"
-        ]
+        "techs": "DevOps Unit Testing UX/Wireframing"
     }
 ]
