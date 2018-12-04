@@ -1647,3 +1647,8 @@ a:hover {
     width: 100%;
     left: 0
 }
+
+/* project page tick color */
+.text-primary {
+    color: #6f6db2 !important;
+}

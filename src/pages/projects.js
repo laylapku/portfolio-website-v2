@@ -1,9 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Filter from "../components/filter"
 
-export default ({ data }) =>
+export default () =>
 	<Layout>
 		<div className="header-intro theme-bg-primary text-white py-5">
 			<div className="container">
@@ -13,23 +12,3 @@ export default ({ data }) =>
 		</div>{/*//header-intro*/}
 		<Filter />
 	</Layout>
-
-export const query = graphql`
-    query {
-        allProjectsJson {
-            edges {
-                node {
-                    id
-                    name
-                    for
-                    thumb
-                    logo
-                    logo_inv
-                    url
-                    desc
-                    techs
-                }
-            }
-        }
-    }
-`

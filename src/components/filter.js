@@ -89,7 +89,7 @@ class FilterBar extends React.Component {
             <div className="text-center">
                 <ul id="filters" className="filters mb-5 mx-auto pl-0">
                     <li className="type active" onClick={(e) => this.handleClick(e, "")}>All</li>
-                    {['React', 'PHP', 'HTML/CSS'].map((item) => (
+                    {['Angular', 'React', 'Python', 'Ruby', 'PHP'].map((item) => (
                         <li className="type" onClick={(e) => this.handleClick(e, item)} key={"filter-"+item}>{item}</li>
                     ))}
                 </ul>{/*//filters*/}

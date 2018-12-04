@@ -102,7 +102,7 @@ export const query = graphql`
                 }
             }
         }
-        allProjectsJson {
+        allProjectsJson(limit: 3) {
             edges {
                 node {
                     id
