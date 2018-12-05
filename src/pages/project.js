@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../components/layout"
 import Calc from "../components/calc/calc"
 import Pmdr from "../components/pmdr/pmdr"
+import Drum from "../components/drum/drum"
 
 export default ({ data }) =>
     <Layout>
@@ -42,8 +42,8 @@ export default ({ data }) =>
                     </div>{/*//section-row*/}
 
                     <div className="section-row">
-                        <h3 className="section-title">Conclusions</h3>
-
+                        <h3 className="section-title">Drum Machine</h3>
+                        <Drum />
                     </div>{/*//section-row*/}
 
                 </section>

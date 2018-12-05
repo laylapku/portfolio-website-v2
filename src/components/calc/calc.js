@@ -1,4 +1,5 @@
 import React from 'react'
+import Mexp from 'math-expression-evaluator';
 import { Button } from 'reactstrap';
 import "./calc.css"
 
@@ -139,8 +140,7 @@ class Calc extends React.Component {
 
     evaluate() {
         this.setState({
-            //display: mexp.eval(this.state.display).toString()
-            display: eval(this.state.display).toString()
+            display: Mexp.eval(this.state.display).toString()
         });
     }
 

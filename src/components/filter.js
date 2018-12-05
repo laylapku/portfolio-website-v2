@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby";
+import { Button, ButtonGroup } from 'reactstrap';
 
 export default () =>
     <StaticQuery
@@ -76,6 +77,10 @@ class ProjectCards extends React.Component {
 class FilterBar extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            rSelected: '',
+        };
+        this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
     }
 
     handleClick(e, item) {
@@ -84,15 +89,20 @@ class FilterBar extends React.Component {
         e.target.className += " active";
     }
 
+    onRadioBtnClick(rSelected) {
+        this.setState({ rSelected });
+        this.props.onFilterTextChange(rSelected);
+    }
+
     render() {
         return (
             <div className="text-center">
-                <ul id="filters" className="filters mb-5 mx-auto pl-0">
-                    <li className="type active" onClick={(e) => this.handleClick(e, "")}>All</li>
+                <ButtonGroup className="mb-5">
+                    <Button onClick={() => this.onRadioBtnClick("")} active={this.state.rSelected === ""}>All</Button>
                     {['Angular', 'React', 'Python', 'Ruby', 'PHP'].map((item) => (
-                        <li className="type" onClick={(e) => this.handleClick(e, item)} key={"filter-"+item}>{item}</li>
+                        <Button onClick={() => this.onRadioBtnClick(item)} active={this.state.rSelected === item} key={"filter-"+item}>{item}</Button>
                     ))}
-                </ul>{/*//filters*/}
+                </ButtonGroup>
             </div>
         );
     }

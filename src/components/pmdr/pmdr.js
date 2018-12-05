@@ -54,20 +54,12 @@ class Ctrl extends React.Component {
 }
 
 class Timer extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
-
             <div className="pmdr-timer">
-
                 <div id="timer-label">{this.props.timerType}</div>
-
                 {/* Format seconds 2 MM:SS}*/}
                 <p id="time-left">{("0" + Math.floor(this.props.timer / 60)).slice(-2)}:{("0" + this.props.timer % 60).slice(-2)}</p>
-
             </div>
         )
     }
