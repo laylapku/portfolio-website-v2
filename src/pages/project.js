@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import Calc from "../components/calc/calc"
 import Pmdr from "../components/pmdr/pmdr"
 import Drum from "../components/drum/drum"
+import Markdown from "../components/markdown/markdown"
+import Quote from "../components/quote/quote"
 
 export default ({ data }) =>
     <Layout>
@@ -44,6 +46,16 @@ export default ({ data }) =>
                     <div className="section-row">
                         <h3 className="section-title">Drum Machine</h3>
                         <Drum />
+                    </div>{/*//section-row*/}
+
+                    <div className="section-row">
+                        <h3 className="section-title">Markdown Previewer</h3>
+                        <Markdown />
+                    </div>{/*//section-row*/}
+
+                    <div className="section-row">
+                        <h3 className="section-title">Random Quote Machine</h3>
+                        <Quote />
                     </div>{/*//section-row*/}
 
                 </section>
