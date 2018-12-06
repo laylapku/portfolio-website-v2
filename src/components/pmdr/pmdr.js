@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'reactstrap';
+import { Button, Progress } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./pmdr.css"
 
@@ -18,9 +18,9 @@ class LengthChanger extends React.Component {
             <div>
                 <div id={this.props.type + "-label"}>{this.props.type + " length"}</div>                
                 <div className="pmdr-len-ctrl">                
-                    <Button id={this.props.type + "-decrement"} onClick={() => this.handleClick("-")}><FontAwesomeIcon icon="arrow-down" /></Button>
-                    <div id={this.props.type + "-length"}>{this.props.length}</div>
-                    <Button id={this.props.type + "-increment"} onClick={() => this.handleClick("+")}><FontAwesomeIcon icon="arrow-up" /></Button>
+                    <Button id={this.props.type + "-decrement"} onClick={() => this.handleClick("-")} size="sm"><FontAwesomeIcon icon="arrow-down" /></Button>
+                    <div id={this.props.type + "-length"}>{this.props.length} min(s)</div>
+                    <Button id={this.props.type + "-increment"} onClick={() => this.handleClick("+")} size="sm"><FontAwesomeIcon icon="arrow-up" /></Button>
                 </div>
             </div>
         )
@@ -45,21 +45,22 @@ class Ctrl extends React.Component {
     render() {
         return (
             <div className="pmdr-ctrl">
-                <Button id="start_stop" onClick={this.handleStartPause}><FontAwesomeIcon icon="play" /><FontAwesomeIcon icon="pause" /></Button>
+                <Button id="start_stop" onClick={this.handleStartPause} size="sm"><FontAwesomeIcon icon="play" /><FontAwesomeIcon icon="pause" /></Button>
                 {' '}
-                <Button id="reset" onClick={this.handleReset}><FontAwesomeIcon icon="redo" /></Button>
+                <Button id="reset" onClick={this.handleReset} size="sm"><FontAwesomeIcon icon="redo" /></Button>
             </div>
         )
     }
 }
 
 class Timer extends React.Component {
+
     render() {
         return (
-            <div className="pmdr-timer">
-                <div id="timer-label">{this.props.timerType}</div>
-                {/* Format seconds 2 MM:SS}*/}
-                <p id="time-left">{("0" + Math.floor(this.props.timer / 60)).slice(-2)}:{("0" + this.props.timer % 60).slice(-2)}</p>
+            <div className="pmdr-timer">                
+                <div id="timer-label">{this.props.timerType==="session" ? "Keep on working!" : "Get some rest!"}</div>
+                <Progress animated={this.props.active ? true : false} color={this.props.timer < 60 ? "danger" : "success"} value={this.props.progress}>{this.props.timer}</Progress>
+                <div id="time-left">{this.props.timer}</div>
             </div>
         )
     }
@@ -74,6 +75,7 @@ class Pmdr extends React.Component {
             timer: 60 * 25,
             timerType: "session",
             active: false,
+            progress: 100
         }
         this.ticker = null; // for setInterval()
         this.startPause = this.startPause.bind(this);
@@ -83,17 +85,21 @@ class Pmdr extends React.Component {
 
     startPause() {
         if (!this.state.active) {
+            this.setState({
+                active: true
+            });
             this.ticker = setInterval(() => {
                 if (this.state.timer === 0) {
                     this.audio.play();
                     this.setState({
                         timerType: (this.state.timerType === "session") ? "break" : "session",
-                        timer: (this.state.timerType === "session") ? 60 * this.state.breakLength + 1 : 60 * this.state.sessionLength + 1
+                        timer: (this.state.timerType === "session") ? 60 * this.state.breakLength + 1 : 60 * this.state.sessionLength + 1,
+                        progress: 100
                     });
                 }
                 this.setState({
                     timer: this.state.timer - 1,
-                    active: true
+                    progress: (this.state.timerType === "session") ? Math.floor(this.state.timer / (60 * this.state.sessionLength) * 100) : Math.floor(this.state.timer / (60 * this.state.breakLength) * 100)
                 });
             }, 1000);
         } else {
@@ -113,7 +119,8 @@ class Pmdr extends React.Component {
             sessionLength: 25,
             timer: 60 * 25,
             timerType: "session",
-            active: false
+            active: false,
+            progress: 100
         });
     }
 
@@ -143,7 +150,8 @@ class Pmdr extends React.Component {
 
                 <LengthChanger type="session" length={this.state.sessionLength} changeLength={this.changeLength} />
 
-                <Timer timerType={this.state.timerType} timer={this.state.timer} />
+                {/* Format timer: seconds to MM:SS}*/}
+                <Timer timerType={this.state.timerType} timer={("0" + Math.floor(this.state.timer / 60)).slice(-2)+':'+("0" + this.state.timer % 60).slice(-2)} progress={this.state.progress} active={this.state.active} />
 
                 <Ctrl startPause={this.startPause} reset={this.reset} />
 

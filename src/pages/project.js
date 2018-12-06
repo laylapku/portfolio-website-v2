@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import classnames from 'classnames';
 import Layout from "../components/layout"
 import Calc from "../components/calc/calc"
 import Pmdr from "../components/pmdr/pmdr"
@@ -21,43 +23,14 @@ export default ({ data }) =>
             <div className="row">
                 <section className="col-12 col-lg-8">
                     <div className="section-row">
-                        <div className="mb-5"><img className="img-fluid" src="/images/projects/project-figure-main.jpg" alt="" /></div>
                         <h3 className="section-title">Project Background</h3>
-
                         <p>Project summary goes here. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.</p>
-
                         <div className="mb-5"><a className="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt mr-2"></i> View Live Site</a></div>
-
                         <div className="alert alert-dark">
                             This template <strong>includes the original Sketch source file</strong> for making the browser window in the carousel. The screenshots were taken from the <a href="https://www.uxfordev.com/" target="_blank" rel="noopener noreferrer">AppKit template</a>.
 			            </div>
-
                     </div>{/*//section-row*/}
-
-                    <div className="section-row">
-                        <h3 className="section-title">Calculator</h3>
-                        <Calc />
-                    </div>{/*//section-row*/}
-                    <div className="section-row">
-                        <h3 className="section-title">Pomodoro Clock</h3>
-                        <Pmdr />
-                    </div>{/*//section-row*/}
-
-                    <div className="section-row">
-                        <h3 className="section-title">Drum Machine</h3>
-                        <Drum />
-                    </div>{/*//section-row*/}
-
-                    <div className="section-row">
-                        <h3 className="section-title">Markdown Previewer</h3>
-                        <Markdown />
-                    </div>{/*//section-row*/}
-
-                    <div className="section-row">
-                        <h3 className="section-title">Random Quote Machine</h3>
-                        <Quote />
-                    </div>{/*//section-row*/}
-
+                    <Tabs />
                 </section>
                 <aside className="project-sidebar col-12 col-lg-4 pl-lg-5">
                     <div className="project-sidebar-inner bg-white p-4">
@@ -130,6 +103,90 @@ export default ({ data }) =>
             </div>{/*//container*/}
         </section>
     </Layout>
+
+class Tabs extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            activeTab: '5'
+        };
+    }
+
+    toggle(tab) {
+        if (this.state.activeTab !== tab) {
+            this.setState({
+                activeTab: tab
+            });
+        }
+    }
+    render() {
+        return (
+            <div>
+                <Nav tabs>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '1' })}
+                            onClick={() => { this.toggle('1'); }}
+                        >
+                            Random Quote
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '2' })}
+                            onClick={() => { this.toggle('2'); }}
+                        >
+                            Markdown Previewer
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '3' })}
+                            onClick={() => { this.toggle('3'); }}
+                        >
+                            Drum
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '4' })}
+                            onClick={() => { this.toggle('4'); }}
+                        >
+                            Calculator
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '5' })}
+                            onClick={() => { this.toggle('5'); }}
+                        >
+                            Pomodoro
+                        </NavLink>
+                    </NavItem>
+                </Nav>
+                <TabContent className="text-center" activeTab={this.state.activeTab}>
+                    <TabPane tabId="1">
+                        <Quote />
+                    </TabPane>
+                    <TabPane tabId="2">
+                        <Markdown />
+                    </TabPane>
+                    <TabPane tabId="3">
+                        <Drum />
+                    </TabPane>
+                    <TabPane tabId="4">
+                        <Calc />
+                    </TabPane>
+                    <TabPane tabId="5">
+                        <Pmdr />
+                    </TabPane>
+                </TabContent>
+            </div>
+        );
+    }
+}
 
 export const query = graphql`
     query {

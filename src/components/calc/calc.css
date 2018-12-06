@@ -4,7 +4,8 @@
     display: grid;
     grid-template-columns: repeat(4, 50px);    
     grid-template-rows: repeat(6, 50px);
-    grid-gap: 1px
+    grid-gap: 1px;
+    justify-content: center
 }
 .calc-disp {
     background:rgb(0, 0, 0);

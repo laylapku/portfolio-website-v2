@@ -1,14 +1,15 @@
 .pmdr {
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(3, 75px);
-    justify-items: center
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: 75px 75px 50px;
+    align-items: center
 }
 
 .pmdr-len-ctrl {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 50px auto 50px;
+    justify-items: center
 }
 
 .pmdr-timer {

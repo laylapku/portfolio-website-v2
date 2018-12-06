@@ -4,34 +4,39 @@ import { Button, Alert } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./quote.css"
 
+const quoteColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
+
 class Quote extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             quoteText: '',
-            quoteAuthor: ''
+            quoteAuthor: '',
+            quoteColor:''
         }
         this.quoteData = this.props.data.allQuotesJson.edges;
         this.newQuote = this.newQuote.bind(this);
     }
 
     // generate a random quote on first load
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         window.addEventListener('load', this.newQuote);
     }
 
     newQuote() {
         let newQuote = this.quoteData[Math.floor(Math.random() * this.quoteData.length)].node;
+        let newColor = quoteColors[Math.floor(Math.random() * quoteColors.length)];
         this.setState({
             quoteText: newQuote.quote,
-            quoteAuthor: newQuote.author
+            quoteAuthor: newQuote.author,
+            quoteColor: newColor
         });
     }
 
     render() {
         return (
             <div>
-                <Alert color="secondary">
+                <Alert color={this.state.quoteColor}>
                     <div id="text"><FontAwesomeIcon icon={"quote-left"} />{' '}{this.state.quoteText}{' '}<FontAwesomeIcon icon={"quote-right"} /></div>
                     <hr />
                     <div id="author" className="mb-0">- {this.state.quoteAuthor}</div>
