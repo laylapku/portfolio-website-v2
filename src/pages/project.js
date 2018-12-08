@@ -8,6 +8,7 @@ import Pmdr from "../components/pmdr/pmdr"
 import Drum from "../components/drum/drum"
 import Markdown from "../components/markdown/markdown"
 import Quote from "../components/quote/quote"
+import Heatmap from "../components/heatmap/heatmap"
 
 export default ({ data }) =>
     <Layout>
@@ -165,6 +166,14 @@ class Tabs extends React.Component {
                             Pomodoro
                         </NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '6' })}
+                            onClick={() => { this.toggle('6'); }}
+                        >
+                            Heatmap
+                        </NavLink>
+                    </NavItem>
                 </Nav>
                 <TabContent className="text-center" activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
@@ -181,6 +190,9 @@ class Tabs extends React.Component {
                     </TabPane>
                     <TabPane tabId="5">
                         <Pmdr />
+                    </TabPane>
+                    <TabPane tabId="6">
+                        <Heatmap />
                     </TabPane>
                 </TabContent>
             </div>
