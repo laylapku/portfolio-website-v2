@@ -98,9 +98,9 @@ class FilterBar extends React.Component {
         return (
             <div className="text-center">
                 <ButtonGroup className="mb-5">
-                    <Button onClick={() => this.onRadioBtnClick("")} active={this.state.rSelected === ""}>All</Button>
+                    <Button color="light" onClick={() => this.onRadioBtnClick("")} active={this.state.rSelected === ""}>All</Button>
                     {['Angular', 'React', 'Python', 'Ruby', 'PHP'].map((item) => (
-                        <Button onClick={() => this.onRadioBtnClick(item)} active={this.state.rSelected === item} key={"filter-"+item}>{item}</Button>
+                        <Button color="light" onClick={() => this.onRadioBtnClick(item)} active={this.state.rSelected === item} key={"filter-"+item}>{item}</Button>
                     ))}
                 </ButtonGroup>
             </div>

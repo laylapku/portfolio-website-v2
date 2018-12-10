@@ -19,7 +19,7 @@ class Quote extends React.Component {
     }
 
     // generate a random quote on first load
-    UNSAFE_componentWillMount() {
+    componentDidMount() {
         window.addEventListener('load', this.newQuote);
     }
 

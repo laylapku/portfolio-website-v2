@@ -8,7 +8,7 @@ export default ({ data }) =>
         <div className="header-intro header-intro-resume theme-bg-primary text-white py-5">
             <div className="container position-relative">
                 <h2 className="page-heading mb-3">Resume</h2>
-                <a className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto" href="#"><i className="fas fa-download mr-2"></i>Download PDF Version</a>
+                <a className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto" href="#"><FontAwesomeIcon className="mr-2" icon="download" />Download PDF Version</a>
             </div>{/*//container*/}
         </div>{/*//header-intro*/}
         <article className="resume-wrapper text-center position-relative">
@@ -16,9 +16,9 @@ export default ({ data }) =>
                 <header className="resume-header pt-4 pt-md-0">
                     <div className="media flex-column flex-md-row">
                         <img className="mr-3 img-fluid picture mx-auto" src="/images/profile.jpg" alt="" />
-                        <div className="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+                        <div className="media-body p-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                             <div className="primary-info">
-                                <h1 className="name mt-0 mb-1 text-white text-uppercase text-uppercase">Sean Lee</h1>
+                                <h1 className="name mt-0 mb-1 text-white text-uppercase">Sean Lee</h1>
                                 <div className="title mb-3">Full Stack Developer</div>
                                 <ul className="list-unstyled">
                                     <li className="mb-2"><a href="mailto:iamleexiang@gmail.com"><i className="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>iamleexiang@gmail.com</a></li>

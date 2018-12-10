@@ -111,7 +111,7 @@ class Tabs extends React.Component {
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            activeTab: '5'
+            activeTab: '1'
         };
     }
 

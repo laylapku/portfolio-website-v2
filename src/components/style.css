@@ -1657,3 +1657,11 @@ a:hover {
 .nav-tabs {
     margin-bottom: 1rem
 }
+
+/* project filter buttons */
+.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+    color: #fff;
+    background-color: #6f6db2;
+    border-color: #6f6db2;
+}

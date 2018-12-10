@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Header from "./header"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight, faCheck, faDownload } from '@fortawesome/free-solid-svg-icons'
 import { addBackToTop } from 'vanilla-back-to-top'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css"
@@ -19,7 +19,7 @@ export default ({ children }) => (
 )
 
 const Scripts = function () {
-  library.add(faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow, faTwitter, faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight);
+  library.add(faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow, faTwitter, faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight, faCheck, faDownload);
   return null;
 }
 
@@ -46,11 +46,11 @@ const Footer = function () {
   addBackToTop();
   return (
     <footer className="footer text-light text-center py-2">
-      <div className="container">
-        <small className="copyright">Copyright &copy; 2018 by <a className="text-light" href="//sean-lee.glitch.me" target="_blank" rel="noopener noreferrer">Sean Lee</a> </small>
+      <div>
+        <small className="copyright">Copyright &copy; 2018 by <a className="text-light" href="//sean-lee.glitch.me" target="_blank" rel="noopener noreferrer">Sean Lee</a></small>
       </div>
-      <div className="container">
-        <small className="copyright">Designed by <a className="text-light" href="//www.3rdwavemedia.com" target="_blank" rel="noopener noreferrer">Xiaoying Riley</a> </small>
+      <div>
+        <small className="copyright">Designed by <a className="text-light" href="//www.3rdwavemedia.com" target="_blank" rel="noopener noreferrer">Xiaoying Riley</a></small>
       </div>
     </footer>
   );
