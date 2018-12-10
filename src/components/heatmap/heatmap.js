@@ -3204,7 +3204,7 @@ const data = [{
 // otherwise height will be 0 and no chart will be rendered.
 // website examples showcase many properties, you'll often use just a few of them.
 export default () =>
-  <div style={{ height: '500px' }}>
+  <div style={{ height: 500 + 'px' }}>
     <ResponsiveHeatMapCanvas
       data={data}
       keys={keyArr}
@@ -3216,43 +3216,24 @@ export default () =>
         "left": 100
       }}
       colors="PuOr"
-      axisTop={{
-        "orient": "top",
-        "tickSize": 5,
-        "tickPadding": 5,
-        "tickRotation": -90,
-        "legend": "",
-        "legendOffset": 36,
-        "tickValues": tickValues
-      }}
-      axisRight={{
-        "orient": "right",
-        "tickSize": 5,
-        "tickPadding": 5,
-        "tickRotation": 0,
-        "legendOffset": 0
-      }}
+      axisTop={null}
       axisBottom={{
         "orient": "bottom",
         "tickSize": 5,
         "tickPadding": 5,
         "tickRotation": -90,
-        "legendOffset": 36,
         "tickValues": tickValues
       }}
       axisLeft={{
         "orient": "left",
         "tickSize": 5,
         "tickPadding": 5,
-        "tickRotation": 0,
-        "legend": "country",
-        "legendPosition": "middle",
-        "legendOffset": -40
+        "tickRotation": 0
       }}
       cellOpacity={1}
       enableLabels={false}
       tooltip={e => {
-        return <div style={{ textAlign: 'center' }}><p>{e.yKey} - {e.xKey}</p><p>{(8.66 + e.value).toFixed(1)}℃</p><p>{e.value.toFixed(1)}℃</p></div>
+        return <div style={{ whiteSpace: 'pre', display: 'flex', alignItems: 'center' }}><span style={{ display: 'block', width: '12px', height: '12px', background: e.color, marginRight: '7px' }}></span><span>{e.yKey} - {e.xKey}: <strong>{(8.66 + e.value).toFixed(1)}℃</strong>, <strong>{e.value.toFixed(1)}℃</strong></span></div>
       }}
     />
   </div>

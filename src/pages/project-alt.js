@@ -1,7 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../components/layout"
+import Heatmap from "../components/heatmap/heatmap"
+import Bar from "../components/bar/bar"
+import Scatter from "../components/scatter/scatter"
+import Treemap from "../components/treemap/treemap"
 
 export default ({ data }) =>
     <Layout>
@@ -22,6 +28,8 @@ export default ({ data }) =>
                     This template <strong>includes the original Sketch source file</strong> for making the browser window in the carousel. The screenshots were taken from the <a href="https://www.uxfordev.com/" target="_blank" rel="noopener noreferrer">AppKit template</a>.
 		        </div>
             </div>{/*//section-row*/}
+
+            <Tabs />
 
             <div className="section-row">
                 <h3 className="section-title">Technologies Used</h3>
@@ -89,6 +97,90 @@ export default ({ data }) =>
             </div>{/*//container*/}
         </section>
     </Layout>
+
+class Tabs extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            activeTab: '1'
+        };
+    }
+
+    toggle(tab) {
+        if (this.state.activeTab !== tab) {
+            this.setState({
+                activeTab: tab
+            });
+        }
+    }
+    render() {
+        return (
+            <div>
+                <Nav tabs>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '1' })}
+                            onClick={() => { this.toggle('1'); }}
+                        >
+                            Bar
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '2' })}
+                            onClick={() => { this.toggle('2'); }}
+                        >
+                            Scatterplot
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '3' })}
+                            onClick={() => { this.toggle('3'); }}
+                        >
+                            Heatmap
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '4' })}
+                            onClick={() => { this.toggle('4'); }}
+                        >
+                            Calculator
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '5' })}
+                            onClick={() => { this.toggle('5'); }}
+                        >
+                            Treemap
+                        </NavLink>
+                    </NavItem>
+                </Nav>
+                <TabContent className="text-center" activeTab={this.state.activeTab}>
+                    <TabPane tabId="1">
+                        <Bar />
+                    </TabPane>
+                    <TabPane tabId="2">
+                        <Scatter />
+                    </TabPane>
+                    <TabPane tabId="3">
+                        <Heatmap />
+                    </TabPane>
+                    <TabPane tabId="4">
+                        
+                    </TabPane>
+                    <TabPane tabId="5">
+                        <Treemap />
+                    </TabPane>
+                </TabContent>
+            </div>
+        );
+    }
+}
 
 export const query = graphql`
     query {
