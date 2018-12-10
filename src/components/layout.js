@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Header from "./header"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight, faCheck, faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight, faCheck, faDownload, faExternalLinkAlt, faBuilding, faWrench } from '@fortawesome/free-solid-svg-icons'
 import { addBackToTop } from 'vanilla-back-to-top'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css"
@@ -19,7 +19,7 @@ export default ({ children }) => (
 )
 
 const Scripts = function () {
-  library.add(faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow, faTwitter, faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight, faCheck, faDownload);
+  library.add(faGithubAlt, faNodeJs, faFreeCodeCamp, faCodepen, faStackOverflow, faTwitter, faHome, faArrowUp, faArrowDown, faPlay, faPause, faRedo, faQuoteLeft, faQuoteRight, faCheck, faDownload, faExternalLinkAlt, faBuilding, faWrench);
   return null;
 }
 

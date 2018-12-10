@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classnames from 'classnames';
 import Layout from "../components/layout"
 import Calc from "../components/calc/calc"
@@ -26,7 +27,7 @@ export default ({ data }) =>
                     <div className="section-row">
                         <h3 className="section-title">Project Background</h3>
                         <p>Project summary goes here. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.</p>
-                        <div className="mb-5"><a className="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt mr-2"></i> View Live Site</a></div>
+                        <div className="mb-5"><a className="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="mr-2" icon="external-link-alt" /> View Live Site</a></div>
                         <div className="alert alert-dark">
                             This template <strong>includes the original Sketch source file</strong> for making the browser window in the carousel. The screenshots were taken from the <a href="https://www.uxfordev.com/" target="_blank" rel="noopener noreferrer">AppKit template</a>.
 			            </div>
@@ -38,9 +39,9 @@ export default ({ data }) =>
                         <div className="sidebar-row mb-5">
                             <h3 className="sidebar-title mb-4">Project Info</h3>
                             <ul className="list-unstyled pl-2">
-                                <li className="mb-4"><i className="fas fa-building mr-3 text-primary" data-fa-transform="grow-6 down-2"></i><strong>Client:</strong> Basecamp</li>
-                                <li className="mb-4"><i className="fas fa-external-link-alt mr-3 text-primary" data-fa-transform="grow-6 down-2"></i><strong>Site Link:</strong> <a href="#">website.com</a></li>
-                                <li><i className="fas fa-wrench mr-3 text-primary" data-fa-transform="grow-6 down-2"></i><strong>Type:</strong> Frontend &amp; Backend</li>
+                                <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="building" /><strong>Client:</strong> Basecamp</li>
+                                <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="external-link-alt" /><strong>Site Link:</strong> <a href="#">website.com</a></li>
+                                <li><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="wrench" /><strong>Type:</strong> Frontend &amp; Backend</li>
                             </ul>
                         </div>
                         <div className="sidebar-row">
