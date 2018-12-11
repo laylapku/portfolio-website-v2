@@ -274,7 +274,7 @@ const data = [{
   2013: 1.09,
   2014: 1.132,
   2015: 1.291,
-  month: 'January'
+  month: 'JAN'
 },
 {
   1753: -2.223,
@@ -540,7 +540,7 @@ const data = [{
   2013: 1.022,
   2014: 0.29,
   2015: 1.45,
-  month: 'February'
+  month: 'FEB'
 },
 {
   1753: 0.211,
@@ -806,7 +806,7 @@ const data = [{
   2013: 0.936,
   2014: 1.061,
   2015: 1.414,
-  month: 'March'
+  month: 'MAR'
 },
 {
   1753: -0.958,
@@ -1072,7 +1072,7 @@ const data = [{
   2013: 0.698,
   2014: 1.23,
   2015: 0.951,
-  month: 'April'
+  month: 'APR'
 },
 {
   1753: 0.175,
@@ -1338,7 +1338,7 @@ const data = [{
   2013: 0.804,
   2014: 1.187,
   2015: 0.917,
-  month: 'May'
+  month: 'MAY'
 },
 {
   1753: 1.049,
@@ -1604,7 +1604,7 @@ const data = [{
   2013: 1.023,
   2014: 0.775,
   2015: 0.977,
-  month: 'June'
+  month: 'JUN'
 },
 {
   1753: 0.464,
@@ -1870,7 +1870,7 @@ const data = [{
   2013: 0.597,
   2014: 0.442,
   2015: 0.631,
-  month: 'July'
+  month: 'JUL'
 },
 {
   1753: -0.526,
@@ -2136,7 +2136,7 @@ const data = [{
   2013: 0.824,
   2014: 0.94,
   2015: 0.823,
-  month: 'August'
+  month: 'AUG'
 },
 {
   1753: 0.47,
@@ -2402,7 +2402,7 @@ const data = [{
   2013: 1.019,
   2014: 0.952,
   2015: 0.87,
-  month: 'September'
+  month: 'SEP'
 },
 {
   1753: -0.61,
@@ -2667,7 +2667,7 @@ const data = [{
   2012: 1.184,
   2013: 1.009,
   2014: 1.1,
-  month: 'October'
+  month: 'OCT'
 },
 {
   1753: -1.452,
@@ -2932,7 +2932,7 @@ const data = [{
   2012: 1.062,
   2013: 1.347,
   2014: 0.632,
-  month: 'November'
+  month: 'NOV'
 },
 {
   1753: -4.256,
@@ -3197,7 +3197,7 @@ const data = [{
   2012: 0.473,
   2013: 1.106,
   2014: 1.229,
-  month: 'December'
+  month: 'DEC'
 }]
 
 // make sure parent container have a defined height when using responsive component,
@@ -3210,25 +3210,18 @@ export default () =>
       keys={keyArr}
       indexBy="month"
       margin={{
-        "top": 100,
-        "right": 100,
-        "bottom": 100,
-        "left": 100
+        "bottom": 50,
+        "left": 50
       }}
       colors="PuOr"
       axisTop={null}
       axisBottom={{
         "orient": "bottom",
-        "tickSize": 5,
-        "tickPadding": 5,
         "tickRotation": -90,
         "tickValues": tickValues
       }}
       axisLeft={{
-        "orient": "left",
-        "tickSize": 5,
-        "tickPadding": 5,
-        "tickRotation": 0
+        "orient": "left"
       }}
       cellOpacity={1}
       enableLabels={false}

@@ -1468,9 +1468,9 @@ class TreeMapSwitcher extends React.Component {
         return (
             <div style={{ height: 500 + 'px' }}>
                 <ButtonGroup>
-                    <Button onClick={() => this.onRadioBtnClick(0)} active={this.state.rSelected === 0}>Video Game Data Set</Button>
-                    <Button onClick={() => this.onRadioBtnClick(1)} active={this.state.rSelected === 1}>Movies Data Set</Button>
-                    <Button onClick={() => this.onRadioBtnClick(2)} active={this.state.rSelected === 2}>Kickstarter Data Set</Button>
+                    <Button onClick={() => this.onRadioBtnClick(0)} active={this.state.rSelected === 0}>Video Games</Button>
+                    <Button onClick={() => this.onRadioBtnClick(1)} active={this.state.rSelected === 1}>Movies</Button>
+                    <Button onClick={() => this.onRadioBtnClick(2)} active={this.state.rSelected === 2}>Kickstarters</Button>
                 </ButtonGroup>
                 <ResponsiveTreeMapHtml
                     root={this.state.curData}

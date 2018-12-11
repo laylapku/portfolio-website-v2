@@ -9,10 +9,10 @@ export default () =>
             data={data}
             reverse={true}
             margin={{
-                "top": 60,
-                "right": 250,
-                "bottom": 70,
-                "left": 90
+                "top": 10,
+                "right": 10,
+                "bottom": 50,
+                "left": 50
             }}
             xScale={{
                 "type": "linear",
@@ -27,21 +27,13 @@ export default () =>
             colors="set2"
             axisBottom={{
                 "orient": "bottom",
-                "tickSize": 5,
-                "tickPadding": 5,
-                "tickRotation": 0,
-                "legend": "Year",
-                "legendPosition": "middle",
-                "legendOffset": 46
+                "tickRotation": -90
             }}
             axisLeft={{
                 "orient": "left",
-                "tickSize": 5,
-                "tickPadding": 5,
-                "tickRotation": 0,
                 "legend": "Time in Minutes",
                 "legendPosition": "middle",
-                "legendOffset": -60,
+                "legendOffset": -45,
                 // with formatted values
                 "format": e => { return (Math.floor(e/60)+':'+('0'+e%60).slice(-2)).slice(1) }
             }}
@@ -51,9 +43,9 @@ export default () =>
             }}
             legends={[
                 {
-                    "anchor": "bottom-right",
+                    "anchor": "top-right",
                     "direction": "column",
-                    "translateX": 130,
+                    "translateX": -75,
                     "itemWidth": 100,
                     "itemHeight": 12,
                     "itemsSpacing": 5,

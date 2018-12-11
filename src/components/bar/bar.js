@@ -12,30 +12,21 @@ export default () =>
             data={data}
             indexBy="date"
             margin={{
-                "top": 50,
-                "right": 130,
-                "bottom": 50,
-                "left": 100
+                "top": 25,
+                "left": 40,
+                "bottom": 50
             }}
             padding={0.3}
             axisBottom={{
-                "tickSize": 5,
-                "tickPadding": 5,
-                "tickRotation": 0,
-                "legend": "Year",
-                "legendPosition": "middle",
-                "legendOffset": 32,
                 "tickValues": tickValues,
+                "tickRotation": -90,
                 // with formatted values
                 "format": e => { return e.slice(0, 4) }
             }}
             axisLeft={{
-                "tickSize": 5,
-                "tickPadding": 5,
-                "tickRotation": 0,
-                "legend": "Gross Domestic Product",
-                "legendPosition": "middle",
-                "legendOffset": -50
+                "legend": "GDP",
+                "legendPosition": "top",
+                "legendOffset": 10
             }}
             enableLabel={false}
             // custom tooltip

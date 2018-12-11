@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import Heatmap from "../components/heatmap/heatmap"
 import Bar from "../components/bar/bar"
 import Scatter from "../components/scatter/scatter"
+import Choropleth from "../components/choropleth/choropleth"
 import Treemap from "../components/treemap/treemap"
 
 export default ({ data }) =>
@@ -148,7 +149,7 @@ class Tabs extends React.Component {
                             className={classnames({ active: this.state.activeTab === '4' })}
                             onClick={() => { this.toggle('4'); }}
                         >
-                            Calculator
+                            Choropleth
                         </NavLink>
                     </NavItem>
                     <NavItem>
@@ -171,7 +172,7 @@ class Tabs extends React.Component {
                         <Heatmap />
                     </TabPane>
                     <TabPane tabId="4">
-                        
+                        <Choropleth />
                     </TabPane>
                     <TabPane tabId="5">
                         <Treemap />
