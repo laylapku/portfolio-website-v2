@@ -24,8 +24,8 @@ export default () =>
                 "format": e => { return e.slice(0, 4) }
             }}
             axisLeft={{
-                "legend": "GDP",
-                "legendPosition": "top",
+                "legend": "GDP in $B",
+                "legendPosition": "start",
                 "legendOffset": 10
             }}
             enableLabel={false}
