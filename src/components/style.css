@@ -1669,7 +1669,7 @@ a:hover {
 #tooltip {
     position: absolute;
     padding: 10px;                
-    font-size: 14px;        
+    font-size: 16px;        
     background: rgb(233,122,110);
     color: white;
     box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);

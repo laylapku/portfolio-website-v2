@@ -3226,7 +3226,14 @@ export default () =>
       cellOpacity={1}
       enableLabels={false}
       tooltip={e => {
-        return <div style={{ whiteSpace: 'pre', display: 'flex', alignItems: 'center' }}><span style={{ display: 'block', width: '12px', height: '12px', background: e.color, marginRight: '7px' }}></span><span>{e.yKey} - {e.xKey}: <strong>{(8.66 + e.value).toFixed(1)}℃</strong>, <strong>{e.value.toFixed(1)}℃</strong></span></div>
+        return (
+          <div style={{ alignItems: 'center', fontSize: '16px' }}>
+            <strong>{e.xKey} {e.yKey}: </strong>{(8.66 + e.value).toFixed(1)}℃
+            <br />
+            <strong>Variance: </strong>{e.value.toFixed(1)}℃
+          </div>
+      
+        )
       }}
     />
   </div>

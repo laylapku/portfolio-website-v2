@@ -39,7 +39,17 @@ export default () =>
             }}
             symbolSize={15}
             tooltip={e => {
-                return <div style={{ whiteSpace: 'pre', display: 'flex', alignItems: 'center' }}><span><strong>{e.name}:</strong> {e.country} <strong>Year:</strong> {e.x}, <strong>Time:</strong> {e.time} {e.doping}</span></div>
+                return (
+                    <div style={{ alignItems: 'center', fontSize: '16px' }}>
+                        <strong>{e.name}:</strong> {e.country}
+                        <br />
+                        <strong>Year:</strong> {e.x}
+                        <br />
+                        <strong>Time:</strong> {e.time}
+                        <br />
+                        {e.doping}                
+                    </div>
+                )
             }}
             legends={[
                 {

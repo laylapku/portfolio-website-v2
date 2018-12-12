@@ -1466,11 +1466,11 @@ class TreeMapSwitcher extends React.Component {
 
     render() {
         return (
-            <div style={{ height: 500 + 'px' }}>
+            <div style={{ height: '500px', fontSize: '16px' }}>
                 <ButtonGroup>
-                    <Button onClick={() => this.onRadioBtnClick(0)} active={this.state.rSelected === 0}>Video Games</Button>
-                    <Button onClick={() => this.onRadioBtnClick(1)} active={this.state.rSelected === 1}>Movies</Button>
-                    <Button onClick={() => this.onRadioBtnClick(2)} active={this.state.rSelected === 2}>Kickstarters</Button>
+                    <Button color="light" size="sm" onClick={() => this.onRadioBtnClick(0)} active={this.state.rSelected === 0}>Video Games</Button>
+                    <Button color="light" size="sm" onClick={() => this.onRadioBtnClick(1)} active={this.state.rSelected === 1}>Movies</Button>
+                    <Button color="light" size="sm" onClick={() => this.onRadioBtnClick(2)} active={this.state.rSelected === 2}>Kickstarters</Button>
                 </ButtonGroup>
                 <ResponsiveTreeMapHtml
                     root={this.state.curData}
@@ -1487,7 +1487,15 @@ class TreeMapSwitcher extends React.Component {
                     animate={false}
                     // custom tooltip
                     tooltip={e => {
-                        return <div style={{ whiteSpace: 'pre', display: 'flex', alignItems: 'center' }}><span style={{ display: 'block', width: '12px', height: '12px', background: e.color, marginRight: '7px' }}></span><span><strong>Name: </strong>{e.data.name}<strong> Category: </strong>{e.data.category} <strong> Value: </strong> {e.value}</span></div>
+                        return (
+                            <div style={{ alignItems: 'center', fontSize: '16px' }}>
+                                <strong>Name: </strong>{e.data.name}
+                                <br />
+                                <strong>Category: </strong>{e.data.category}
+                                <br />
+                                <strong>Value: </strong>{e.value}
+                            </div>                    
+                        )
                     }}
                 />
             </div>

@@ -23,15 +23,16 @@ export default () =>
                 // with formatted values
                 "format": e => { return e.slice(0, 4) }
             }}
-            axisLeft={{
-                "legend": "GDP in $B",
-                "legendPosition": "start",
-                "legendOffset": 10
-            }}
             enableLabel={false}
             // custom tooltip
             tooltip={e => {
-                return <div style={{ whiteSpace: 'pre', display: 'flex', alignItems: 'center' }}><span>{e.indexValue}: <strong>${e.value.toLocaleString('en')} Billion</strong></span></div>
+                return (
+                    <div style={{ alignItems: 'center', fontSize: '16px' }}>
+                        <strong>{e.indexValue}:</strong>
+                        <br />
+                        ${e.value.toLocaleString('en')} Billion
+                    </div>
+                )
             }}
         />
     </div>
