@@ -53,15 +53,29 @@ class Choropleth extends React.Component {
                 // mousever tooltip
                 .on('mouseover', d => {
                     tooltip
-                        .html( () => {
+                        .html(() => {
                             var match = dataEdu.find(obj => obj.fips === d.id);
                             return match.area_name + ', ' + match.state + ': ' + match.bachelorsOrHigher + '%';
                         })
                         .transition()
                         .duration(100)
                         .style('opacity', 0.9)
-                        .style('left', d3.event.pageX + 'px')
+                        //.style('left', d3.event.pageX + 'px')
                         .style('top', d3.event.pageY + 'px')
+                        
+                        // get viewport width
+                        var vW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                        // determine tooltip direction (left or right)
+                        if (d3.event.pageX <= vW / 2) {
+                            tooltip
+                                .style('left', d3.event.pageX + 'px')
+                                .style('right', null);
+                        }
+                        else {
+                            tooltip
+                                .style('right', vW - d3.event.pageX + 'px')
+                                .style('left', null);
+                        }
                 })
                 .on('mouseout', () => {
                     tooltip
@@ -107,7 +121,7 @@ class Choropleth extends React.Component {
         });
     }
     render() {
-        return <div>{this.props.chart}</div>
+        return <div id="choropleth">{this.props.chart}</div>
     }
 }
 
