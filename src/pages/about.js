@@ -8,7 +8,7 @@ export default ({ data }) =>
         <div className="header-intro theme-bg-primary text-white py-5">
             <div className="container">
                 <div className="profile-teaser media flex-column flex-md-row">
-                    <img alt="" className="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="/images/profile.jpg" />
+                    <img alt="" className="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="/images/profile.png" />
                     <div className="media-body text-center text-md-left">
                         <div className="lead">Hello, my name is</div>
                         <h2 className="mt-0 display-4 font-weight-bold">Sean Lee</h2>

@@ -28,7 +28,7 @@ const CTA = function () {
     <section className="section py-5 theme-bg-primary text-white">
       <div className="container">
         <div className="text-center">
-          <img className="profile-small d-inline-block mx-auto rounded-circle mb-2" src="/images/profile.jpg" alt="" />
+          <img className="profile-small d-inline-block mx-auto rounded-circle mb-2" src="/images/profile.png" alt="" />
         </div>
         <h3 className="section-title font-weight-bold text-center mb-2">Interested in hiring me for your project?</h3>
         <div className="section-intro mx-auto text-center mb-3">

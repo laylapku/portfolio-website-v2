@@ -15,7 +15,7 @@ export default ({ data }) =>
             <div className="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
                 <header className="resume-header pt-4 pt-md-0">
                     <div className="media flex-column flex-md-row">
-                        <img className="mr-3 img-fluid picture mx-auto" src="/images/profile.jpg" alt="" />
+                        <img className="mr-3 img-fluid picture mx-auto" src="/images/profile.png" alt="" />
                         <div className="media-body p-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                             <div className="primary-info">
                                 <h1 className="name mt-0 mb-1 text-white text-uppercase">Sean Lee</h1>
