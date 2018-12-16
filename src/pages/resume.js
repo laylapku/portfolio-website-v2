@@ -15,13 +15,13 @@ export default ({ data }) =>
             <div className="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
                 <header className="resume-header pt-4 pt-md-0">
                     <div className="media flex-column flex-md-row">
-                        <img className="mr-3 img-fluid picture mx-auto" src="/images/profile.png" alt="" />
+                        <img className="mr-3 img-fluid picture mx-auto" src={data.site.siteMetadata.pic} alt="" />
                         <div className="media-body p-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                             <div className="primary-info">
-                                <h1 className="name mt-0 mb-1 text-white text-uppercase">Sean Lee</h1>
+                                <h1 className="name mt-0 mb-1 text-white text-uppercase">{data.site.siteMetadata.name}</h1>
                                 <div className="title mb-3">Full Stack Developer</div>
                                 <ul className="list-unstyled">
-                                    <li className="mb-2"><a href="mailto:iamleexiang@gmail.com"><i className="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>iamleexiang@gmail.com</a></li>
+                                    <li className="mb-2"><a href={"mailto:"+data.site.siteMetadata.email}><i className="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>{data.site.siteMetadata.email}</a></li>
                                     <li><a href="tel:+86-139-1106-6746"><i className="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>+86 139 1106 6746</a></li>
                                 </ul>
                             </div>{/*//primary-info*/}
@@ -155,6 +155,13 @@ export const query = graphql`
                     desc
                     tech
                 }
+            }
+        }
+        site {
+            siteMetadata {
+                name
+                email
+                pic
             }
         }
     }

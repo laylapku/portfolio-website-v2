@@ -14,7 +14,7 @@ export default ({ data }) =>
 			<div className="container">
 				<div className="row">
 					<div className="contact-intro col-lg-8 mx-lg-auto mb-5 text-center">
-						<img className="profile-small d-inline-block mx-auto rounded-circle mb-3" src="/images/profile.png" alt="" />
+						<img className="profile-small d-inline-block mx-auto rounded-circle mb-3" src={data.site.siteMetadata.pic} alt="" />
 						<div className="speech-bubble bg-white p-4 p-lg-5 shadow-sm">
 							<p className="text-left mb-3">I'm currently taking on freelance work. If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my <Link to="/projects/">project case studies</Link> and <Link to="/resume/">resume</Link>.</p>
 							<h6 className="font-weight-bold text-center mb-3">You can also find me on the following channels</h6>
@@ -51,7 +51,7 @@ export default ({ data }) =>
 	</Layout>
 
 export const query = graphql`
-  query {
+  	query {
 		allSocialsJson {
 			edges {
 					node {
@@ -62,5 +62,10 @@ export const query = graphql`
 					}
 			}
 		}
-  }
+		site {
+            siteMetadata {
+                pic
+            }
+        }
+  	}
 `

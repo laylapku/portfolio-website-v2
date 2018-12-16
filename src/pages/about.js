@@ -8,10 +8,10 @@ export default ({ data }) =>
         <div className="header-intro theme-bg-primary text-white py-5">
             <div className="container">
                 <div className="profile-teaser media flex-column flex-md-row">
-                    <img alt="" className="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="/images/profile.png" />
+                    <img alt="" className="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src={data.site.siteMetadata.pic} />
                     <div className="media-body text-center text-md-left">
                         <div className="lead">Hello, my name is</div>
-                        <h2 className="mt-0 display-4 font-weight-bold">Sean Lee</h2>
+                        <h2 className="mt-0 display-4 font-weight-bold">{data.site.siteMetadata.name}</h2>
                         <div className="bio mb-3">I'm a full-stack developer specialised in frontend and backend web app development. Want to know how I may help your project? Check out my project <Link className="link-on-bg" to="/projects/">case studies</Link> and <Link className="link-on-bg" to="/resume/">resume</Link>.</div>{/*//bio*/}
                         <Link className="theme-btn-on-bg btn font-weight-bold theme-btn-cta" to="/contact/">Hire Me</Link>
                     </div>{/*//media-body*/}
@@ -116,6 +116,12 @@ export const query = graphql`
                     desc
                     techs
                 }
+            }
+        }
+        site {
+            siteMetadata {
+                name
+                pic
             }
         }
     }

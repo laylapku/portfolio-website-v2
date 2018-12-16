@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    "title": "Sean Lee's Portfolio",
+    "name": "Sean Lee",
+    "email": "seanleecoder@gmail.com",
+    "pic": "/images/profile.png"
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -6,7 +12,7 @@ module.exports = {
         fonts: [
           {
             family: `Roboto`,
-            variants: [`400`, `500`, `400italic` , `300italic`, `300`, `500italic`, `700`, `700italic`, `900`, `900italic`],
+            variants: [`400`, `500`, `400italic`, `300italic`, `300`, `500italic`, `700`, `700italic`, `900`, `900italic`],
           },
         ],
       },
