@@ -43,16 +43,6 @@ export default ({ data }) =>
                 </div>
             </div>{/*//container*/}
         </section>{/*//skills-section*/}
-        <section className="section-proof section bg-white py-5">
-            <div className="container">
-                <h3 className="section-title font-weight-bold text-center mb-5">Great clients I've worked with</h3>
-                <div className="logos row mb-5">
-                    {data.allProjectsJson.edges.map((item) => (
-                        <div className="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4" key={item.node.id}><Link className="logo-link" to={item.node.url}><img alt="" className="img-fluid svg-ie-fix" src={item.node.logo} /></Link></div>
-                    ))}
-                </div>
-            </div>
-        </section>
         <section className="section-featured-projects py-5">
             <div className="container">
                 <h3 className="section-title font-weight-bold text-center mb-5">Featured Projects</h3>
