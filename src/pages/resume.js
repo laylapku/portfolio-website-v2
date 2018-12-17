@@ -93,16 +93,13 @@ export default ({ data }) =>
                                 <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
                                 <div className="resume-section-content">
                                     <ul className="list-unstyled">
-                                        <li className="mb-2">
-                                            <div className="resume-degree font-weight-bold">Graduate Coursework in English Literature</div>
-                                            <div className="resume-degree-org">Peking University</div>
-                                            <div className="resume-degree-time">2011 - 2014</div>
-                                        </li>
-                                        <li>
-                                            <div className="resume-degree font-weight-bold">BA in English Literature</div>
-                                            <div className="resume-degree-org">Peking University</div>
-                                            <div className="resume-degree-time">2007 - 2011</div>
-                                        </li>
+                                        {data.allEduJson.edges.map((item) => (
+                                            <li className="mb-2" key={item.node.id}>
+                                                <div className="resume-degree font-weight-bold">{item.node.name}</div>
+                                                <div className="resume-degree-org">{item.node.place}</div>
+                                                <div className="resume-degree-time">{item.node.time}</div>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </section>{/*//education-section*/}
@@ -110,9 +107,12 @@ export default ({ data }) =>
                                 <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
                                 <div className="resume-section-content">
                                     <ul className="list-unstyled resume-lang-list">
-                                        <li className="mb-2"><span className="resume-lang-name font-weight-bold">Chinese</span> <small className="text-muted font-weight-normal">(Native)</small></li>
-                                        <li className="mb-2 align-middle"><span className="resume-lang-name font-weight-bold">English</span> <small className="text-muted font-weight-normal">(Full Professional)</small></li>
-                                        <li><span className="resume-lang-name font-weight-bold">German</span> <small className="text-muted font-weight-normal">(Limited Working)</small></li>
+                                        {data.allLangJson.edges.map((item) => (
+                                            <li className="mb-2" key={item.node.id}>
+                                                <span className="resume-lang-name font-weight-bold">{item.node.name}</span>
+                                                <small className="text-muted font-weight-normal"> ({item.node.level})</small>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </section>{/*//language-section*/}
@@ -154,6 +154,25 @@ export const query = graphql`
                     time
                     desc
                     tech
+                }
+            }
+        }
+        allEduJson {
+            edges {
+                node {
+                    id
+                    name
+                    place
+                    time
+                }
+            }
+        }
+        allLangJson {
+            edges {
+                node {
+                    id
+                    name
+                    level
                 }
             }
         }
