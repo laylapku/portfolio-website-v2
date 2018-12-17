@@ -17,6 +17,7 @@ export default ({ children }) => (
                 name
                 email
                 pic
+                year
               }
           }
         }
@@ -62,7 +63,7 @@ const Footer = function (data) {
   return (
     <footer className="footer text-light text-center py-2">
       <div>
-        <small className="copyright">Copyright &copy; 2018 by <a className="text-light" href="//sean-lee.glitch.me" target="_blank" rel="noopener noreferrer">{data.data.site.siteMetadata.name}</a></small>
+        <small className="copyright">Copyright &copy; {data.data.site.siteMetadata.year} by <a className="text-light" href="//sean-lee.glitch.me" target="_blank" rel="noopener noreferrer">{data.data.site.siteMetadata.name}</a></small>
       </div>
       <div>
         <small className="copyright">Designed by <a className="text-light" href="//www.3rdwavemedia.com" target="_blank" rel="noopener noreferrer">Xiaoying Riley</a></small>

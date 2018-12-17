@@ -3,7 +3,8 @@ module.exports = {
     "title": "Sean Lee's Portfolio",
     "name": "Sean Lee",
     "email": "seanleecoder@gmail.com",
-    "pic": "/images/profile.png"
+    "pic": "/images/profile.png",
+    "year": "2019"
   },
   plugins: [
     {
