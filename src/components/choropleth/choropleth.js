@@ -12,7 +12,8 @@ const marginBottom = 50;
 // tooltip
 const tooltip = d3.select('body').append('div')
     .attr('id', 'tooltip')
-    .style('opacity', 0);
+    .style('opacity', 0)
+    .style('display', 'none');
 
 // legend settings
 const legendRectLocationY = 50;
@@ -59,8 +60,8 @@ class Choropleth extends React.Component {
                         })
                         .transition()
                         .duration(100)
-                        .style('opacity', 0.9)
-                        //.style('left', d3.event.pageX + 'px')
+                        .style('opacity', 0.8)
+                        .style('display', 'block')
                         .style('top', d3.event.pageY + 'px')
                         
                         // get viewport width
@@ -81,7 +82,8 @@ class Choropleth extends React.Component {
                     tooltip
                         .transition()
                         .duration(200)
-                        .style('opacity', 0);
+                        .style('opacity', 0)
+                        .style('display', 'none');
                 });
 
             // draw legend

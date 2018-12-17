@@ -1675,5 +1675,5 @@ a:hover {
     box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
     border: 0px;        
     border-radius: 10px;
-    pointer-events: none;
+    pointer-events: none
 }
