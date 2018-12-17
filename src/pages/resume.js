@@ -29,7 +29,7 @@ export default ({ data }) =>
                                 <ul className="resume-social list-unstyled">
                                     <li className="mb-3"><a href="//sean-lee.glitch.me"><span className="fa-container text-center mr-2"><FontAwesomeIcon icon="home" /></span>sean-lee.glitch.me</a></li>
                                     {data.allSocialsJson.edges.map((item) => (
-                                        <li className="mb-3" key={item.node.id}><a href={item.node.url}><span className="fa-container text-center mr-2"><FontAwesomeIcon icon={['fab', item.node.icon]} /></span>{item.node.disp}</a></li>
+                                        <li className="mb-3" key={item.node.id}><a href={item.node.url}><span className="fa-container text-center mr-2"><FontAwesomeIcon icon={['fab', item.node.icon]} /></span>{item.node.url.slice(2)}</a></li>
                                     ))}
                                 </ul>
                             </div>{/*//secondary-info*/}
@@ -141,7 +141,6 @@ export const query = graphql`
                     id
                     url
                     icon
-                    disp
                 }
             }
         }
