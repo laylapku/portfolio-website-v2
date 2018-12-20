@@ -58,7 +58,6 @@ export const query = graphql`
 							id
 							url
 							icon
-							disp
 					}
 			}
 		}
