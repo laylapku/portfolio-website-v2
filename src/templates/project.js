@@ -42,7 +42,7 @@ export default ({ data }) =>
                             <p />
                             <div className="webdev-icons row mb-5 align-items-center">
                                 {data.projectsJson.techs.map((item, idx) => (
-                                    <div className="webdev-icon col-4 col-md-3 mr-0 mb-4" key={item.node.id + "_tech_" + idx}><img alt="" className="img-fluid" src={"/images/webdev-icons/" + item.toLowerCase() + ".svg"} /></div>
+                                    <div className="webdev-icon col-4 col-md-3 mr-0 mb-4" key={data.projectsJson.id + "_tech_" + idx}><img alt="" className="img-fluid" src={"/images/webdev-icons/" + item.toLowerCase() + ".svg"} /></div>
                                 ))}
                             </div>
                         </div>{/*//section-row*/}
