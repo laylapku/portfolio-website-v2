@@ -8,7 +8,7 @@ export default ({ data }) =>
         <div className="header-intro header-intro-resume theme-bg-primary text-white py-5">
             <div className="container position-relative">
                 <h2 className="page-heading mb-3">Resume</h2>
-                <a className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto" href="#"><FontAwesomeIcon className="mr-2" icon="download" />Download PDF Version</a>
+                <a className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto" href="/"><FontAwesomeIcon className="mr-2" icon="download" />Download PDF Version</a>
             </div>{/*//container*/}
         </div>{/*//header-intro*/}
         <article className="resume-wrapper text-center position-relative">

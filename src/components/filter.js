@@ -2,6 +2,8 @@ import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby";
 import { Button, ButtonGroup } from 'reactstrap';
 
+const TECH_LIST = ['Angular', 'React', 'Python', 'D3', 'PHP'];
+
 export default () =>
     <StaticQuery
         query={graphql`
@@ -101,7 +103,7 @@ class FilterBar extends React.Component {
             <div className="text-center">
                 <ButtonGroup className="mb-5">
                     <Button color="light" onClick={() => this.onRadioBtnClick("")} active={this.state.rSelected === ""}>All</Button>
-                    {['Angular', 'React', 'Python', 'Ruby', 'PHP'].map((item) => (
+                    {TECH_LIST.map((item) => (
                         <Button color="light" onClick={() => this.onRadioBtnClick(item)} active={this.state.rSelected === item} key={"filter-"+item}>{item}</Button>
                     ))}
                 </ButtonGroup>

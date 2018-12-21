@@ -33,7 +33,7 @@ export default ({ data }) =>
                             <h3 className="sidebar-title mb-4">Project Info</h3>
                             <ul className="list-unstyled pl-2">
                                 <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="building" /><strong>{data.projectsJson.for.split(' ')[0]}</strong> {data.projectsJson.for.split(' ')[1]}</li>
-                                <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="external-link-alt" /><strong>Site Link:</strong> <a href={data.projectsJson.url}>{data.projectsJson.url}</a></li>
+                                <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="external-link-alt" /><strong>Site Link:</strong> <a href={data.projectsJson.url}>{data.projectsJson.url.slice(2)}</a></li>
                                 <li><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="wrench" /><strong>Type:</strong> {data.projectsJson.type}</li>
                             </ul>
                         </div>

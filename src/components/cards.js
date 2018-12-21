@@ -12,11 +12,12 @@ export default () => (
                         name
                         for
                         thumb
-                        logo
                         logo_inv
-                        url
                         desc
                         techs
+                        fields {
+                            slug
+                        }
                     }
                 }
             }
@@ -35,13 +36,13 @@ export default () => (
                                         <div className="card-img-overlay overlay-logo text-center">
                                             <div className="project-logo"><img alt="" className="img-fluid w-50" src={item.node.logo_inv} /></div>
                                         </div>
-                                        <Link className="card-img-overlay overlay-content text-left p-lg-4" to={item.node.url}>
+                                        <Link className="card-img-overlay overlay-content text-left p-lg-4" to={item.node.fields.slug}>
                                             <h5 className="card-title font-weight-bold">{item.node.for}</h5>
                                             <p className="card-text">{item.node.desc}</p>
                                         </Link>
                                     </div>
                                     <div className="card-body pb-0">
-                                        <h4 className="card-title text-truncate text-center mb-0"><Link to={item.node.url}>{item.node.name}</Link></h4>
+                                        <h4 className="card-title text-truncate text-center mb-0"><Link to={item.node.fields.slug}>{item.node.name}</Link></h4>
                                     </div>
                                     <div className="card-footer border-0 text-center bg-white pb-4">
                                         <ul className="list-inline mb-0 mx-auto">
