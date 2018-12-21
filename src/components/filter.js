@@ -48,7 +48,7 @@ class ProjectCards extends React.Component {
                         <div className="card-img-container position-relative">
                             <img className="card-img-top rounded-0" src={item.node.thumb} alt="" />
                             <div className="card-img-overlay overlay-logo text-center">
-                                <div className="project-logo"><img alt="" className="img-fluid w-50" src={item.node.logo_inv} /></div>
+                                <div className="project-logo"><img alt="" className="img-fluid" src={item.node.logo_inv} /></div>
                             </div>
                             <Link className="card-img-overlay overlay-content text-left p-lg-4" to={item.node.fields.slug}>
                                 <h5 className="card-title font-weight-bold">{item.node.for}</h5>
