@@ -24,6 +24,7 @@ export default ({ data }) =>
                         <div className="alert alert-dark">
                             This template <strong>includes the original Sketch source file</strong> for making the browser window in the carousel. The screenshots were taken from the <a href="https://www.uxfordev.com/" target="_blank" rel="noopener noreferrer">AppKit template</a>.
 			            </div>
+                        <div dangerouslySetInnerHTML={{ __html: data.projectsJson.html }} />
                     </div>{/*//section-row*/}
                 </section>
                 <aside className="project-sidebar col-12 col-lg-4 pl-lg-5">
@@ -33,28 +34,16 @@ export default ({ data }) =>
                             <ul className="list-unstyled pl-2">
                                 <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="building" /><strong>{data.projectsJson.for.split(' ')[0]}</strong> {data.projectsJson.for.split(' ')[1]}</li>
                                 <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="external-link-alt" /><strong>Site Link:</strong> <a href={data.projectsJson.url}>{data.projectsJson.url}</a></li>
-                                <li><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="wrench" /><strong>Type:</strong> Frontend &amp; Backend</li>
+                                <li><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="wrench" /><strong>Type:</strong> {data.projectsJson.type}</li>
                             </ul>
                         </div>
                         <div className="sidebar-row">
                             <h3 className="sidebar-title mb-3">Technologies Used</h3>
                             <p />
                             <div className="webdev-icons row mb-5 align-items-center">
-
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/react.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/nodejs.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/javascript.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/jquery-alt.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/html5.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/css3.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/sass.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/python.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/php.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/mysql-alt.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/mongodb-alt.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/webpack.svg" /></div>
-                                <div className="webdev-icon col-4 col-md-3 mr-0 mb-4"><img alt="" className="img-fluid" src="/images/webdev-icons/bootstrap4.svg" /></div>
-
+                                {data.projectsJson.techs.map((item, idx) => (
+                                    <div className="webdev-icon col-4 col-md-3 mr-0 mb-4" key={item.node.id + "_tech_" + idx}><img alt="" className="img-fluid" src={"/images/webdev-icons/" + item.toLowerCase() + ".svg"} /></div>
+                                ))}
                             </div>
                         </div>{/*//section-row*/}
                     </div>{/*//project-sidebar-inner*/}
@@ -70,12 +59,12 @@ export const query = graphql`
         projectsJson(fields: { slug: { eq: $slug } }) {
             name
             for
-            thumb
-            logo
             logo_inv
             url
             desc
             techs
+            type
+            html
         }
     }
 `

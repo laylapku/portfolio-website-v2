@@ -45,7 +45,7 @@ export default () => (
                                     </div>
                                     <div className="card-footer border-0 text-center bg-white pb-4">
                                         <ul className="list-inline mb-0 mx-auto">
-                                            {item.node.techs.split(" ").map((ele, idx) => (
+                                            {item.node.techs.map((ele, idx) => (
                                                 <li className="list-inline-item" key={item.node.id + "_tech_" + idx}><span className="badge badge-secondary badge-pill">{ele}</span></li>
                                             ))}
                                         </ul>

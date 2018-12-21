@@ -59,21 +59,6 @@ export const query = graphql`
                 }
             }
         }
-        allProjectsJson(limit: 3) {
-            edges {
-                node {
-                    id
-                    name
-                    for
-                    thumb
-                    logo
-                    logo_inv
-                    url
-                    desc
-                    techs
-                }
-            }
-        }
         site {
             siteMetadata {
                 name
