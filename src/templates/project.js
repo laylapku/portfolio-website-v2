@@ -9,7 +9,7 @@ export default ({ data }) =>
         <div className="header-intro theme-bg-primary text-white py-5">
             <div className="container position-relative">
                 <h2 className="page-heading mb-2">{data.projectsJson.name}</h2>
-                <div className="page-heading-tagline">Project tagline goes here lorem ipsum dolor sit amet.</div>
+                <div className="page-heading-tagline">{data.projectsJson.tagline}</div>
                 <div className="page-heading-logo font-weight-bold position-absolute mt-4 mt-md-0"><img alt="" className="client-logo" src={data.projectsJson.logo_inv} /></div>
             </div>{/*//container*/}
         </div>{/*//header-intro*/}
@@ -58,6 +58,7 @@ export const query = graphql`
     query($slug: String!) {
         projectsJson(fields: { slug: { eq: $slug } }) {
             name
+            tagline
             for
             logo_inv
             url
