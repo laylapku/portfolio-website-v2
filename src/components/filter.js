@@ -15,7 +15,6 @@ export default () =>
                             name
                             for
                             thumb
-                            logo
                             logo_inv
                             desc
                             techs
