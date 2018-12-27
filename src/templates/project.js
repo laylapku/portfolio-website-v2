@@ -24,7 +24,8 @@ export default ({ data }) =>
                                 {data.projectsJson.story.map((item, idx) => (
                                     <li key={data.projectsJson.story + "_story_" + idx}>{item}</li>
                                 ))}
-                            </ol>                    
+                            </ol>
+                            {(data.projectsJson.pic) && <img className="img-fluid" src="/images/projects/anon-message-board-main.png" alt="" />}
                         </div>
                     }
                     {(data.projectsJson.html) &&
@@ -48,7 +49,7 @@ export default ({ data }) =>
                             <h3 className="sidebar-title mb-3">Technologies Used</h3>
                             <p />
                             <div className="webdev-icons row mb-5 align-items-center">
-                                {data.projectsJson.techs.map((item, idx) => (
+                                {data.projectsJson.tech.map((item, idx) => (
                                     <div className="webdev-icon col-4 col-md-3 mr-0 mb-4" key={data.projectsJson.id + "_tech_" + idx}><img alt={item} className="img-fluid" src={"/images/webdev-icons/" + item.toLowerCase() + ".svg"} /></div>
                                 ))}
                             </div>
@@ -69,9 +70,9 @@ export const query = graphql`
             for
             logo_inv
             url
-            desc
             story
-            techs
+            pic
+            tech
             type
             html
         }
