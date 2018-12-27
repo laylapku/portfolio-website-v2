@@ -2,6 +2,10 @@
     {
         "url": "//github.com/ilovepku",
         "icon": "github-alt"
+    },    
+    {
+        "url": "//codepen.io/ilovepku",
+        "icon": "codepen"
     },
     {
         "url": "//glitch.com/@ilovepku",
@@ -10,10 +14,6 @@
     {
         "url": "//freecodecamp.org/ilovepku",
         "icon": "free-code-camp"
-    },
-    {
-        "url": "//codepen.io/ilovepku",
-        "icon": "codepen"
     },
     {
         "url": "//stackoverflow.com/users/10644430/sean-lee",

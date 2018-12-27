@@ -10,10 +10,10 @@ export default () => (
                     node {
                         id
                         name
+                        tagline
                         for
                         thumb
                         logo_inv
-                        desc
                         techs
                         fields {
                             slug
@@ -38,7 +38,7 @@ export default () => (
                                         </div>
                                         <Link className="card-img-overlay overlay-content text-left p-lg-4" to={item.node.fields.slug}>
                                             <h5 className="card-title font-weight-bold">{item.node.for}</h5>
-                                            <p className="card-text">{item.node.desc}</p>
+                                            <p className="card-text">{item.node.tagline}</p>
                                         </Link>
                                     </div>
                                     <div className="card-body pb-0">

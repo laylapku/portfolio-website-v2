@@ -17,15 +17,22 @@ export default ({ data }) =>
         <div className="project-wrapper container py-5">
             <div className="row">
                 <section className="col-12 col-lg-8">
-                    <div className="section-row">
-                        <h3 className="section-title">Project Background</h3>
-                        <p>{data.projectsJson.desc}</p>
-                        <div className="mb-5"><a className="btn btn-primary" href={data.projectsJson.url} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="mr-2" icon="external-link-alt" /> View Live Site</a></div>
-                        <div className="alert alert-dark">
-                            This template <strong>includes the original Sketch source file</strong> for making the browser window in the carousel. The screenshots were taken from the <a href="https://www.uxfordev.com/" target="_blank" rel="noopener noreferrer">AppKit template</a>.
-			            </div>
-                        <div dangerouslySetInnerHTML={{ __html: data.projectsJson.html }} />
-                    </div>{/*//section-row*/}
+                    {(data.projectsJson.story) &&
+                        <div className="section-row">
+                            <h3 className="section-title">User Stories</h3>
+                            <ol>
+                                {data.projectsJson.story.map((item, idx) => (
+                                    <li key={data.projectsJson.story + "_story_" + idx}>{item}</li>
+                                ))}
+                            </ol>                    
+                        </div>
+                    }
+                    {(data.projectsJson.html) &&
+                        <div className="section-row">
+                            <h3 className="section-title">Embedded Project</h3>
+                            <div dangerouslySetInnerHTML={{ __html: data.projectsJson.html }} />
+                        </div>
+                    }
                 </section>
                 <aside className="project-sidebar col-12 col-lg-4 pl-lg-5">
                     <div className="project-sidebar-inner bg-white p-4">
@@ -33,7 +40,7 @@ export default ({ data }) =>
                             <h3 className="sidebar-title mb-4">Project Info</h3>
                             <ul className="list-unstyled pl-2">
                                 <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="building" /><strong>{data.projectsJson.for.split(' ')[0]}</strong> {data.projectsJson.for.split(' ')[1]}</li>
-                                <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="external-link-alt" /><strong>Site Link:</strong> <a href={data.projectsJson.url}>{data.projectsJson.url.slice(2)}</a></li>
+                                <li className="mb-4"><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="external-link-alt" /><strong>Link:</strong> <a href={data.projectsJson.url}>{data.projectsJson.url.slice(2)}</a></li>
                                 <li><FontAwesomeIcon className="mr-3 text-primary" transform="grow-6 down-2" icon="wrench" /><strong>Type:</strong> {data.projectsJson.type}</li>
                             </ul>
                         </div>
@@ -42,7 +49,7 @@ export default ({ data }) =>
                             <p />
                             <div className="webdev-icons row mb-5 align-items-center">
                                 {data.projectsJson.techs.map((item, idx) => (
-                                    <div className="webdev-icon col-4 col-md-3 mr-0 mb-4" key={data.projectsJson.id + "_tech_" + idx}><img alt="" className="img-fluid" src={"/images/webdev-icons/" + item.toLowerCase() + ".svg"} /></div>
+                                    <div className="webdev-icon col-4 col-md-3 mr-0 mb-4" key={data.projectsJson.id + "_tech_" + idx}><img alt={item} className="img-fluid" src={"/images/webdev-icons/" + item.toLowerCase() + ".svg"} /></div>
                                 ))}
                             </div>
                         </div>{/*//section-row*/}
@@ -63,6 +70,7 @@ export const query = graphql`
             logo_inv
             url
             desc
+            story
             techs
             type
             html
