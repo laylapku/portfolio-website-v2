@@ -10,13 +10,15 @@ export default ({ data }) => (
       <div className="container position-relative">
         <h2 className="page-heading mb-2">{data.projectsJson.name}</h2>
         <div className="page-heading-tagline">{data.projectsJson.tagline}</div>
-        <div className="page-heading-logo font-weight-bold position-absolute mt-4 mt-md-0">
-          <img
-            alt=""
-            className="client-logo"
-            src={data.projectsJson.logo_inv}
-          />
-        </div>
+        {data.projectsJson.logo_inv && (
+          <div className="page-heading-logo font-weight-bold position-absolute mt-4 mt-md-0">
+            <img
+              alt=""
+              className="client-logo"
+              src={data.projectsJson.logo_inv}
+            />
+          </div>
+        )}
       </div>
       {/*//container*/}
     </div>
@@ -25,6 +27,32 @@ export default ({ data }) => (
     <div className="project-wrapper container py-5">
       <div className="row">
         <section className="col-12 col-lg-8">
+          {data.projectsJson.desc && (
+            <div className="section-row">
+              {data.projectsJson.pic && (
+                <div className="mb-5">
+                  <img
+                    className="img-fluid"
+                    src={data.projectsJson.pic}
+                    alt=""
+                  />
+                </div>
+              )}
+              <h3 className="section-title">Project Description</h3>
+              <p>{data.projectsJson.desc}</p>
+              <div className="mb-5">
+                <a
+                  className="btn btn-primary"
+                  href={data.projectsJson.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon className="mr-2" icon="external-link-alt" />{" "}
+                  View Live Site
+                </a>
+              </div>
+            </div>
+          )}
           {data.projectsJson.html && (
             <div className="section-row">
               <h3 className="section-title">Embedded Project</h3>
@@ -64,8 +92,8 @@ export default ({ data }) => (
                     transform="grow-6 down-2"
                     icon="building"
                   />
-                  <strong>{data.projectsJson.for.split(" ")[0]}</strong>{" "}
-                  {data.projectsJson.for.split(" ")[1]}
+                  <strong>{data.projectsJson.for.split(": ")[0] + ":"}</strong>{" "}
+                  {data.projectsJson.for.split(": ")[1]}
                 </li>
                 <li className="mb-4">
                   <FontAwesomeIcon
@@ -129,6 +157,7 @@ export const query = graphql`
       for
       logo_inv
       url
+      desc
       story
       pic
       tech

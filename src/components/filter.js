@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby";
 import { Button, ButtonGroup } from 'reactstrap';
 
-const TECH_LIST = ['React', 'NodeJS', 'D3', 'JavaScript', 'MongoDB', 'Python', 'PHP'];
+const TECH_LIST = ['React', 'NodeJS', 'D3', 'JavaScript', 'MongoDB', 'MySQL', 'Wordpress', 'Python'];
 
 export default () =>
     <StaticQuery
