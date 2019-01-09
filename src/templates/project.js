@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { UncontrolledCarousel } from 'reactstrap';
 import Layout from "../components/layout";
 import ProjectCards from "../components/cards";
 
@@ -48,10 +49,13 @@ export default ({ data }) => (
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon className="mr-2" icon="external-link-alt" />{" "}
-                  View Live Site
+                  Check Out This Project
                 </a>
               </div>
             </div>
+          )}
+          {data.projectsJson.carousel && (
+            <UncontrolledCarousel items={data.projectsJson.carousel} />
           )}
           {data.projectsJson.html && (
             <div className="section-row">
@@ -160,6 +164,12 @@ export const query = graphql`
       desc
       story
       pic
+      carousel {
+        src
+        altText
+        caption
+        header
+      }
       tech
       type
       html
