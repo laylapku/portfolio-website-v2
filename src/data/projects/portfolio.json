@@ -1,0 +1,10 @@
+{
+    "name": "Portfolio Website",
+    "tagline": "My own coder portfolio website",
+    "for": "Client: Myself",
+    "thumb": "/images/projects/portfolio-thumb.png",
+    "url": "/",
+    "desc": "test",
+    "tech": ["Gatsby", "React", "GraphQL", "JavaScript", "CSS", "Webpack"],
+    "type": "Frontend"
+}
