@@ -5,6 +5,6 @@
     "thumb": "/images/projects/portfolio-thumb.png",
     "url": "/",
     "desc": "test",
-    "tech": ["Gatsby", "React", "GraphQL", "JavaScript", "CSS", "Webpack"],
+    "tech": ["Gatsby", "React", "GraphQL", "JavaScript", "Bootstrap", "CSS", "Webpack"],
     "type": "Frontend"
 }
