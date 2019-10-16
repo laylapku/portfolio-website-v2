@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { UncontrolledCarousel } from 'reactstrap';
+//import { UncontrolledCarousel } from 'reactstrap';
 import Layout from "../components/layout";
 import ProjectCards from "../components/cards";
 
@@ -54,9 +54,9 @@ export default ({ data }) => (
               </div>
             </div>
           )}
-          {data.projectsJson.carousel && (
+          {/*  {data.projectsJson.carousel && (
             <UncontrolledCarousel items={data.projectsJson.carousel} />
-          )}
+          )} */}
           {data.projectsJson.html && (
             <div className="section-row">
               <h3 className="section-title">Embedded Project</h3>
@@ -148,8 +148,6 @@ export default ({ data }) => (
       {/*//row*/}
     </div>
     {/*//container*/}
-
-    <ProjectCards />
   </Layout>
 );
 
@@ -164,15 +162,17 @@ export const query = graphql`
       desc
       story
       pic
-      carousel {
-        src
-        altText
-        caption
-        header
-      }
+
       tech
       type
       html
     }
   }
 `;
+
+/* carousel {
+  src
+  altText
+  caption
+  header
+} */

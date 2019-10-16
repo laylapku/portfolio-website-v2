@@ -1,35 +1,26 @@
 [
-    {
-        "name": "Frontend",
-        "icon": "/images/frontend-icon.svg",
-        "value": [
-            "React/Redux/Angular",
-            "Javascript",
-            "Node.js",
-            "Webpack/Gulp/Grunt",
-            "HTML/CSS/SASS/LESS"
-        ]
-    },
-    {
-        "name": "Backend",
-        "icon": "/images/backend-icon.svg",
-        "value": [
-            "Python/Django",
-            "Ruby/Rails",
-            "PHP",
-            "PostgresSQL/MySQL",
-            "MongoDB"
-        ]
-    },
-    {
-        "name": "Others",
-        "icon": "/images/other-skills-icon.svg",
-        "value": [
-            "DevOps",
-            "Unit Testing",
-            "UX/Wireframing",
-            "Sketch/Balsamiq",
-            "Wordpress/Shopify"
-        ]
-    }
+  {
+    "name": "Languages & Runtimes",
+    "icon": "/images/frontend-icon.svg",
+    "value": ["Javascript", "Node.js", "GraphQL", "HTML", "CSS", "SASS", "LESS"]
+  },
+  {
+    "name": "Frameworks",
+    "icon": "/images/backend-icon.svg",
+    "value": ["React", "Redux", "Material-UI", "Bootstrap", "Reactstrap"]
+  },
+  {
+    "name": "Dev Tools",
+    "icon": "/images/other-skills-icon.svg",
+    "value": [
+      "Webpack",
+      "Github",
+      "GitLab",
+      "Firebase",
+      "Gatsby",
+      "Visual Studio",
+      "Glitch",
+      "Codepen"
+    ]
+  }
 ]

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    "title": "Sean Lee's Portfolio",
-    "name": "Sean Lee",
-    "email": "seanleecoder@gmail.com",
+    "title": "Layla Ouyang's Portfolio",
+    "name": "Layla Ouyang",
+    "email": "ouyangleilei515@gmail.com",
     "pic": "/images/profile.png",
     "year": "2019"
   },
