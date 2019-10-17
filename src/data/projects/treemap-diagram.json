@@ -1,13 +1,27 @@
 {
-    "name": "Treemap Diagram",
-    "tagline": "A data visualization project, part of Free Code Camp's curriculum",
-    "for": "Practice: freeCodeCamp",
-    "thumb": "/images/projects/d3-thumb.png",
-    "logo_inv": "/images/logos/freecodecamp-inverse.svg",
-    "url": "//codepen.io/ilovepku/full/VqWPMY",
-    "story": ["My tree map should have a title with a corresponding id=\"title\".", "My tree map should have a description with a corresponding id=\"description\".", "My tree map should have rect elements with a corresponding class=\"tile\" that represent the data.", "There should be at least 2 different fill colors used for the tiles.", "Each tile should have the properties data-name, data-category, and data-value containing their corresponding name, category, and value.", "The area of each tile should correspond to the data-value amount: tiles with a larger data-value should have a bigger area.", "My tree map should have a legend with corresponding id=\"legend\".", "My legend should have rect elements with a corresponding class=\"legend-item\".", "The rect elements in the legend should use at least 2 different fill colors.", "I can mouse over an area and see a tooltip with a corresponding id=\"tooltip\" which displays more information about the area.", "My tooltip should have a data-value property that corresponds to the data-value of the active area."],
-    "pic": "",
-    "tech": ["D3", "JavaScript", "CSS"],
-    "type": "Dataviz",
-    "html": "<iframe height='450' scrolling='no' title='FCC: Dataviz - Treemap Diagram' src='//codepen.io/ilovepku/embed/VqWPMY/?height=265&theme-id=dark&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/VqWPMY/'>FCC: Dataviz - Treemap Diagram</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
+  "name": "Treemap Diagram",
+  "tagline": "A data visualization project, part of Free Code Camp's curriculum",
+  "for": "Practice: freeCodeCamp",
+  "thumb": "/images/projects/d3-thumb.png",
+  "logo_inv": "/images/logos/freecodecamp-inverse.svg",
+  "tech": ["D3", "JavaScript", "CSS"],
+  "ctg": ["Data-viz", "Frontend"],
+
+  "url": "//codepen.io/laylapku/full/Zmoadj",
+  "story": [
+    "My tree map should have a title with a corresponding id=\"title\".",
+    "My tree map should have a description with a corresponding id=\"description\".",
+    "My tree map should have rect elements with a corresponding class=\"tile\" that represent the data.",
+    "There should be at least 2 different fill colors used for the tiles.",
+    "Each tile should have the properties data-name, data-category, and data-value containing their corresponding name, category, and value.",
+    "The area of each tile should correspond to the data-value amount: tiles with a larger data-value should have a bigger area.",
+    "My tree map should have a legend with corresponding id=\"legend\".",
+    "My legend should have rect elements with a corresponding class=\"legend-item\".",
+    "The rect elements in the legend should use at least 2 different fill colors.",
+    "I can mouse over an area and see a tooltip with a corresponding id=\"tooltip\" which displays more information about the area.",
+    "My tooltip should have a data-value property that corresponds to the data-value of the active area."
+  ],
+  "pic": "",
+  "type": "Dataviz",
+  "html": "<iframe height='450' scrolling='no' title='FCC: Dataviz - Treemap Diagram' src='//codepen.io/ilovepku/embed/VqWPMY/?height=265&theme-id=dark&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/VqWPMY/'>FCC: Dataviz - Treemap Diagram</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
 }

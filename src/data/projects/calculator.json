@@ -1,13 +1,31 @@
 {
-    "name": "Calculator",
-    "tagline": "A frontend project, part of Free Code Camp's curriculum",
-    "for": "Practice: freeCodeCamp",
-    "thumb": "/images/projects/calculator-thumb.jpg",
-    "logo_inv": "/images/logos/freecodecamp-inverse.svg",
-    "url": "//codepen.io/ilovepku/full/oJZVdL",
-    "story": ["My calculator should contain a clickable element containing an = (equal sign) with a corresponding id=\"equals\".", "My calculator should contain 10 clickable elements containing one number each from 0-9, with the following corresponding IDs: id=\"zero\", id=\"one\", id=\"two\", id=\"three\", id=\"four\", id=\"five\", id=\"six\", id=\"seven\", id=\"eight\", and id=\"nine\".", "My calculator should contain 4 clickable elements each containing one of the 4 primary mathematical operators with the following corresponding IDs: id=\"add\", id=\"subtract\", id=\"multiply\", id=\"divide\".", "My calculator should contain a clickable element containing a . (decimal point) symbol with a corresponding id=\"decimal\".", "My calculator should contain a clickable element with an id=\"clear\".", "My calculator should contain an element to display values with a corresponding id=\"display\".", "At any time, pressing the clear button clears the input and output values, and returns the calculator to its initialized state; 0 should be shown in the element with the id of display.", "As I input numbers, I should be able to see my input in the element with the id of display.", "In any order, I should be able to add, subtract, multiply and divide a chain of numbers of any length, and when I hit =, the correct result should be shown in the element with the id of display.", "When inputting numbers, my calculator should not allow a number to begin with multiple zeros.", "When the decimal element is clicked, a . should append to the currently displayed value; two . in one number should not be accepted.", "I should be able to perform any operation (+, -, *, /) on numbers containing decimal points.", "If 2 or more operators are entered consecutively, the operation performed should be the last operator entered.", "Pressing an operator immediately following = should start a new calculation that operates on the result of the previous evaluation.", "My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places)."],
-    "pic": "",
-    "tech": ["React", "Bootstrap", "JavaScript", "CSS"],
-    "type": "Frontend",
-    "html": "<iframe height='350' scrolling='no' title='FCC: Frontend - Calculator' src='//codepen.io/ilovepku/embed/oJZVdL/?height=265&theme-id=0&default-tab=js,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/oJZVdL/'>FCC: Frontend - Calculator</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
+  "name": "Calculator",
+  "tagline": "A frontend project, part of Free Code Camp's curriculum",
+  "for": "Practice: freeCodeCamp",
+  "thumb": "/images/projects/calculator-thumb.jpg",
+  "logo_inv": "/images/logos/freecodecamp-inverse.svg",
+  "tech": ["React", "JavaScript", "CSS"],
+  "ctg": ["React", "Frontend"],
+
+  "url": "//calculator-4.glitch.me/",
+  "story": [
+    "My calculator should contain a clickable element containing an = (equal sign) with a corresponding id=\"equals\".",
+    "My calculator should contain 10 clickable elements containing one number each from 0-9, with the following corresponding IDs: id=\"zero\", id=\"one\", id=\"two\", id=\"three\", id=\"four\", id=\"five\", id=\"six\", id=\"seven\", id=\"eight\", and id=\"nine\".",
+    "My calculator should contain 4 clickable elements each containing one of the 4 primary mathematical operators with the following corresponding IDs: id=\"add\", id=\"subtract\", id=\"multiply\", id=\"divide\".",
+    "My calculator should contain a clickable element containing a . (decimal point) symbol with a corresponding id=\"decimal\".",
+    "My calculator should contain a clickable element with an id=\"clear\".",
+    "My calculator should contain an element to display values with a corresponding id=\"display\".",
+    "At any time, pressing the clear button clears the input and output values, and returns the calculator to its initialized state; 0 should be shown in the element with the id of display.",
+    "As I input numbers, I should be able to see my input in the element with the id of display.",
+    "In any order, I should be able to add, subtract, multiply and divide a chain of numbers of any length, and when I hit =, the correct result should be shown in the element with the id of display.",
+    "When inputting numbers, my calculator should not allow a number to begin with multiple zeros.",
+    "When the decimal element is clicked, a . should append to the currently displayed value; two . in one number should not be accepted.",
+    "I should be able to perform any operation (+, -, *, /) on numbers containing decimal points.",
+    "If 2 or more operators are entered consecutively, the operation performed should be the last operator entered.",
+    "Pressing an operator immediately following = should start a new calculation that operates on the result of the previous evaluation.",
+    "My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places)."
+  ],
+  "pic": "",
+  "type": "Frontend",
+  "html": "<iframe height='350' scrolling='no' title='FCC: Frontend - Calculator' src='//codepen.io/ilovepku/embed/oJZVdL/?height=265&theme-id=0&default-tab=js,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/oJZVdL/'>FCC: Frontend - Calculator</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
 }

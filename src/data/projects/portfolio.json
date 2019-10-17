@@ -1,10 +1,22 @@
 {
-    "name": "Portfolio Website",
-    "tagline": "My own coder portfolio website",
-    "for": "Client: Myself",
-    "thumb": "/images/projects/portfolio-thumb.png",
-    "url": "/",
-    "desc": "test",
-    "tech": ["Gatsby", "React", "GraphQL", "JavaScript", "Bootstrap", "CSS", "Webpack"],
-    "type": "Frontend"
+  "name": "Portfolio Website",
+  "tagline": "My own developer portfolio website",
+  "for": "Client: Myself",
+  "thumb": "/images/projects/portfolio-thumb.png",
+  "logo_inv": "",
+  "tech": [
+    "Gatsby",
+    "React",
+    "GraphQL",
+    "JavaScript",
+    "Bootstrap",
+    "CSS",
+    "Webpack"
+  ],
+  "ctg": ["React", "Production", "Frontend", "Backend"],
+
+  "url": "/",
+  "desc": "test",
+  "pic": "",
+  "type": "Frontend"
 }

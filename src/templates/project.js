@@ -2,8 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { UncontrolledCarousel } from 'reactstrap';
-import Layout from "../components/layout";
-import ProjectCards from "../components/cards";
+import Layout from "../components/Layout";
 
 export default ({ data }) => (
   <Layout>
@@ -28,7 +27,7 @@ export default ({ data }) => (
     <div className="project-wrapper container py-5">
       <div className="row">
         <section className="col-12 col-lg-8">
-          {data.projectsJson.desc && (
+         {/*  {data.projectsJson.desc && (
             <div className="section-row">
               {data.projectsJson.pic && (
                 <div className="mb-5">
@@ -53,7 +52,7 @@ export default ({ data }) => (
                 </a>
               </div>
             </div>
-          )}
+          )} */}
           {/*  {data.projectsJson.carousel && (
             <UncontrolledCarousel items={data.projectsJson.carousel} />
           )} */}
@@ -65,6 +64,7 @@ export default ({ data }) => (
               />
             </div>
           )}
+          {/*//embedded-view*/}
           {data.projectsJson.story && (
             <div className="section-row">
               <h3 className="section-title">User Stories</h3>
@@ -75,13 +75,14 @@ export default ({ data }) => (
                   </li>
                 ))}
               </ol>
-              {data.projectsJson.pic && (
+              {/*//project-description*/}
+              {/* {data.projectsJson.pic && (
                 <img
                   className="img-fluid"
                   src="/images/projects/anon-message-board-main.png"
                   alt=""
                 />
-              )}
+              )} */}
             </div>
           )}
         </section>
@@ -110,14 +111,14 @@ export default ({ data }) => (
                     {data.projectsJson.url.slice(2)}
                   </a>
                 </li>
-                <li>
+               {/*  <li>
                   <FontAwesomeIcon
                     className="mr-3 text-primary"
                     transform="grow-6 down-2"
                     icon="wrench"
                   />
                   <strong>Type:</strong> {data.projectsJson.type}
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="sidebar-row">
@@ -158,13 +159,11 @@ export const query = graphql`
       tagline
       for
       logo_inv
+      tech
       url
       desc
       story
       pic
-
-      tech
-      type
       html
     }
   }

@@ -4,7 +4,10 @@
   "for": "Practice: freeCodeCamp",
   "thumb": "/images/projects/markdown-previewer-thumb.jpg",
   "logo_inv": "/images/logos/freecodecamp-inverse.svg",
-  "url": "//codepen.io/ilovepku/full/QzpKNX",
+  "tech": ["React", "JavaScript", "CSS"],
+  "ctg": ["React", "Frontend"],
+
+  "url": "//markdown-previewer-2.glitch.me/",
   "story": [
     "I can see a textarea element with a corresponding id=\"editor\".",
     "I can see an element with a corresponding id=\"preview\".",
@@ -16,7 +19,6 @@
     "My markdown previewer interprets carriage returns and renders them as br (line break) elements."
   ],
   "pic": "",
-  "tech": ["React", "Bootstrap", "JavaScript"],
-  "type": ["React"],
+  "type": "React",
   "html": "<iframe height='1000' scrolling='no' title='FCC: Front End - Markdown Previewer' src='//codepen.io/ilovepku/embed/QzpKNX/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/QzpKNX/'>FCC: Front End - Markdown Previewer</a> by Layla Ouyange (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
 }

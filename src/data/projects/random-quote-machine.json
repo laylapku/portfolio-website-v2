@@ -1,13 +1,27 @@
 {
-    "name": "Random Quote Machine",
-    "tagline": "A frontend project, part of Free Code Camp's curriculum",
-    "for": "Practice: freeCodeCamp",
-    "thumb": "/images/projects/random-quote-machine-thumb.jpg",
-    "logo_inv": "/images/logos/freecodecamp-inverse.svg",
-    "url": "//codepen.io/ilovepku/full/aPpadW",
-    "story": ["I can see a wrapper element with a corresponding id=\"quote-box\".", "Within #quote-box, I can see an element with a corresponding id=\"text\".", "Within #quote-box, I can see an element with a corresponding id=\"author\".", "Within #quote-box, I can see a clickable element with a corresponding id=\"new-quote\".", "Within #quote-box, I can see a clickable element with a corresponding id=\"tweet-quote\".", "On first load, my quote machine displays a random quote in the element with id=\"text\".", "On first load, my quote machine displays the random quote's author in the element with id=\"author\".", "When the #new-quote button is clicked, my quote machine should fetch a new quote and display it in the #text element.", "My quote machine should fetch the new quote's author when the #new-quote button is clicked and display it in the #author element.", "I can tweet the current quote by clicking on the #tweet-quote a element. This a element should include the \"twitter.com/intent/tweet\" path in it's href attribute to tweet the current quote.", "The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized."],
-    "pic": "",
-    "tech": ["React", "Bootstrap", "JavaScript"],
-    "type": "Frontend",
-    "html": "<iframe height='250' scrolling='no' title='FCC: Front End - Random Quote Machine' src='//codepen.io/ilovepku/embed/aPpadW/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/aPpadW/'>FCC: Front End - Random Quote Machine</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
+  "name": "Random Quote Machine",
+  "tagline": "A frontend project, part of Free Code Camp's curriculum",
+  "for": "Practice: freeCodeCamp",
+  "thumb": "/images/projects/random-quote-machine-thumb.jpg",
+  "logo_inv": "/images/logos/freecodecamp-inverse.svg",
+  "tech": ["React", "JavaScript", "CSS"],
+  "ctg": ["React", "Frontend"],
+
+  "url": "//quote-machine-1.glitch.me/",
+  "story": [
+    "I can see a wrapper element with a corresponding id=\"quote-box\".",
+    "Within #quote-box, I can see an element with a corresponding id=\"text\".",
+    "Within #quote-box, I can see an element with a corresponding id=\"author\".",
+    "Within #quote-box, I can see a clickable element with a corresponding id=\"new-quote\".",
+    "Within #quote-box, I can see a clickable element with a corresponding id=\"tweet-quote\".",
+    "On first load, my quote machine displays a random quote in the element with id=\"text\".",
+    "On first load, my quote machine displays the random quote's author in the element with id=\"author\".",
+    "When the #new-quote button is clicked, my quote machine should fetch a new quote and display it in the #text element.",
+    "My quote machine should fetch the new quote's author when the #new-quote button is clicked and display it in the #author element.",
+    "I can tweet the current quote by clicking on the #tweet-quote a element. This a element should include the \"twitter.com/intent/tweet\" path in it's href attribute to tweet the current quote.",
+    "The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized."
+  ],
+  "pic": "",
+  "type": "Frontend",
+  "html": "<iframe height='250' scrolling='no' title='FCC: Front End - Random Quote Machine' src='//codepen.io/ilovepku/embed/aPpadW/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/aPpadW/'>FCC: Front End - Random Quote Machine</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
 }

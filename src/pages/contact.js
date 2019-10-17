@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 export default ({ data }) => (
   <Layout>

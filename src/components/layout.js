@@ -1,6 +1,5 @@
 import React from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
-import Header from "./header";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faGithubAlt,
@@ -28,6 +27,7 @@ import {
 import { addBackToTop } from "vanilla-back-to-top";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
+import Navigation from "./Navigation";
 
 export default ({ children }) => (
   <StaticQuery
@@ -45,8 +45,8 @@ export default ({ children }) => (
     `}
     render={data => (
       <div>
-        <Scripts />
-        <Header />
+        <Icons />
+        <Navigation />
         {children}
         <CTA data={data} />
         <Footer data={data} />
@@ -55,7 +55,7 @@ export default ({ children }) => (
   />
 );
 
-const Scripts = function() {
+const Icons = function() {
   library.add(
     faGithubAlt,
     faNodeJs,

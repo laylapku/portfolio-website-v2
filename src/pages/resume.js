@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 export default ({ data }) => (
   <Layout>
@@ -50,11 +50,11 @@ export default ({ data }) => (
               <div className="secondary-info ml-md-auto">
                 <ul className="resume-social list-unstyled">
                   <li className="mb-3">
-                    <a href="//glitch.com/@laylapku">
+                    <a href="">
                       <span className="fa-container text-center mr-2">
                         <FontAwesomeIcon icon="home" />
                       </span>
-                      glitch.com/@laylapku
+                      laylawebsite.com
                     </a>
                   </li>
                   {data.allSocialsJson.edges.map(item => (
