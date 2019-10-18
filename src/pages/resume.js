@@ -50,7 +50,7 @@ export default ({ data }) => (
               <div className="secondary-info ml-md-auto">
                 <ul className="resume-social list-unstyled">
                   <li className="mb-3">
-                    <a href="">
+                    <a href="//laylawebsite.com">
                       <span className="fa-container text-center mr-2">
                         <FontAwesomeIcon icon="home" />
                       </span>

@@ -1,0 +1,14 @@
+{
+  "name": "Reading List",
+  "tagline": "A practice project of The Net Ninja's react hooks tutorial",
+  "for": "Practice: The Net Ninja",
+  "thumb": "/images/projects/reading-list-thumb.png",
+  "logo_inv": "",
+  "tech": ["React", "JavaScript", "CSS", "Webpack"],
+  "ctg": ["React", "Frontend", "Practice"],
+
+  "url": "//github.com/laylapku/booklist-with-context-hooks",
+  "pic": "",
+  "html": "<a href='//github.com/laylapku/booklist-with-context-hooks'><img style='height: 80%; width: 80%;' src='/images/projects/reading-list-snapshot.png' /></a>",
+  "story": []
+}

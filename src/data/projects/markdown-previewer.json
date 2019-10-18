@@ -5,9 +5,11 @@
   "thumb": "/images/projects/markdown-previewer-thumb.jpg",
   "logo_inv": "/images/logos/freecodecamp-inverse.svg",
   "tech": ["React", "JavaScript", "CSS"],
-  "ctg": ["React", "Frontend"],
+  "ctg": ["React", "Frontend", "Practice"],
 
   "url": "//markdown-previewer-2.glitch.me/",
+  "pic": "",
+  "html": "<iframe src='https://glitch.com/embed/#!/embed/fcc-markdown-previewer-2?path=app/components/MarkdownPreviewer.jsx&previewSize=0' title='fcc-markdown-previewer-2 on Glitch' allow='geolocation; microphone; camera; midi; vr; encrypted-media' style='height: 450px; width: 100%; border: 0'></iframe>",
   "story": [
     "I can see a textarea element with a corresponding id=\"editor\".",
     "I can see an element with a corresponding id=\"preview\".",
@@ -17,8 +19,5 @@
     "When my markdown previewer first loads, the default markdown in the #editor field should be rendered as HTML in the #preview element.",
     "When I click a link rendered by my markdown previewer, the link is opened up in a new tab.",
     "My markdown previewer interprets carriage returns and renders them as br (line break) elements."
-  ],
-  "pic": "",
-  "type": "React",
-  "html": "<iframe height='1000' scrolling='no' title='FCC: Front End - Markdown Previewer' src='//codepen.io/ilovepku/embed/QzpKNX/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/QzpKNX/'>FCC: Front End - Markdown Previewer</a> by Layla Ouyange (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
+  ]
 }

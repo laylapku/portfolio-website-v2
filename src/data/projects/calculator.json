@@ -5,9 +5,11 @@
   "thumb": "/images/projects/calculator-thumb.jpg",
   "logo_inv": "/images/logos/freecodecamp-inverse.svg",
   "tech": ["React", "JavaScript", "CSS"],
-  "ctg": ["React", "Frontend"],
+  "ctg": ["React", "Frontend", "Practice"],
 
   "url": "//calculator-4.glitch.me/",
+  "pic": "",
+  "html": "<iframe src='https://glitch.com/embed/#!/embed/fcc-calculator-4?path=app/components/Calculator.jsx&previewSize=0' title='fcc-calculator-4 on Glitch' allow='geolocation; microphone; camera; midi; vr; encrypted-media' style='height: 450px; width: 100%; border: 0'></iframe>",
   "story": [
     "My calculator should contain a clickable element containing an = (equal sign) with a corresponding id=\"equals\".",
     "My calculator should contain 10 clickable elements containing one number each from 0-9, with the following corresponding IDs: id=\"zero\", id=\"one\", id=\"two\", id=\"three\", id=\"four\", id=\"five\", id=\"six\", id=\"seven\", id=\"eight\", and id=\"nine\".",
@@ -24,8 +26,5 @@
     "If 2 or more operators are entered consecutively, the operation performed should be the last operator entered.",
     "Pressing an operator immediately following = should start a new calculation that operates on the result of the previous evaluation.",
     "My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like 2 / 7 with reasonable precision to at least 4 decimal places)."
-  ],
-  "pic": "",
-  "type": "Frontend",
-  "html": "<iframe height='350' scrolling='no' title='FCC: Frontend - Calculator' src='//codepen.io/ilovepku/embed/oJZVdL/?height=265&theme-id=0&default-tab=js,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/oJZVdL/'>FCC: Frontend - Calculator</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
+  ]
 }

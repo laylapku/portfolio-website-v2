@@ -21,8 +21,7 @@ import {
   faCheck,
   faDownload,
   faExternalLinkAlt,
-  faBuilding,
-  faWrench
+  faMeteor
 } from "@fortawesome/free-solid-svg-icons";
 import { addBackToTop } from "vanilla-back-to-top";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -74,8 +73,7 @@ const Icons = function() {
     faCheck,
     faDownload,
     faExternalLinkAlt,
-    faBuilding,
-    faWrench
+    faMeteor
   );
   return null;
 };

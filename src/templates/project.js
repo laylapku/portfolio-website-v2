@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { UncontrolledCarousel } from 'reactstrap';
 import Layout from "../components/Layout";
 
 export default ({ data }) => (
@@ -27,7 +26,7 @@ export default ({ data }) => (
     <div className="project-wrapper container py-5">
       <div className="row">
         <section className="col-12 col-lg-8">
-         {/*  {data.projectsJson.desc && (
+          {/*  {data.projectsJson.desc && (
             <div className="section-row">
               {data.projectsJson.pic && (
                 <div className="mb-5">
@@ -53,12 +52,10 @@ export default ({ data }) => (
               </div>
             </div>
           )} */}
-          {/*  {data.projectsJson.carousel && (
-            <UncontrolledCarousel items={data.projectsJson.carousel} />
-          )} */}
+
           {data.projectsJson.html && (
             <div className="section-row">
-              <h3 className="section-title">Embedded Project</h3>
+              <h3 className="section-title">Project Snapshot</h3>
               <div
                 dangerouslySetInnerHTML={{ __html: data.projectsJson.html }}
               />
@@ -67,7 +64,7 @@ export default ({ data }) => (
           {/*//embedded-view*/}
           {data.projectsJson.story && (
             <div className="section-row">
-              <h3 className="section-title">User Stories</h3>
+              <h3 className="section-title">Details & Highlights</h3>
               <ol>
                 {data.projectsJson.story.map((item, idx) => (
                   <li key={data.projectsJson.story + "_story_" + idx}>
@@ -95,7 +92,7 @@ export default ({ data }) => (
                   <FontAwesomeIcon
                     className="mr-3 text-primary"
                     transform="grow-6 down-2"
-                    icon="building"
+                    icon="meteor"
                   />
                   <strong>{data.projectsJson.for.split(": ")[0] + ":"}</strong>{" "}
                   {data.projectsJson.for.split(": ")[1]}
@@ -111,14 +108,6 @@ export default ({ data }) => (
                     {data.projectsJson.url.slice(2)}
                   </a>
                 </li>
-               {/*  <li>
-                  <FontAwesomeIcon
-                    className="mr-3 text-primary"
-                    transform="grow-6 down-2"
-                    icon="wrench"
-                  />
-                  <strong>Type:</strong> {data.projectsJson.type}
-                </li> */}
               </ul>
             </div>
             <div className="sidebar-row">
@@ -161,17 +150,10 @@ export const query = graphql`
       logo_inv
       tech
       url
-      desc
-      story
       pic
       html
+      story
+      desc
     }
   }
 `;
-
-/* carousel {
-  src
-  altText
-  caption
-  header
-} */

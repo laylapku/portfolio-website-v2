@@ -3,7 +3,14 @@ import { StaticQuery, graphql } from "gatsby";
 import { Button, ButtonGroup } from "reactstrap";
 import ProjectCard from "./ProjectCard";
 
-const TECH_LIST = ["Production", "React", "Frontend", "Backend", "Data-viz"];
+const TECH_LIST = [
+  "React",
+  "Production",
+  "Frontend",
+  "Backend",
+  "Data-viz",
+  "Practice"
+];
 
 export default () => (
   <StaticQuery

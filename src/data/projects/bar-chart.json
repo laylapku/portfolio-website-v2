@@ -5,9 +5,11 @@
   "thumb": "/images/projects/bar-chart-thumb.jpg",
   "logo_inv": "/images/logos/freecodecamp-inverse.svg",
   "tech": ["D3", "JavaScript", "CSS"],
-  "ctg": ["Data-viz", "Frontend"],
+  "ctg": ["Data-viz", "Frontend", "Practice"],
 
   "url": "//codepen.io/laylapku/full/qJGbgL",
+  "pic": "",
+  "html": "<iframe height='500' style='width: 100%;' scrolling='no' title='FCC Data Visualization Projects - Bar Chart' src='https://codepen.io/laylapku/embed/qJGbgL?height=265&theme-id=0&default-tab=js,result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/laylapku/pen/qJGbgL'>FCC Data Visualization Projects - Bar Chart</a> by Layla(<a href='https://codepen.io/laylapku'>@laylapku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>",
   "story": [
     "My chart should have a title with a corresponding id=\"title\".",
     "My chart should have a g element x-axis with a corresponding id=\"x-axis\".",
@@ -22,8 +24,5 @@
     "The data-gdp attribute and its corresponding bar element should align with the corresponding value on the y-axis.",
     "I can mouse over an area and see a tooltip with a corresponding id=\"tooltip\" which displays more information about the area.",
     "My tooltip should have a data-date property that corresponds to the data-date of the active area."
-  ],
-  "pic": "",
-  "type": "Dataviz",
-  "html": "<iframe height='450' scrolling='no' title='FCC: Visualize Data with a Bar Chart (New Responsive Version)' src='//codepen.io/ilovepku/embed/LMbJaq/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/ilovepku/pen/LMbJaq/'>FCC: Visualize Data with a Bar Chart (New Responsive Version)</a> by Sean Lee (<a href='https://codepen.io/ilovepku'>@ilovepku</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>"
+  ]
 }
