@@ -5,7 +5,7 @@
   "thumb": "/images/projects/robofriends-thumb.png",
   "logo_inv": "",
   "tech": ["React", "JavaScript", "CSS", "Webpack"],
-  "ctg": ["React", "Frontend", "Practice"],
+  "ctg": ["Frontend", "Practice"],
 
   "url": "//github.com/laylapku/robofriends",
   "pic": "",

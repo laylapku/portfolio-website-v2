@@ -117,9 +117,6 @@ export default ({ data }) => (
                               {item.node.role}{" "}
                               <small className="text-muted"></small>
                             </h3>
-                            <div className="resume-company-name ml-auto">
-                              {item.node.co}
-                            </div>
                           </div>
                           {/*//row*/}
                           <div className="resume-position-time">
@@ -160,27 +157,33 @@ export default ({ data }) => (
                 <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
                   Skills &amp; Tools
                 </h2>
-                <div className="resume-section-content">
-                  {data.allSkillsJson.edges.map(item => (
-                    <div className="resume-skill-item" key={item.node.id}>
-                      <h4 className="resume-skills-cat font-weight-bold">
-                        {item.node.name}
-                      </h4>
-                      <ul className="list-inline">
-                        {item.node.value.map((ele, idx) => (
-                          <li
-                            className="list-inline-item"
-                            key={item.node.id + "_skill_" + idx}
-                          >
-                            <span className="badge badge-light">{ele}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                  {/*//resume-skill-item*/}
+
+                <div className="resume-skill-item">
+                  <h4 className="resume-skills-cat font-weight-bold">
+                    Technical
+                  </h4>
+                  <ul className="list-unstyled">
+                    <li className="mb-2 badge badge-light">JavaScript/React</li>
+                    <li className="mb-2 badge badge-light">Node.js</li>
+                    <li className="mb-2 badge badge-light">Serverless/Cloud</li>
+                    <li className="mb-2 badge badge-light">
+                      Product &amp; Visual Design
+                    </li>
+                  </ul>
                 </div>
-                {/*resume-section-content*/}
+                <div className="resume-skill-item">
+                  <h4 className="resume-skills-cat font-weight-bold">
+                    Professional
+                  </h4>
+                  <ul className="list-unstyled">
+                    <li className="mb-2 badge badge-light">
+                      Efficient Learner
+                    </li>
+                    <li className="mb-2 badge badge-light">Team Player</li>
+                    <li className="mb-2 badge badge-light">Self-Driven</li>
+                    <li className="mb-2 badge badge-light">Enthusiastic</li>
+                  </ul>
+                </div>
               </section>
               {/*//skills-section*/}
               <section className="resume-section education-section mb-5">
@@ -189,19 +192,13 @@ export default ({ data }) => (
                 </h2>
                 <div className="resume-section-content">
                   <ul className="list-unstyled">
-                    {data.allEduJson.edges.map(item => (
-                      <li className="mb-2" key={item.node.id}>
-                        <div className="resume-degree font-weight-bold">
-                          {item.node.name}
-                        </div>
-                        <div className="resume-degree-org">
-                          {item.node.place}
-                        </div>
-                        <div className="resume-degree-time">
-                          {item.node.time}
-                        </div>
-                      </li>
-                    ))}
+                    <li className="mb-2">
+                      <div className="resume-degree font-weight-bold">
+                        MA in English Literature
+                      </div>
+                      <div className="resume-degree-org">Peking University</div>
+                      <div className="resume-degree-time">2012 - 2015</div>
+                    </li>
                   </ul>
                 </div>
               </section>
@@ -214,12 +211,15 @@ export default ({ data }) => (
                   <ul className="list-unstyled resume-lang-list">
                     {data.allLangJson.edges.map(item => (
                       <li className="mb-2" key={item.node.id}>
-                        <span className="resume-lang-name font-weight-bold">
+                        <div className="resume-lang-name font-weight-bold">
                           {item.node.name}
-                        </span>
-                        <small className="text-muted font-weight-normal">
-                          {" "}
-                          ({item.node.level})
+                          <span className="text-muted">
+                            {" "}
+                            ({item.node.level})
+                          </span>
+                        </div>
+                        <small className="font-weight-normal">
+                          {item.node.certif}
                         </small>
                       </li>
                     ))}
@@ -227,6 +227,20 @@ export default ({ data }) => (
                 </div>
               </section>
               {/*//language-section*/}
+              <section className="resume-section interests-section mb-5">
+                <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  Interests
+                </h2>
+                <div className="resume-section-content">
+                  <ul className="list-unstyled resume-interests-list mb-0">
+                    <li className="mb-2 badge badge-light">Music</li>
+                    <li className="mb-2 badge badge-light">Reading</li>
+                    <li className="mb-2 badge badge-light">Cooking</li>
+                    <li className="mb-2 badge badge-light">Tennis</li>
+                  </ul>
+                </div>
+              </section>
+              {/*//interests-section*/}
             </div>
           </div>
           {/*//row*/}
@@ -239,6 +253,15 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
+    allSocialsJson(limit: 4) {
+      edges {
+        node {
+          id
+          url
+          icon
+        }
+      }
+    }
     allSkillsJson {
       edges {
         node {
@@ -249,34 +272,14 @@ export const query = graphql`
         }
       }
     }
-    allSocialsJson(limit: 4) {
-      edges {
-        node {
-          id
-          url
-          icon
-        }
-      }
-    }
     allExpJson {
       edges {
         node {
           id
           role
-          co
           time
           desc
           tech
-        }
-      }
-    }
-    allEduJson {
-      edges {
-        node {
-          id
-          name
-          place
-          time
         }
       }
     }
@@ -286,6 +289,7 @@ export const query = graphql`
           id
           name
           level
+          certif
         }
       }
     }

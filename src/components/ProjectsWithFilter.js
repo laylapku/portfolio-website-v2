@@ -3,14 +3,7 @@ import { StaticQuery, graphql } from "gatsby";
 import { Button, ButtonGroup } from "reactstrap";
 import ProjectCard from "./ProjectCard";
 
-const TECH_LIST = [
-  "React",
-  "Production",
-  "Frontend",
-  "Backend",
-  "Data-viz",
-  "Practice"
-];
+const TECH_LIST = ["Production", "Frontend", "Backend", "Data-viz", "Practice"];
 
 export default () => (
   <StaticQuery
@@ -101,7 +94,7 @@ class FilterBar extends Component {
   render() {
     return (
       <div className="text-center">
-        <ButtonGroup className="mb-5">
+        <ButtonGroup className="btn-group mb-5">
           <Button
             color="light"
             onClick={() => this.onRadioBtnClick("")}

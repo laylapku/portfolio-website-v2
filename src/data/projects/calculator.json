@@ -5,7 +5,7 @@
   "thumb": "/images/projects/calculator-thumb.jpg",
   "logo_inv": "/images/logos/freecodecamp-inverse.svg",
   "tech": ["React", "JavaScript", "CSS"],
-  "ctg": ["React", "Frontend", "Practice"],
+  "ctg": ["Frontend", "Practice"],
 
   "url": "//calculator-4.glitch.me/",
   "pic": "",

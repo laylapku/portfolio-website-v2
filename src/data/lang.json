@@ -1,14 +1,17 @@
 [
     {
         "name": "Chinese",
-        "level": "Native"
+        "level": "Native",
+        "certif": ""
     },
     {
         "name": "English",
-        "level": "Full Professional"
+        "level": "Advanced",
+        "certif": "Master Degree in English Literature"
     },
     {
         "name": "German",
-        "level": "Limited Working"
+        "level": "Intermediate",
+        "certif": "Graduate Level 2nd Foreign Language Courses / Duolingo Course with Full Skill Levels"
     }
 ]

@@ -13,7 +13,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     graphql(`
@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
       result.data.allProjectsJson.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/project.js`),
+          component: path.resolve(`./src/pages/templates/projectInner.js`),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
@@ -44,3 +44,43 @@ exports.createPages = ({ graphql, actions }) => {
     });
   });
 };
+
+/* exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
+
+  const projectTemplate = path.resolve(
+    `src/pages/templates/blogTemplate.js`
+  );
+
+  const projects = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "/src/pages/projects/*.md" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (projects.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
+
+  projects.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: projectTemplate,
+      context: {}
+    });
+  });
+};
+ */

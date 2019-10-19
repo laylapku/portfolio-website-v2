@@ -1,6 +1,6 @@
 {
   "name": "Eloqua",
-  "tagline": "A prgressive web application for appreciating great sppeches",
+  "tagline": "Listen to great speeches on your smartphone",
   "for": "For: Everyone",
   "thumb": "/images/projects/eloqua-thumb.png",
   "logo_inv": "",
@@ -14,7 +14,7 @@
     "CSS",
     "Webpack"
   ],
-  "ctg": ["React", "Production", "Frontend", "Backend"],
+  "ctg": ["Production", "Frontend", "Backend"],
 
   "url": "//speech-pwa.web.app/",
   "pic": "",

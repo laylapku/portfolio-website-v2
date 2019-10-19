@@ -1558,6 +1558,11 @@ a:hover {
   color: #4b498a;
 }
 
+/* for filterbar responsiveness */
+.btn-group {
+  display: inline-block;
+}
+
 .btn-primary {
   background-color: #6f6db2;
   border-color: #6f6db2;
@@ -1682,3 +1687,4 @@ a:hover {
 .carousel-indicators li {
   background-color: #6f6db2;
 }
+

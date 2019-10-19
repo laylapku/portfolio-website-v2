@@ -7,7 +7,7 @@ export default ({ data }) => (
   <Layout>
     <div className="header-intro theme-bg-primary text-white py-5">
       <div className="container">
-        <h2 className="page-heading mb-0">Contact</h2>
+        <h2 className="page-heading mb-0">Contact Me</h2>
       </div>
       {/*//container*/}
     </div>

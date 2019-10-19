@@ -5,7 +5,7 @@
   "thumb": "/images/projects/random-quote-machine-thumb.jpg",
   "logo_inv": "/images/logos/freecodecamp-inverse.svg",
   "tech": ["React", "JavaScript", "CSS"],
-  "ctg": ["React", "Frontend", "Practice"],
+  "ctg": ["Frontend", "Practice"],
 
   "url": "//quote-machine-1.glitch.me/",
   "pic": "",

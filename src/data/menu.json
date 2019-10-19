@@ -1,18 +1,18 @@
 [
-    {
-        "name": "About",
-        "url": "/"
-    },
-    {
-        "name": "Projects",
-        "url": "/projects/"
-    },
-    {
-        "name": "Resume",
-        "url": "/resume/"
-    },
-    {
-        "name": "Contact",
-        "url": "/contact/"
-    }
+  {
+    "name": "About",
+    "url": "/"
+  },
+  {
+    "name": "Portfolio",
+    "url": "/portfolio/"
+  },
+  {
+    "name": "Resume",
+    "url": "/resume/"
+  },
+  {
+    "name": "Contact",
+    "url": "/contact/"
+  }
 ]

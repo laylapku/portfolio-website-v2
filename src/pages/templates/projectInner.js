@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 
 export default ({ data }) => (
   <Layout>
@@ -26,33 +26,6 @@ export default ({ data }) => (
     <div className="project-wrapper container py-5">
       <div className="row">
         <section className="col-12 col-lg-8">
-          {/*  {data.projectsJson.desc && (
-            <div className="section-row">
-              {data.projectsJson.pic && (
-                <div className="mb-5">
-                  <img
-                    className="img-fluid"
-                    src={data.projectsJson.pic}
-                    alt=""
-                  />
-                </div>
-              )}
-              <h3 className="section-title">Project Description</h3>
-              <p>{data.projectsJson.desc}</p>
-              <div className="mb-5">
-                <a
-                  className="btn btn-primary"
-                  href={data.projectsJson.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon className="mr-2" icon="external-link-alt" />{" "}
-                  Check Out This Project
-                </a>
-              </div>
-            </div>
-          )} */}
-
           {data.projectsJson.html && (
             <div className="section-row">
               <h3 className="section-title">Project Snapshot</h3>
@@ -64,7 +37,7 @@ export default ({ data }) => (
           {/*//embedded-view*/}
           {data.projectsJson.story && (
             <div className="section-row">
-              <h3 className="section-title">Details & Highlights</h3>
+              <h3 className="section-title">Details &amp; Highlights</h3>
               <ol>
                 {data.projectsJson.story.map((item, idx) => (
                   <li key={data.projectsJson.story + "_story_" + idx}>
@@ -73,13 +46,6 @@ export default ({ data }) => (
                 ))}
               </ol>
               {/*//project-description*/}
-              {/* {data.projectsJson.pic && (
-                <img
-                  className="img-fluid"
-                  src="/images/projects/anon-message-board-main.png"
-                  alt=""
-                />
-              )} */}
             </div>
           )}
         </section>

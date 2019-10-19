@@ -129,19 +129,19 @@ const Footer = function(data) {
           </a>
         </small>
       </div>
-      {/* <div>
+      <div>
         <small className="copyright">
-          Designed by{" "}
+          Theme design from{" "}
           <a
             className="text-light"
             href="//www.3rdwavemedia.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Xiaoying Riley
+            3rdwavemedia
           </a>
         </small>
-      </div> */}
+      </div>
     </footer>
   );
 };
