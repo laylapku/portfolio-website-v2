@@ -8,6 +8,22 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { glob: "**/src/pages/projects/*.md" } }
+        ) {
+          nodes {
+            id
+            frontmatter {
+              path
+              name
+              madeFor
+              tagline
+              thumb
+              watermark
+              tech
+            }
+          }
+        }
         allSkillsJson {
           edges {
             node {
@@ -15,23 +31,6 @@ export default () => (
               name
               icon
               value
-            }
-          }
-        }
-        allProjectsJson {
-          edges {
-            node {
-              id
-              name
-              tagline
-              for
-              thumb
-              logo_inv
-              tech
-              ctg
-              fields {
-                slug
-              }
             }
           }
         }
@@ -49,7 +48,7 @@ export default () => (
 
 const AboutPage = props => {
   const { data } = props;
-
+  
   return (
     <Layout>
       <div className="header-intro theme-bg-primary text-white py-5">
@@ -61,7 +60,7 @@ const AboutPage = props => {
               src={data.site.siteMetadata.pic}
             />
             <div className="media-body text-center text-md-left">
-              <div className="lead">Hi, my name is</div>
+              <div className="lead">Hi, I'm</div>
               <h2 className="mt-0 display-4 font-weight-bold">
                 {data.site.siteMetadata.name}
               </h2>
@@ -74,7 +73,7 @@ const AboutPage = props => {
                 </Link>{" "}
                 and{" "}
                 <Link className="link-on-bg" to="/resume/">
-                  resume
+                  online resume
                 </Link>
                 .
               </div>
@@ -117,20 +116,20 @@ const AboutPage = props => {
           <h3 className="section-title font-weight-bold text-center mb-5">
             Featured Projects
           </h3>
-          <div className="project-cards row mb-5">
-            {data.allProjectsJson.edges
+           <div className="project-cards row mb-5">
+            {data.allMarkdownRemark.nodes
               .filter(
                 item =>
-                  item.node.name === "Eloqua" ||
-                  item.node.name === "Portfolio Website"
+                  item.frontmatter.name === "Eloqua" ||
+                  item.frontmatter.name === "My Developer Website"
               )
-              .map(item => (
-                <ProjectCard key={item.node.id} item={item} />
+              .map(({id, frontmatter}) => (
+                <ProjectCard key={id} frontmatter={frontmatter} />
               ))}
           </div>
           {/*//project-cards*/}
           <div className="text-center">
-            <Link className="btn btn-primary" to="/projects/">
+            <Link className="btn btn-primary" to="/portfolio/">
               View all projects
             </Link>
           </div>

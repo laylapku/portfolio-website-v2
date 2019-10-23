@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Layla Ouyang's Portfolio",
+    title: "Layla Ouyang's Developer Website",
     name: "Layla Ouyang",
     email: "ouyangleilei515@gmail.com",
     pic: "/images/profile.png",
@@ -30,12 +30,27 @@ module.exports = {
       }
     },
     `gatsby-transformer-json`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data/`
       }
     },
-    `gatsby-transformer-remark`
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`
   ]
 };

@@ -138,7 +138,7 @@ const Footer = function(data) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            3rdwavemedia
+            <em>3rdwavemedia</em>
           </a>
         </small>
       </div>

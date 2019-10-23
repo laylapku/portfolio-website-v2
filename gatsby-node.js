@@ -1,7 +1,7 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+/* exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `ProjectsJson`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` });
@@ -44,20 +44,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   });
 };
-
-/* exports.createPages = async ({ actions, graphql, reporter }) => {
+ */
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const projectTemplate = path.resolve(
-    `src/pages/templates/blogTemplate.js`
-  );
+  const projectTemplate = path.resolve(`src/pages/templates/projectTemplate.js`);
 
   const projects = await graphql(`
     {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { glob: "/src/pages/projects/*.md" } }
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+        filter: { fileAbsolutePath: { glob: "**/src/pages/projects/*.md" } }
       ) {
         edges {
           node {
@@ -83,4 +79,3 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   });
 };
- */

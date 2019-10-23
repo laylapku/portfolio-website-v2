@@ -33,7 +33,7 @@ export default ({ data }) => (
                 <h1 className="name mt-0 mb-1 text-white text-uppercase">
                   {data.site.siteMetadata.name}
                 </h1>
-                <div className="title mb-3">Web Developer</div>
+                <h4 className="mb-3 font-weight-normal">Web Developer</h4>
                 <ul className="list-unstyled">
                   <li className="mb-2">
                     <a href={"mailto:" + data.site.siteMetadata.email}>
@@ -77,23 +77,13 @@ export default ({ data }) => (
         </header>
         <div className="resume-body p-5">
           <section className="resume-section summary-section mb-5">
-            <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
-              Career Summary
+            <h2 className="resume-section-title font-weight-bold pb-3 mb-3">
+              A few words about me...
             </h2>
             <div className="resume-section-content">
               <p className="mb-0">
-                Summarise your career here. Lorem ipsum dolor sit amet,
-                consectetuer adipiscing elit. You can download this free
-                resume/CV template here. Aenean commodo ligula eget dolor aenean
-                massa. Cum sociis natoque penatibus et magnis dis parturient
-                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                pellentesque eu. Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-                enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
-                eget.
+                I'm a self-taught web developer... If you are interested, you
+                can learn more about me in my <a href="/resume">developer story</a>.
               </p>
             </div>
           </section>
@@ -167,8 +157,9 @@ export default ({ data }) => (
                     <li className="mb-2 badge badge-light">Node.js</li>
                     <li className="mb-2 badge badge-light">Serverless/Cloud</li>
                     <li className="mb-2 badge badge-light">
-                      Product &amp; Visual Design
+                      Product Feature Design
                     </li>
+                    <li className="mb-2 badge badge-light">UI Design</li>
                   </ul>
                 </div>
                 <div className="resume-skill-item">
