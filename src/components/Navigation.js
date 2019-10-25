@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 
 export default () => (
@@ -53,6 +52,8 @@ class MyNavbar extends Component {
   }
 
   render() {
+    // webpack feature: function mapping all *.svg paths to the actual data:image
+    const reqSvgs = require.context("../images/social-icons", true, /\.svg$/);
     return (
       <div className="container-fluid">
         <Navbar className="navbar-dark position-relative" expand="lg">
@@ -60,7 +61,11 @@ class MyNavbar extends Component {
             {this.props.data.allSocialsJson.edges.map(item => (
               <li className="list-inline-item" key={item.node.id}>
                 <a className="text-white" href={item.node.url}>
-                  <FontAwesomeIcon icon={["fab", item.node.icon]} />
+                  <img
+                    alt={item}
+                    className="img-fluid"
+                    src={reqSvgs(`./${item.node.icon.toLowerCase()}.svg`)}
+                  />
                 </a>
               </li>
             ))}

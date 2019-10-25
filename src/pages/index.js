@@ -51,9 +51,7 @@ export default () => (
   />
 );
 
-const AboutPage = props => {
-  const { data } = props;
-
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <div className="header-intro theme-bg-primary text-white py-5">
@@ -73,7 +71,7 @@ const AboutPage = props => {
                 I'm a web developer specialising in React. I design and build
                 web applications.
                 <br /> Check out my{" "}
-                <Link className="link-on-bg" to="/projects/">
+                <Link className="link-on-bg" to="/portfolio/">
                   portfolio
                 </Link>{" "}
                 and{" "}
@@ -125,7 +123,7 @@ const AboutPage = props => {
             {data.allMarkdownRemark.nodes
               .filter(
                 item =>
-                  item.frontmatter.name === "Eloqua" ||
+                  item.frontmatter.name === "Eloqua Speech App" ||
                   item.frontmatter.name === "My Developer Website"
               )
               .map(({ id, frontmatter }) => (

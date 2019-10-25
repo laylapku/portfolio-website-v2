@@ -2,7 +2,7 @@ import React from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faGithubAlt,
+  faGithub,
   faNodeJs,
   faFreeCodeCamp,
   faCodepen,
@@ -25,7 +25,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { addBackToTop } from "vanilla-back-to-top";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./style.css";
+import "../style.css";
 import Navigation from "./Navigation";
 
 export default ({ children }) => (
@@ -56,7 +56,7 @@ export default ({ children }) => (
 
 const Icons = function() {
   library.add(
-    faGithubAlt,
+    faGithub,
     faNodeJs,
     faFreeCodeCamp,
     faCodepen,

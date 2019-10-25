@@ -111,13 +111,14 @@ a.theme-btn-on-bg:active,
 }
 
 .social-list a {
-  width: 36px;
-  height: 36px;
-  padding-top: 7px;
+  width: 30px;
+  height: 30px;
+  padding-top: 3px;
   display: inline-block;
   text-align: center;
   border-radius: 50%;
   transition: all 0.4s ease-in-out;
+  background-color: #d3d3e7;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -127,7 +128,7 @@ a.theme-btn-on-bg:active,
 }
 
 .social-list a:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: #f4f4f4;
 }
 
 #navigation {
@@ -176,7 +177,7 @@ a.theme-btn-on-bg:active,
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background: url("../images/bars.svg") no-repeat left top;
+  background: url("./images/bars.svg") no-repeat left top;
   height: 20px;
   width: 24px;
 }
@@ -1485,4 +1486,3 @@ a:hover {
 .carousel-container {
   align-self: center;
 }
-

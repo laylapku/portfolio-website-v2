@@ -17,20 +17,7 @@ const ProjectCard = ({
               alt=""
             />
           )}
-          <div className="card-img-overlay overlay-logo text-center">
-            {
-              // pending: overlay logo won't show... *>_<*
-              /* <div className="project-logo">
-              {watermark && watermark.length && (
-                <Img
-                  alt=""
-                  className="img-fluid"
-                  fluid={watermark.childImageSharp.fluid}
-                />
-              )}
-            </div> */
-            }
-          </div>
+          <div className="card-img-overlay overlay-logo text-center" />
           <Link
             className="card-img-overlay overlay-content text-left p-lg-4"
             to={path}
