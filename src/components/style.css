@@ -176,7 +176,7 @@ a.theme-btn-on-bg:active,
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background: url("../../public/images/bars.svg") no-repeat left top;
+  background: url("../images/bars.svg") no-repeat left top;
   height: 20px;
   width: 24px;
 }
@@ -430,37 +430,6 @@ a.theme-btn-on-bg:active,
 
 .project-wrapper .section-row {
   margin-bottom: 6rem;
-}
-
-.ekko-lightbox-nav-overlay a {
-  color: #434e5e;
-  position: relative;
-}
-
-.ekko-lightbox-nav-overlay a .arrow-left {
-  position: absolute;
-  left: 1rem;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url("/static/images/arrow-left.svg") no-repeat center center;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-}
-
-.ekko-lightbox-nav-overlay a .arrow-right {
-  position: absolute;
-  right: 1rem;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url("/static/images/arrow-right.svg") no-repeat center center;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
 }
 
 .project-sidebar {
@@ -1504,7 +1473,16 @@ a:hover {
   border-color: #6f6db2;
 }
 
+.project-media-body {
+  background: #f4f4f4;
+}
+
 /* carousel */
 .carousel-item {
   width: 300px;
 }
+
+.carousel-container {
+  align-self: center;
+}
+

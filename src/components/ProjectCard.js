@@ -1,19 +1,35 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 const ProjectCard = ({
-  frontmatter: { path, name, madeFor, tagline, thumb, watermark, tech }
+  frontmatter: { path, name, madeFor, tagline, thumb, tech }
 }) => {
   return (
     <div className="col-12 col-lg-4">
       <div className="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
         {/*//card-image*/}
         <div className="card-img-container position-relative">
-          <img className="card-img-top rounded-0" src={thumb} alt="" />
+          {thumb && (
+            <Img
+              className="card-img-top rounded-0"
+              fluid={thumb.childImageSharp.fluid}
+              alt=""
+            />
+          )}
           <div className="card-img-overlay overlay-logo text-center">
-            <div className="project-logo">
-              <img alt="" className="img-fluid" src={watermark} />
-            </div>
+            {
+              // pending: overlay logo won't show... *>_<*
+              /* <div className="project-logo">
+              {watermark && watermark.length && (
+                <Img
+                  alt=""
+                  className="img-fluid"
+                  fluid={watermark.childImageSharp.fluid}
+                />
+              )}
+            </div> */
+            }
           </div>
           <Link
             className="card-img-overlay overlay-content text-left p-lg-4"

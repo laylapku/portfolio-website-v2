@@ -50,11 +50,11 @@ export default ({ data }) => (
               <div className="secondary-info ml-md-auto">
                 <ul className="resume-social list-unstyled">
                   <li className="mb-3">
-                    <a href="//laylawebsite.com">
+                    <a href="//laylaoy.netlify.com">
                       <span className="fa-container text-center mr-2">
                         <FontAwesomeIcon icon="home" />
                       </span>
-                      laylawebsite.com
+                      laylaoy.netlify.com
                     </a>
                   </li>
                   {data.allSocialsJson.edges.map(item => (
@@ -83,7 +83,11 @@ export default ({ data }) => (
             <div className="resume-section-content">
               <p className="mb-0">
                 I'm a self-taught web developer... If you are interested, you
-                can learn more about me in my <a href="/resume">developer story</a>.
+                can get to know more about me in my{" "}
+                <a href="/resume" className="font-weight-bold">
+                  developer story
+                </a>
+                .
               </p>
             </div>
           </section>
@@ -157,9 +161,9 @@ export default ({ data }) => (
                     <li className="mb-2 badge badge-light">Node.js</li>
                     <li className="mb-2 badge badge-light">Serverless/Cloud</li>
                     <li className="mb-2 badge badge-light">
-                      Product Feature Design
+                      Product Design
                     </li>
-                    <li className="mb-2 badge badge-light">UI Design</li>
+                    <li className="mb-2 badge badge-light">UI/UX Design</li>
                   </ul>
                 </div>
                 <div className="resume-skill-item">
@@ -250,16 +254,6 @@ export const query = graphql`
           id
           url
           icon
-        }
-      }
-    }
-    allSkillsJson {
-      edges {
-        node {
-          id
-          name
-          icon
-          value
         }
       }
     }

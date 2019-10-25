@@ -18,8 +18,13 @@ const PortfolioPage = () => {
             name
             madeFor
             tagline
-            thumb
-            watermark
+            thumb {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             tech
           }
         }
@@ -69,10 +74,10 @@ export default PortfolioPage;
 
 const FilterBar = ({ onFilterChange }) => {
   const TECH_LIST = [
-    "Production",
     "Frontend",
     "Backend",
     "Data-viz",
+    "Production",
     "Practice"
   ];
   const [rSelected, setrSelected] = useState("");

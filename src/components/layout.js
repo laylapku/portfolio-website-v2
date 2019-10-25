@@ -90,7 +90,7 @@ const CTA = function(data) {
           />
         </div>
         <h3 className="section-title font-weight-bold text-center mb-2">
-          Looking for a passionate web developer to join your team?
+          Looking for a passionate developer to join your team?
         </h3>
         <div className="section-intro mx-auto text-center mb-2">
           Just drop me an email at{" "}

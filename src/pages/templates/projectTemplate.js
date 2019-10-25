@@ -5,6 +5,9 @@ import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../../components/Layout";
 
+// webpack feature: function mapping all *.svg paths to the actual data:image
+const reqSvgs = require.context("../../images/webdev-icons", true, /\.svg$/);
+
 const ProjectTemplate = ({ data: { markdownRemark } }) => {
   if (markdownRemark) {
     var {
@@ -14,11 +17,11 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
         name,
         tagline,
         madeFor,
-        watermark,
-        tech,
+        pics,
         url,
         github,
-        pics
+        highlights,
+        tech
       }
     } = markdownRemark;
   }
@@ -29,23 +32,18 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
         <div className="container position-relative">
           <h2 className="page-heading mb-2">{name}</h2>
           <div className="page-heading-tagline">{tagline}</div>
-          {watermark && (
-            <div className="page-heading-logo font-weight-bold position-absolute mt-4 mt-md-0">
-              <img alt="" className="client-logo" src={watermark} />
-            </div>
-          )}
         </div>
         {/*//container*/}
       </div>
       {/*//header-intro*/}
 
-      <div className="project-wrapper container py-5">
+      <section className="project-wrapper container py-5">
         <div className="row">
-          <section className="col-12 col-lg-8">
-            {pics && pics.length > 1 && (
+          <div className="project-media-body d-flex col-12 m-auto">
+            {pics && pics.length > 1 ? (
               <Carousel
                 controls={false}
-                className="project-thumb mb-3 mb-md-0 mr-md-5 rounded d-none d-md-inline-block"
+                className="carousel-container col-lg-4 mb-3 mb-md-0 md-5 rounded d-none d-md-inline-block"
               >
                 {pics.map((pic, idx) => (
                   <Carousel.Item
@@ -56,72 +54,92 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
                   </Carousel.Item>
                 ))}
               </Carousel>
+            ) : (
+              <Img
+                fluid={pics && pics[0].childImageSharp.fluid}
+                className="col-lg-4 mb-3 mb-md-0 md-5 rounded d-md-inline-block d-none"
+              />
             )}
             {/*//pics-view*/}
-            <div
-              className="project-sections py-5"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </section>
-          <aside className="project-sidebar col-12 col-lg-4 pl-lg-5">
-            <div className="project-sidebar-inner bg-white p-4">
-              <div className="sidebar-row mb-5">
-                <h3 className="sidebar-title mb-4">Project Info</h3>
-                <ul className="list-unstyled pl-2">
-                  <li className="mb-4">
-                    <FontAwesomeIcon
-                      className="mr-3 text-primary"
-                      transform="grow-6 down-2"
-                      icon="meteor"
-                    />
-                    <strong>For:</strong> {madeFor}
-                  </li>
-                  <li className="mb-4">
-                    <FontAwesomeIcon
-                      className="mr-3 text-primary"
-                      transform="grow-6 down-2"
-                      icon="external-link-alt"
-                    />
-                    <strong>Link:</strong> <a href={url}>{url.slice(2)}</a>
-                  </li>
-                  <li className="mb-4">
-                    <FontAwesomeIcon
-                      className="mr-3 text-primary"
-                      transform="grow-6 down-2"
-                      icon={["fab", "github-alt"]}
-                    />
-                    <strong>Code:</strong>{" "}
-                    <a href={github}>{github.slice(2)}</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="sidebar-row">
-                <h3 className="sidebar-title mb-3">Technologies Used</h3>
-                <p />
-                <div className="webdev-icons row mb-5 align-items-center">
-                  {tech.map((item, idx) => (
-                    <div
-                      className="webdev-icon col-4 col-md-3 mr-0 mb-4"
-                      key={id + "_tech_" + idx}
-                    >
-                      <img
-                        alt={item}
-                        className="img-fluid"
-                        src={
-                          "/images/webdev-icons/" + item.toLowerCase() + ".svg"
-                        }
-                      />
-                    </div>
-                  ))}
+            <aside className="project-sidebar col-lg-6 pl-lg-5">
+              <div className="project-sidebar-inner p-4">
+                <div className="sidebar-row mb-5">
+                  <h3 className="sidebar-title mb-3">Project Info</h3>
+                  <ul className="list-unstyled pl-2">
+                    {madeFor && (
+                      <li className="mb-3">
+                        <FontAwesomeIcon
+                          className="mr-3 text-primary"
+                          transform="grow-6 down-2"
+                          icon="meteor"
+                        />
+                        <strong>For:</strong> {madeFor}
+                      </li>
+                    )}
+                    {url && (
+                      <li className="mb-3">
+                        <FontAwesomeIcon
+                          className="mr-3 text-primary"
+                          transform="grow-6 down-2"
+                          icon="external-link-alt"
+                        />
+                        <strong>Link:</strong> <a href={url}>{url.slice(2)}</a>
+                      </li>
+                    )}
+                    {github && (
+                      <li className="mb-3">
+                        <FontAwesomeIcon
+                          className="mr-3 text-primary"
+                          transform="grow-6 down-2"
+                          icon={["fab", "github-alt"]}
+                        />
+                        <strong>Code:</strong>{" "}
+                        <a href={github}>{github.slice(2)}</a>
+                      </li>
+                    )}
+                  </ul>
                 </div>
+                {highlights && (
+                  <div className="sidebar-row mb-5">
+                    <h3 className="sidebar-title mb-3">Highlights</h3>
+                    <ul className="mb-3">
+                      {highlights.map((highlight, idx) => (
+                        <li className="mb-2" key={`${id}-highlight-${idx}`}>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                <div className="sidebar-row">
+                  <h3 className="sidebar-title mb-3">Technologies Used</h3>
+                  <div className="webdev-icons mx-2 row align-items-center">
+                    {tech.map((item, idx) => (
+                      <div
+                        className="webdev-icon col-3 col-lg-2 mr-0 mb-4"
+                        key={id + "_tech_" + idx}
+                      >
+                        <img
+                          alt={item}
+                          className="img-fluid"
+                          src={reqSvgs(`./${item.toLowerCase()}.svg`)}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/*//section-row*/}
               </div>
-              {/*//section-row*/}
-            </div>
-            {/*//project-sidebar-inner*/}
-          </aside>
+              {/*//project-sidebar-inner*/}
+            </aside>
+          </div>
+          <div
+            className="project-sections col-lg-12 py-5 mx-3"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </div>
         {/*//row*/}
-      </div>
+      </section>
       {/*//container*/}
     </Layout>
   );
@@ -139,7 +157,6 @@ export const query = graphql`
         name
         madeFor
         tagline
-        watermark
         pics {
           childImageSharp {
             fluid {
@@ -149,6 +166,7 @@ export const query = graphql`
         }
         url
         github
+        highlights
         tech
       }
     }

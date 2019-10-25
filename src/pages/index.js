@@ -18,8 +18,13 @@ export default () => (
               name
               madeFor
               tagline
-              thumb
-              watermark
+              thumb {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               tech
             }
           }
@@ -48,7 +53,7 @@ export default () => (
 
 const AboutPage = props => {
   const { data } = props;
-  
+
   return (
     <Layout>
       <div className="header-intro theme-bg-primary text-white py-5">
@@ -116,14 +121,14 @@ const AboutPage = props => {
           <h3 className="section-title font-weight-bold text-center mb-5">
             Featured Projects
           </h3>
-           <div className="project-cards row mb-5">
+          <div className="project-cards row mb-5">
             {data.allMarkdownRemark.nodes
               .filter(
                 item =>
                   item.frontmatter.name === "Eloqua" ||
                   item.frontmatter.name === "My Developer Website"
               )
-              .map(({id, frontmatter}) => (
+              .map(({ id, frontmatter }) => (
                 <ProjectCard key={id} frontmatter={frontmatter} />
               ))}
           </div>

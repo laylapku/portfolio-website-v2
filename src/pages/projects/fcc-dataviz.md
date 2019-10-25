@@ -4,12 +4,12 @@ type: ["Practice", "Data-viz"]
 name: "Data Visualization Projects"
 madeFor: "freeCodeCamp"
 tagline: "5 data visualization projects, part of freeCodeCamp's curriculum"
-thumb: "/images/projects/d3-thumb.png"
-watermark: "/images/logos/freecodecamp-inverse.svg"
+thumb: ../../images/projects/d3-thumb.png
 
-pics: []
+pics: [../../images/projects/d3-thumb.png]
 url: "//codepen.io/collection/DYzrEd/"
-github: "//"
+github: ""
+highlights: 
 tech: ["D3", "JavaScript", "CSS", "Codepen"]
 ---
 

@@ -1,17 +1,17 @@
 [
   {
     "name": "Languages & Runtimes",
-    "icon": "/images/frontend-icon.svg",
+    "icon": "blk1-icon",
     "value": ["Javascript", "Node.js", "GraphQL", "HTML", "CSS", "SASS", "LESS"]
   },
   {
     "name": "Frameworks",
-    "icon": "/images/backend-icon.svg",
+    "icon": "blk2-icon",
     "value": ["React", "Redux", "Material-UI", "Bootstrap", "Reactstrap"]
   },
   {
     "name": "Dev Tools",
-    "icon": "/images/other-skills-icon.svg",
+    "icon": "blk3-icon",
     "value": [
       "Webpack",
       "Github",
