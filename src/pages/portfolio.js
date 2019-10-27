@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Button, ButtonGroup } from "reactstrap";
+import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
 
@@ -39,6 +40,7 @@ const PortfolioPage = () => {
 
   return (
     <Layout>
+      <SEO title="Portfolio" />
       <div className="header-intro theme-bg-primary text-white py-5">
         <div className="container">
           <h2 className="page-heading mb-3">Projects</h2>

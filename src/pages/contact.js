@@ -1,10 +1,12 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import SEO from "../components/SEO";
 import Layout from "../components/Layout";
+import ProfilePic from "../images/profile.png";
 
-export default () => (
-  <StaticQuery
-    query={graphql`
+const ContactPage = () => {
+  const data = useStaticQuery(
+    graphql`
       query {
         allSocialsJson {
           edges {
@@ -15,22 +17,15 @@ export default () => (
             }
           }
         }
-        site {
-          siteMetadata {
-            pic
-          }
-        }
       }
-    `}
-    render={data => <ContactPage data={data} />}
-  />
-);
+    `
+  );
 
-const ContactPage = ({ data }) => {
   // webpack feature: function mapping all *.svg paths to the actual data:image
   const reqSvgs = require.context("../images/social-icons", true, /\.svg$/);
   return (
     <Layout>
+      <SEO title="Contact" />
       <div className="header-intro theme-bg-primary text-white py-5">
         <div className="container">
           <h2 className="page-heading mb-0">Contact Me</h2>
@@ -44,7 +39,7 @@ const ContactPage = ({ data }) => {
             <div className="contact-intro col-lg-8 mx-lg-auto mb-5 text-center">
               <img
                 className="profile-small d-inline-block mx-auto rounded-circle mb-3"
-                src={data.site.siteMetadata.pic}
+                src={ProfilePic}
                 alt=""
               />
               <div className="speech-bubble bg-white p-4 p-lg-5 shadow-sm">
@@ -143,3 +138,5 @@ const ContactPage = ({ data }) => {
     </Layout>
   );
 };
+
+export default ContactPage;

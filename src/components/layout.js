@@ -1,31 +1,19 @@
 import React from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
-  faGithub,
-  faNodeJs,
-  faFreeCodeCamp,
-  faCodepen,
-  faStackOverflow,
-  faTwitter
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faHome,
-  faArrowUp,
-  faArrowDown,
-  faPlay,
-  faPause,
-  faRedo,
-  faQuoteLeft,
-  faQuoteRight,
   faCheck,
+  faHome,
+  faEnvelope,
+  faMeteor,
   faDownload,
-  faExternalLinkAlt,
-  faMeteor
+  faExternalLinkAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { addBackToTop } from "vanilla-back-to-top";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style.css";
+import ProfilePic from "../images/profile.png";
 import Navigation from "./Navigation";
 
 export default ({ children }) => (
@@ -34,10 +22,8 @@ export default ({ children }) => (
       query {
         site {
           siteMetadata {
-            name
+            author
             email
-            pic
-            year
           }
         }
       }
@@ -57,23 +43,12 @@ export default ({ children }) => (
 const Icons = function() {
   library.add(
     faGithub,
-    faNodeJs,
-    faFreeCodeCamp,
-    faCodepen,
-    faStackOverflow,
-    faTwitter,
-    faHome,
-    faArrowUp,
-    faArrowDown,
-    faPlay,
-    faPause,
-    faRedo,
-    faQuoteLeft,
-    faQuoteRight,
     faCheck,
-    faDownload,
+    faHome,
+    faEnvelope,
+    faMeteor,
     faExternalLinkAlt,
-    faMeteor
+    faDownload
   );
   return null;
 };
@@ -85,7 +60,7 @@ const CTA = function(data) {
         <div className="text-center">
           <img
             className="profile-small d-inline-block mx-auto rounded-circle mb-2"
-            src={data.data.site.siteMetadata.pic}
+            src={ProfilePic}
             alt=""
           />
         </div>
@@ -118,14 +93,14 @@ const Footer = function(data) {
     <footer className="footer text-light text-center py-2">
       <div>
         <small className="copyright">
-          Copyright &copy; {data.data.site.siteMetadata.year} by{" "}
+          Copyright &copy; 2019 by{" "}
           <a
             className="text-light"
             href="//sean-lee.glitch.me"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {data.data.site.siteMetadata.name}
+            {data.data.site.siteMetadata.author}
           </a>
         </small>
       </div>

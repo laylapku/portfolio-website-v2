@@ -91,7 +91,7 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
                         <FontAwesomeIcon
                           className="mr-3 text-primary"
                           transform="grow-6 down-2"
-                          icon={["fab", "github-alt"]}
+                          icon={["fab", "github"]}
                         />
                         <strong>Code:</strong>{" "}
                         <a href={github}>{github.slice(2)}</a>

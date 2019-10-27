@@ -1,12 +1,14 @@
 import React from "react";
-import { StaticQuery, Link, graphql } from "gatsby";
+import { useStaticQuery, Link, graphql } from "gatsby";
+import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import SkillBlock from "../components/SkillBlock";
 import ProjectCard from "../components/ProjectCard";
+import ProfilePic from "../images/profile.png";
 
-export default () => (
-  <StaticQuery
-    query={graphql`
+const AboutPage = () => {
+  const data = useStaticQuery(
+    graphql`
       query {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { glob: "**/src/pages/projects/*.md" } }
@@ -41,36 +43,32 @@ export default () => (
         }
         site {
           siteMetadata {
-            name
-            pic
+            author
           }
         }
       }
-    `}
-    render={data => <AboutPage data={data} />}
-  />
-);
+    `
+  );
 
-const AboutPage = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Home" />
       <div className="header-intro theme-bg-primary text-white py-5">
         <div className="container">
           <div className="profile-teaser media flex-column flex-md-row">
             <img
               alt=""
               className="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto"
-              src={data.site.siteMetadata.pic}
+              src={ProfilePic}
             />
             <div className="media-body text-center text-md-left">
               <div className="lead">Hi, I'm</div>
-              <h2 className="mt-0 display-4 font-weight-bold">
-                {data.site.siteMetadata.name}
-              </h2>
+              <h3 className="mt-0 display-4 font-weight-bold">
+                {data.site.siteMetadata.author}
+              </h3>
               <div className="bio mb-3">
-                I'm a web developer specialising in React. I design and build
-                web applications.
-                <br /> Check out my{" "}
+                I'm a web developer. I design and build web applications.
+                <br /> Come check out my{" "}
                 <Link className="link-on-bg" to="/portfolio/">
                   portfolio
                 </Link>{" "}
@@ -143,3 +141,5 @@ const AboutPage = ({ data }) => {
     </Layout>
   );
 };
+
+export default AboutPage;

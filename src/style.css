@@ -187,7 +187,8 @@ a.theme-btn-on-bg:active,
 }
 
 .profile-image {
-  max-width: 240px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .section-title {
@@ -556,11 +557,12 @@ a.theme-btn-on-bg:active,
 .resume-header {
   background: #434e5e;
   color: rgba(255, 255, 255, 0.9);
-  height: 220px;
+  height: auto;
 }
 
 .resume-header .picture {
-  width: 220px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .resume-header .name {
@@ -745,30 +747,6 @@ a.theme-btn-on-bg:active,
   }
 }
 
-.social-list-color a.twitter {
-  background-color: #1da1f2;
-}
-
-.social-list-color a.twitter:hover {
-  background-color: #0c85d0;
-}
-
-.social-list-color a.facebook {
-  background-color: #3b5998;
-}
-
-.social-list-color a.facebook:hover {
-  background-color: #2d4373;
-}
-
-.social-list-color a.github-alt {
-  background-color: #576477;
-}
-
-.social-list-color a.github-alt:hover {
-  background-color: #414b5a;
-}
-
 .social-list-color a.stack-overflow {
   background-color: #f3a83b;
 }
@@ -791,14 +769,6 @@ a.theme-btn-on-bg:active,
 
 .social-list-color a.codepen:hover {
   background-color: #000;
-}
-
-.social-list-color a.instagram {
-  background-color: #bc296d;
-}
-
-.social-list-color a.instagram:hover {
-  background-color: #922055;
 }
 
 .social-list-color a.medium {

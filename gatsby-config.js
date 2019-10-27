@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Layla Ouyang's Developer Website",
-    name: "Layla Ouyang",
-    email: "ouyangleilei515@gmail.com",
-    pic: "./src/images/profile.png",
-    year: "2019"
+    description: "",
+    author: "Layla Ouyang",
+    email: "ouyangleilei515@gmail.com"
   },
   plugins: [
     {
@@ -36,7 +35,20 @@ module.exports = {
         path: `${__dirname}/src/data/`
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 309
+            }
+          },
+          `gatsby-remark-autolink-headers`
+        ]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,6 +63,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`
       }
-    }
+    },
+    `gatsby-plugin-react-helmet`
   ]
 };

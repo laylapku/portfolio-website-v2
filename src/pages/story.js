@@ -1,60 +1,72 @@
 import React from "react";
+import "../style.css";
 
 const MyStory = () => {
   return (
     <div>
-      <div className="header-intro theme-bg-primary text-white py-5">
-        <h2 className="page-heading mb-2 text-center">My Story</h2>
+      <div className="theme-bg-primary text-white text-center py-4 px-4">
+        <h2 className="mb-3">From Zero to Building My Own App:</h2>
+        <h4 className="font-weight-light">
+          My Journey as a Self-taught Developer
+        </h4>
       </div>
-      <div className="px-5">
+
+      <div className="py-5 px-5">
         If someone told me a year ago that I would be coding and even building
         my own app now, my answer might very well be: when pigs can fly! I have
         a master’s degree in English language and literature, no CS background
         whatsoever. Considering myself more of a humanities person, I’ve never
         entertained the idea of pursuing a career in technology. But here I am
-        somehow, and this is my story. From zero to first steps I was at a low
-        point in my life a while ago: not really enjoying what I was doing and
-        feeling clueless about my career. I decided I needed a change. I want to
-        do something that can be both fun and productive. But what should I
-        learn? I wasn’t feeling particularly passionate about anything then. My
-        good friend Sean suggested I should try programming. It’s fun, cool and
-        practical. Seeing how passionate he is building his own app, I decided
-        to give it a go. I’m lucky to have Sean as my coding mentor throughout
-        this journey. Sean recommended JavaScript to me as a first language. JS
-        is beginner-friendly, relatively easily to learn, and the only (more or
+        somehow, and this is my story.
+        <br />
+        <h5>First steps</h5>
+        I was at a low point in my life a while ago: not really enjoying what I
+        was doing and feeling clueless about my career. I decided I needed a
+        change. I want to do something that can be both fun and productive. But
+        what should I learn? I wasn’t feeling particularly passionate about
+        anything then. My good friend Sean suggested I should try programming.
+        It’s fun, cool and practical. Seeing how passionate he is building his
+        own app, I decided to give it a go.
+        <br />
+        I’m lucky to have Sean as my coding mentor throughout this journey. Sean
+        recommended JavaScript to me as a first language. JS is
+        beginner-friendly, relatively easily to learn, and the only (more or
         less) front end programming language. As an absolute beginner, I believe
         visualizing the stuff I’m building would greatly sustain my interest and
         motivation, especially at the early stage. Besides, I’ve always had an
         interest in design. If I were to become a developer, I’d imagine myself
         doing the kind of work that overlaps design and engineering. Hence JS
-        seems to be a good fit for me. I started with FreeCodeCamp. At this
-        time, I knew absolutely nothing about web development. To be fair
-        though, I may have heard of “HTML” before. It turned out my first
-        encounter was not as bad as I expected. My “Hello World” trial went
-        quite smoothly. I got to know how CSS actually works. Just a bunch of
-        tags and styling rules, I said to myself, nothing too tricky (how
-        naïve!). I exceeded my own expectations by finishing the first part
-        “responsive web design” rather quickly. Feeling confident, I started to
-        work on the project assignments, and experienced my first moments of
-        frustration. How do I center this? Why is this not where I want it to
-        be? How to make this grid work... There just seemed to be endless
-        problems. But am I a person who gives up so easily? So every day I
-        motivated myself: What do we say to CSS? Not today… I finally finished
-        my first web page project, which looks bearable… This did prompt me to
-        consider better learning modes. Since it’s impossible to memorize all
-        those rules, and solving a CSS problem can be really time-consuming and
-        discouraging for beginners, perhaps I should learn something else and
-        come back to these practices once in a while. I proceeded to JS. It’s a
-        totally different mindset doing JS exercises, more function-oriented and
-        logically coherent. That was when I started to grow into programming. So
-        if you are experiencing the same frustrations about CSS, don’t overwork
-        yourself on it. Try learning something new when feeling stuck, and when
-        you come back to it with your spirits lifted, things may feel easier.
-        Valley of despair It took me a while to get the basics out of the way. I
-        feel rather conflicted about data structures and algorithms. On the one
-        hand, solving math problems can be really fun and fulfilling; on the
-        other hand, I felt completely beaten up when I racked my brains to come
-        up with a solution and failed. I was never quite good at math in school,
+        seems to be a good fit for me.
+        <br />I started with FreeCodeCamp. By then I knew absolutely nothing
+        about web development. To be fair though, I may have heard of “HTML”
+        before. It turned out my first encounter was not as bad as I expected.
+        My “Hello World” trial went quite smoothly. I got to know how CSS
+        actually works. Just a bunch of tags and styling rules, I said to
+        myself, nothing too tricky (how naïve!). I exceeded my own expectations
+        by finishing the first part “responsive web design” rather quickly.
+        Feeling confident, I started to work on the project assignments, and
+        experienced my first moments of frustration. How do I center this? Why
+        is this not where I want it to be? How to make this grid work... There
+        just seemed to be endless problems. But am I a person who gives up so
+        easily? So every day I motivated myself: What do we say to CSS? Not
+        today…
+        <br />I finally finished my first web page project, which looks
+        bearable… This did prompt me to consider better learning modes. Since
+        it’s impossible to memorize all those rules, and solving a CSS problem
+        can be really time-consuming and discouraging for beginners, perhaps I
+        should learn something else and come back to these practices once in a
+        while. I proceeded to JS. It’s a totally different mindset doing JS
+        exercises, more function-oriented and logically coherent. That was when
+        I started to grow into programming. So if you are experiencing the same
+        frustrations about CSS, don’t overwork yourself on it. Try learning
+        something new when feeling stuck, and when you come back to it with your
+        spirits lifted, things may feel easier.
+        <h5>Valley of despair</h5>
+        It took me a while to get the basics out of the way. I feel rather
+        conflicted about data structures and algorithms. On the one hand,
+        solving math problems can be really fun and fulfilling; on the other
+        hand, I felt completely beaten up when I racked my brains to come up
+        with a solution and failed. I was never quite good at math in school,
         therefore I’m not confident with my logic thinking. I was constantly
         casted into self-doubt, thinking of giving up. At such moments, I would
         ask Sean for help. He’d show me how he approaches a problem step by
@@ -66,8 +78,10 @@ const MyStory = () => {
         both at the stage of learning and when I started to build productive
         projects. Through such systematic and deductive coding training, I
         gradually gained my confidence back and managed to push myself forward
-        one bit at a time. Small successes: As I finished the JS basics, I
-        proceeded to a more advanced part: using front end frameworks.
+        one bit at a time.
+        <h5>Small successes</h5>
+        As I finished the JS basics, I proceeded to a more advanced part: using
+        front end frameworks.
       </div>
     </div>
   );

@@ -1,12 +1,14 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SEO from "../components/SEO";
 import Layout from "../components/Layout";
+import ProfilePic from "../images/profile.png";
 
-export default () => (
-  <StaticQuery
-    query={graphql`
+const ResumePage = () => {
+  const data = useStaticQuery(
+    graphql`
       query {
         allSocialsJson(limit: 4) {
           edges {
@@ -40,31 +42,29 @@ export default () => (
         }
         site {
           siteMetadata {
-            name
+            author
             email
-            pic
           }
         }
       }
-    `}
-    render={data => <ResumePage data={data} />}
-  />
-);
-const ResumePage = ({ data }) => {
+    `
+  );
+
   // webpack feature: function mapping all *.svg paths to the actual data:image
   const reqSvgs = require.context("../images/social-icons", true, /\.svg$/);
   return (
     <Layout>
+      <SEO title="Resume" />
       <div className="header-intro header-intro-resume theme-bg-primary text-white py-5">
         <div className="container position-relative">
           <h2 className="page-heading mb-3">Resume</h2>
-          <a
-            className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto"
-            href="/"
-          >
-            <FontAwesomeIcon className="mr-2" icon="download" />
-            Download PDF Version
-          </a>
+          {/*  <a
+             className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto"
+             href="/"
+           >
+             <FontAwesomeIcon className="mr-2" icon="download" />
+             Download PDF Version
+           </a> */}
         </div>
         {/*//container*/}
       </div>
@@ -72,25 +72,26 @@ const ResumePage = ({ data }) => {
       <article className="resume-wrapper text-center position-relative">
         <div className="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
           <header className="resume-header pt-4 pt-md-0">
-            <div className="media flex-column flex-md-row">
+            <div className="media flex-column flex-md-row align-items-center">
               <img
                 className="mr-3 img-fluid picture mx-auto"
-                src={data.site.siteMetadata.pic}
+                src={ProfilePic}
                 alt=""
               />
               <div className="media-body p-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                 <div className="primary-info">
                   <h1 className="name mt-0 mb-1 text-white text-uppercase">
-                    {data.site.siteMetadata.name}
+                    {data.site.siteMetadata.author}
                   </h1>
                   <h4 className="mb-3 font-weight-normal">Web Developer</h4>
                   <ul className="list-unstyled">
                     <li className="mb-2">
+                      <FontAwesomeIcon className="mr-2" icon="home" />
+                      <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
+                    </li>
+                    <li className="mb-2">
+                      <FontAwesomeIcon className="mr-2" icon="envelope" />
                       <a href={"mailto:" + data.site.siteMetadata.email}>
-                        <i
-                          className="far fa-envelope fa-fw mr-2"
-                          data-fa-transform="grow-3"
-                        ></i>
                         {data.site.siteMetadata.email}
                       </a>
                     </li>
@@ -99,14 +100,6 @@ const ResumePage = ({ data }) => {
                 {/*//primary-info*/}
                 <div className="secondary-info ml-md-auto">
                   <ul className="resume-social list-unstyled">
-                    {/*  <li className="mb-3">
-                      <a href="//laylaoy.netlify.com">
-                        <span className="fa-container text-center mr-2">
-                          <FontAwesomeIcon icon="home" />
-                        </span>
-                        laylaoy.netlify.com
-                      </a>
-                    </li> */}
                     {data.allSocialsJson.edges.map(item => (
                       <li className="mb-3" key={item.node.id}>
                         <a href={item.node.url}>
@@ -260,7 +253,7 @@ const ResumePage = ({ data }) => {
                 {/*//education-section*/}
                 <section className="resume-section language-section mb-5">
                   <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
-                    Language
+                    Languages
                   </h2>
                   <div className="resume-section-content">
                     <ul className="list-unstyled resume-lang-list">
@@ -307,54 +300,4 @@ const ResumePage = ({ data }) => {
   );
 };
 
-/* export const query = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "/src/pages/story/*.md" } }
-    ) {
-      nodes {
-        id
-        frontmatter {
-          path
-        }
-      }
-    }
-    allSocialsJson(limit: 4) {
-      edges {
-        node {
-          id
-          url
-          icon
-        }
-      }
-    }
-    allExpJson {
-      edges {
-        node {
-          id
-          role
-          time
-          desc
-          tech
-        }
-      }
-    }
-    allLangJson {
-      edges {
-        node {
-          id
-          name
-          level
-          certif
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        name
-        email
-        pic
-      }
-    }
-  }
-`; */
+export default ResumePage;
