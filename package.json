@@ -29,7 +29,6 @@
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
-    "reactstrap": "^6.5.0",
-    "vanilla-back-to-top": "^7.2.1"
+    "reactstrap": "^6.5.0"
   }
 }

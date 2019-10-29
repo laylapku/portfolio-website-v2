@@ -10,7 +10,6 @@ import {
   faDownload,
   faExternalLinkAlt
 } from "@fortawesome/free-solid-svg-icons";
-import { addBackToTop } from "vanilla-back-to-top";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style.css";
 import ProfilePic from "../images/profile.png";
@@ -88,7 +87,7 @@ const CTA = function(data) {
 };
 
 const Footer = function(data) {
-  addBackToTop();
+  /* addBackToTop(); */
   return (
     <footer className="footer text-light text-center py-2">
       <div>

@@ -15,16 +15,7 @@ highlights: [
 "State management with React Hooks and Context API (replacing Redux)",
 "Speeches filterable by speaker, theme, or just a custom keyword.",
 "Common features like playlist, favorites list, loop/random toggle, playback speed switch, dark mode"]
-tech: [
-"PWA",
-"React",
-"JavaScript",
-"Firebase",
-"Redux",
-"Material-UI",
-"CSS",
-"Webpack"
-]
+techs: ["PWA","React","JavaScript","Firebase","Redux","Material-UI","CSS","Webpack"]
 ---
 
 #### Table of Contents

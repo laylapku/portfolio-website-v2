@@ -21,7 +21,7 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
         url,
         github,
         highlights,
-        tech
+        techs
       }
     } = markdownRemark;
   }
@@ -114,18 +114,19 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
                 <div className="sidebar-row">
                   <h3 className="sidebar-title mb-3">Technologies Used</h3>
                   <div className="webdev-icons mx-2 row align-items-center">
-                    {tech.map((item, idx) => (
-                      <div
-                        className="webdev-icon col-3 col-lg-2 mr-0 mb-4"
-                        key={id + "_tech_" + idx}
-                      >
-                        <img
-                          alt={item}
-                          className="img-fluid"
-                          src={reqSvgs(`./${item.toLowerCase()}.svg`)}
-                        />
-                      </div>
-                    ))}
+                    {techs &&
+                      techs.map((item, idx) => (
+                        <div
+                          className="webdev-icon col-3 col-lg-2 mr-0 mb-4"
+                          key={id + "_tech_" + idx}
+                        >
+                          <img
+                            alt={item}
+                            className="img-fluid"
+                            src={reqSvgs(`./${item.toLowerCase()}.svg`)}
+                          />
+                        </div>
+                      ))}
                   </div>
                 </div>
                 {/*//section-row*/}
@@ -167,7 +168,7 @@ export const query = graphql`
         url
         github
         highlights
-        tech
+        techs
       }
     }
   }

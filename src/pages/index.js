@@ -27,7 +27,7 @@ const AboutPage = () => {
                   }
                 }
               }
-              tech
+              techs
             }
           }
         }

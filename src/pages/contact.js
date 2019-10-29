@@ -2,7 +2,6 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
-import ProfilePic from "../images/profile.png";
 
 const ContactPage = () => {
   const data = useStaticQuery(
@@ -37,11 +36,6 @@ const ContactPage = () => {
         <div className="container">
           <div className="row">
             <div className="contact-intro col-lg-8 mx-lg-auto mb-5 text-center">
-              <img
-                className="profile-small d-inline-block mx-auto rounded-circle mb-3"
-                src={ProfilePic}
-                alt=""
-              />
               <div className="speech-bubble bg-white p-4 p-lg-5 shadow-sm">
                 <p className="text-center mb-3">
                   If you are interested in hiring me, please use the form below
@@ -123,7 +117,7 @@ const ContactPage = () => {
                     type="submit"
                     className="btn btn-block btn-primary py-2"
                   >
-                    Send It
+                    Send
                   </button>
                 </div>
               </div>

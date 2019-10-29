@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 const ProjectCard = ({
-  frontmatter: { path, name, madeFor, tagline, thumb, tech }
+  frontmatter: { path, name, madeFor, tagline, thumb, techs }
 }) => {
   return (
     <div className="col-12 col-lg-4">
@@ -37,7 +37,7 @@ const ProjectCard = ({
         {/*//card-footer*/}
         <div className="card-footer border-0 text-center bg-white pb-4">
           <ul className="list-inline mb-0 mx-auto">
-            {tech.map((ele, idx) => (
+            {techs.map((ele, idx) => (
               <li className="list-inline-item" key={"_tech_" + idx}>
                 <span className="badge badge-secondary badge-pill">{ele}</span>
               </li>

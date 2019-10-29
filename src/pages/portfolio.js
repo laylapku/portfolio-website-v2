@@ -26,7 +26,7 @@ const PortfolioPage = () => {
                 }
               }
             }
-            tech
+            techs
           }
         }
       }

@@ -7,24 +7,14 @@ tagline: "A full-stack reading list app"
 thumb: ../../images/projects/booklist-thumb.jpg
 
 pics: [../../images/projects/booklist-inner-1.png, ../../images/projects/booklist-inner-2.png]
-url: ""
-github: "//github.com/laylapku/booklist-with-graphql"
+url: "//glitch.com/~booklist-with-graphql"
+github: ""
 highlights: [
 "GraphQL managing data retrieval and manipulation",
 "GraphQL server with Node-Express, GraphQL client with React-Apollo",
 "Cloud MongoDB instance on mLab",
 "One-to-many data model"]
-tech:
-  [
-    "React",
-    "JavaScript",
-    "Nodejs",
-    "Express",
-    "GraphQL",
-    "Apollo",
-    "MongoDB",
-    "CSS",
-  ]
+techs: ["React","JavaScript","Nodejs","Express","GraphQL","Apollo","MongoDB","CSS"]
 ---
 
 <iframe

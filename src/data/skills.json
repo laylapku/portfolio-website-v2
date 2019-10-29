@@ -7,17 +7,23 @@
   {
     "name": "Frameworks",
     "icon": "blk2-icon",
-    "value": ["React", "Redux", "Material-UI", "Bootstrap", "Reactstrap"]
+    "value": [
+      "React",
+      "Redux",
+      "Gatsby",
+      "Material-UI",
+      "Bootstrap",
+      "Reactstrap"
+    ]
   },
   {
-    "name": "Dev Tools",
+    "name": "Other Tools",
     "icon": "blk3-icon",
     "value": [
       "Github",
       "Webpack",
       "Firebase",
       "MongoDB",
-      "Gatsby",
       "Visual Studio",
       "Codepen",
       "Glitch"

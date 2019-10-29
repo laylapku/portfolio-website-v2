@@ -10,7 +10,7 @@ pics: [../../images/projects/backend-thumb.jpg]
 url: "//glitch.com/@laylapku/fcc-backend-projects"
 github: ""
 highlights:
-tech: ["Nodejs", "Express", "JavaScript", "MongoDB", "CSS", "Glitch"]
+techs: ["Nodejs", "Express", "JavaScript", "MongoDB", "CSS", "Glitch"]
 ---
 
 ## File Metadata

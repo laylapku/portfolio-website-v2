@@ -10,7 +10,7 @@ pics: [../../images/projects/d3-thumb.png]
 url: "//codepen.io/collection/DYzrEd/"
 github: ""
 highlights: 
-tech: ["D3", "JavaScript", "CSS", "Codepen"]
+techs: ["D3", "JavaScript", "CSS", "Codepen"]
 ---
 
 ## Choropleth Map

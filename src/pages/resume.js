@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
@@ -26,17 +25,7 @@ const ResumePage = () => {
               role
               time
               desc
-              tech
-            }
-          }
-        }
-        allLangJson {
-          edges {
-            node {
-              id
-              name
-              level
-              certif
+              techs
             }
           }
         }
@@ -131,18 +120,23 @@ const ResumePage = () => {
               </h2>
               <div className="resume-section-content">
                 <p className="mb-0">
-                  I'm a self-taught web developer... If you are interested, you
-                  can get to know more about me in my{" "}
-                  <Link to="/story" className="font-weight-bold">
-                    developer story
-                  </Link>
-                  .
+                  I'm a self-taught web developer. I started as an absolute
+                  beginner a year ago, and now I'm building my own open source
+                  project: Eloqua - a progressive web app that enables listening
+                  to famous speeches on smartphones. <br />
+                  This may not sound like a whole lot of experience, but
+                  building Eloqua has been a huge milestone for me. It's with
+                  this experience that I feel confident and determined to embark
+                  on my new career path as a programmer. <br />
+                  I'm an efficient and enthusiastic learner, and currently
+                  looking for an opportunity to learn from experienced seniors
+                  and build interesting stuff together.
                 </p>
               </div>
             </section>
             {/*//summary-section*/}
             <div className="row">
-              <div className="col-lg-9">
+              <div className="col-lg-8">
                 <section className="resume-section experience-section mb-5">
                   <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
                     Experience
@@ -173,7 +167,7 @@ const ResumePage = () => {
                               Technologies used:
                             </h4>
                             <ul className="list-inline">
-                              {item.node.tech.map((ele, idx) => (
+                              {item.node.techs.map((ele, idx) => (
                                 <li
                                   className="list-inline-item"
                                   key={item.node.id + "_tech_" + idx}
@@ -195,12 +189,11 @@ const ResumePage = () => {
                 </section>
                 {/*//experience-section*/}
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-4">
                 <section className="resume-section skills-section mb-5">
                   <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
                     Skills &amp; Tools
                   </h2>
-
                   <div className="resume-skill-item">
                     <h4 className="resume-skills-cat font-weight-bold">
                       Technical
@@ -256,22 +249,35 @@ const ResumePage = () => {
                     Languages
                   </h2>
                   <div className="resume-section-content">
-                    <ul className="list-unstyled resume-lang-list">
-                      {data.allLangJson.edges.map(item => (
-                        <li className="mb-2" key={item.node.id}>
-                          <div className="resume-lang-name font-weight-bold">
-                            {item.node.name}
-                            <span className="text-muted">
-                              {" "}
-                              ({item.node.level})
-                            </span>
-                          </div>
-                          <small className="font-weight-normal">
-                            {item.node.certif}
+                    <div className="resume-lang-item mb-2">
+                      <div className="resume-lang-name font-weight-bold">
+                        Chinese<span className="text-muted"> (Native)</span>
+                      </div>
+                    </div>
+                    <div className="resume-lang-item mb-2">
+                      <div className="resume-lang-name font-weight-bold">
+                        English<span className="text-muted"> (Advanced)</span>
+                      </div>
+                      <small className="font-weight-normal">
+                        Master Degree
+                      </small>
+                    </div>
+                    <div className="resume-lang-item">
+                      <div className="resume-lang-name font-weight-bold">
+                        German
+                        <span className="text-muted"> (Intermediate)</span>
+                      </div>
+                      <ul className="list-unstyled">
+                        <li>
+                          <small>
+                            Graduate Level 2nd Foreign Language Course
                           </small>
                         </li>
-                      ))}
-                    </ul>
+                        <li>
+                          <small>Duolingo German with Full Skill Levels</small>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </section>
                 {/*//language-section*/}

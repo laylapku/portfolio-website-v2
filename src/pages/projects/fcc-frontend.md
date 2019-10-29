@@ -10,7 +10,7 @@ pics: [../../images/projects/frontend-thumb.png]
 url: "//codepen.io/collection/nrGJLM/"
 github: ""
 highlights: 
-tech: ["React", "JavaScript", "Bootstrap", "CSS", "Codepen"]
+techs: ["React", "JavaScript", "Bootstrap", "CSS", "Codepen"]
 ---
 
 ## Pomodoro Clock
