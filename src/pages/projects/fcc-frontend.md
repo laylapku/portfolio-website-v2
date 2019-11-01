@@ -5,12 +5,14 @@ name: "Frontend Projects"
 madeFor: "freeCodeCamp"
 tagline: "5 frontend projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/frontend-thumb.png
-
 pics: [../../images/projects/frontend-thumb.png]
 url: "//codepen.io/collection/nrGJLM/"
 github: ""
 highlights: 
 techs: ["React", "JavaScript", "Bootstrap", "CSS", "Codepen"]
+summa: ""
+order: 103
+featured: false
 ---
 
 ## Pomodoro Clock

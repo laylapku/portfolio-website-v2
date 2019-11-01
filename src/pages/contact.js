@@ -8,12 +8,10 @@ const ContactPage = () => {
     graphql`
       query {
         allSocialsJson {
-          edges {
-            node {
-              id
-              url
-              icon
-            }
+          nodes {
+            id
+            url
+            icon
           }
         }
       }
@@ -45,13 +43,13 @@ const ContactPage = () => {
                   You can also find me on the following channels
                 </h6>
                 <ul className="social-list list-inline mb-0">
-                  {data.allSocialsJson.edges.map(item => (
-                    <li className="list-inline-item mb-3" key={item.node.id}>
-                      <a href={item.node.url}>
+                  {data.allSocialsJson.nodes.map(({ id, url, icon }) => (
+                    <li className="list-inline-item mb-3" key={id}>
+                      <a href={url}>
                         <img
-                          alt={item}
+                          alt={icon}
                           className="img-fluid"
-                          src={reqSvgs(`./${item.node.icon.toLowerCase()}.svg`)}
+                          src={reqSvgs(`./${icon.toLowerCase()}.svg`)}
                         />
                       </a>
                     </li>
@@ -66,6 +64,7 @@ const ContactPage = () => {
               className="contact-form col-lg-8 mx-lg-auto"
               method="post"
               action=""
+              data-netlify="true" /* for receiving submissions in Netlify admin panel */
             >
               <h3 className="text-center mb-3">Get In Touch</h3>
               <div className="form-row">

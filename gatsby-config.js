@@ -3,7 +3,7 @@ module.exports = {
     title: "Layla Ouyang's Website",
     description: "",
     author: "Layla Ouyang",
-    email: "ouyangleilei515@gmail.com"
+    email: "laylaoy@gmail.com"
   },
   plugins: [
     {

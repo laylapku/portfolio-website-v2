@@ -28,17 +28,16 @@ const AboutPage = () => {
                 }
               }
               techs
+              order
             }
           }
         }
         allSkillsJson {
-          edges {
-            node {
-              id
-              name
-              icon
-              value
-            }
+          nodes {
+            id
+            name
+            icon
+            value
           }
         }
         site {
@@ -68,22 +67,13 @@ const AboutPage = () => {
               </h3>
               <div className="bio mb-3">
                 I'm a web developer. I design and build web applications.
-                <br /> Come check out my{" "}
-                <Link className="link-on-bg" to="/portfolio/">
-                  portfolio
-                </Link>{" "}
-                and{" "}
-                <Link className="link-on-bg" to="/resume/">
-                  online resume
-                </Link>
-                .
               </div>
               {/*//bio*/}
               <Link
                 className="theme-btn-on-bg btn font-weight-bold theme-btn-cta"
-                to="/contact/"
+                to="/portfolio/"
               >
-                Let's chat
+                View Portfolio
               </Link>
             </div>
             {/*//media-body*/}
@@ -100,7 +90,7 @@ const AboutPage = () => {
           </h3>
           <div className="skills-blocks mx-auto pt-5">
             <div className="row">
-              {data.allSkillsJson.edges.map((item, index) => (
+              {data.allSkillsJson.nodes.map((item, index) => (
                 <SkillBlock key={index} item={item} />
               ))}
               {/*//skills-blocks*/}
@@ -120,9 +110,7 @@ const AboutPage = () => {
           <div className="project-cards row mb-5">
             {data.allMarkdownRemark.nodes
               .filter(
-                item =>
-                  item.frontmatter.name === "Eloqua Speech App" ||
-                  item.frontmatter.name === "My Developer Website"
+                ({ frontmatter: { order } }) => order === 100 || order === 101
               )
               .map(({ id, frontmatter }) => (
                 <ProjectCard key={id} frontmatter={frontmatter} />

@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
@@ -9,24 +9,37 @@ const ResumePage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allSocialsJson(limit: 4) {
-          edges {
-            node {
-              id
-              url
-              icon
+        allMarkdownRemark(
+          filter: {
+            fileAbsolutePath: { glob: "**/src/pages/projects/*.md" }
+            frontmatter: { featured: { ne: false } }
+          }
+          sort: { fields: [frontmatter___order], order: ASC }
+        ) {
+          nodes {
+            id
+            frontmatter {
+              path
+              name
+              madeFor
+              summa
             }
           }
         }
+        allSocialsJson(limit: 4) {
+          nodes {
+            id
+            url
+            icon
+          }
+        }
         allExpJson {
-          edges {
-            node {
-              id
-              role
-              time
-              desc
-              techs
-            }
+          nodes {
+            id
+            role
+            corp
+            time
+            desc
           }
         }
         site {
@@ -67,41 +80,48 @@ const ResumePage = () => {
                 src={ProfilePic}
                 alt=""
               />
-              <div className="media-body p-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+              <div className="media-body px-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                 <div className="primary-info">
-                  <h1 className="name mt-0 mb-1 text-white text-uppercase">
+                  <h2 className="name mt-0 mb-3 text-white text-uppercase">
                     {data.site.siteMetadata.author}
-                  </h1>
-                  <h4 className="mb-3 font-weight-normal">Web Developer</h4>
-                  <ul className="list-unstyled">
+                    <span className="name-sub font-weight-normal">
+                      {" "}
+                      (web developer)
+                    </span>
+                  </h2>
+                  <ul className="resume-social list-unstyled">
                     <li className="mb-2">
-                      <FontAwesomeIcon className="mr-2" icon="home" />
-                      <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
+                      <FontAwesomeIcon className="mr-2" icon="map-marker-alt" />
+                      China
+                    </li>
+                    <li className="mb-2">
+                      <FontAwesomeIcon className="mr-2" icon="phone-square" />
+                      +86 156 5296 9844
                     </li>
                     <li className="mb-2">
                       <FontAwesomeIcon className="mr-2" icon="envelope" />
-                      <a href={"mailto:" + data.site.siteMetadata.email}>
-                        {data.site.siteMetadata.email}
-                      </a>
+                      {data.site.siteMetadata.email}
+                    </li>
+                    <li>
+                      <FontAwesomeIcon className="mr-2" icon="home" />
+                      <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
                     </li>
                   </ul>
                 </div>
                 {/*//primary-info*/}
-                <div className="secondary-info ml-md-auto">
+                <div className="secondary-info ml-md-auto mt-3">
                   <ul className="resume-social list-unstyled">
-                    {data.allSocialsJson.edges.map(item => (
-                      <li className="mb-3" key={item.node.id}>
-                        <a href={item.node.url}>
+                    {data.allSocialsJson.nodes.map(({ id, url, icon }) => (
+                      <li className="mb-3" key={id}>
+                        <a href={url}>
                           <span className="fa-container text-center mr-2">
                             <img
-                              alt={item}
+                              alt={icon}
                               className="img-fluid"
-                              src={reqSvgs(
-                                `./${item.node.icon.toLowerCase()}.svg`
-                              )}
+                              src={reqSvgs(`./${icon.toLowerCase()}.svg`)}
                             />
                           </span>
-                          {item.node.url.slice(2)}
+                          {url.slice(2)}
                         </a>
                       </li>
                     ))}
@@ -116,72 +136,93 @@ const ResumePage = () => {
           <div className="resume-body p-5">
             <section className="resume-section summary-section mb-5">
               <h2 className="resume-section-title font-weight-bold pb-3 mb-3">
-                A few words about me...
+                SUMMARY
               </h2>
               <div className="resume-section-content">
+                I'm a: <br />
                 <p className="mb-0">
-                  I'm a self-taught web developer. I started as an absolute
-                  beginner a year ago, and now I'm building my own open source
-                  project: Eloqua - a progressive web app that enables listening
-                  to famous speeches on smartphones. <br />
-                  This may not sound like a whole lot of experience, but
-                  building Eloqua has been a huge milestone for me. It's with
-                  this experience that I feel confident and determined to embark
-                  on my new career path as a programmer. <br />
-                  I'm an efficient and enthusiastic learner, and currently
-                  looking for an opportunity to learn from experienced seniors
-                  and build interesting stuff together.
+                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
+                  self-taught web developer working on my open source project:
+                  Eloqua - a progressive web app that enables listening to
+                  famous speeches on smart phones;
+                </p>
+                <p className="mb-0">
+                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
+                  efficient and avid learner skilled at front end core
+                  JavaScript, CSS and HTML, experienced with frameworks like
+                  React and Redux, enjoying learning about scale performance and
+                  data management with GraphQL and cloud tools;
+                </p>
+                <p className="mb-0">
+                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
+                  confident and self-driven junior programmer currently looking
+                  for an opportunity to learn from experienced seniors and build
+                  great stuff together.
                 </p>
               </div>
             </section>
             {/*//summary-section*/}
             <div className="row">
-              <div className="col-lg-8">
+              <div className="col-lg-9">
+                <section className="resume-section project-section mb-5">
+                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                    Projects
+                  </h2>
+                  {data.allMarkdownRemark.nodes.map(
+                    ({ id, frontmatter: { path, name, madeFor, summa } }) => (
+                      <div className="resume-section-content mb-3" key={id}>
+                        <div className="d-flex flex-column flex-md-row">
+                          <h3 className="resume-project-name font-weight-bold mb-1">
+                            <Link to={path} className="theme-link">
+                              {name}
+                            </Link>
+                          </h3>
+                          <div className="resume-project-for ml-auto">
+                            {madeFor}
+                          </div>
+                        </div>
+                        <p className="resume-project-summa mb-2">{summa}</p>
+                      </div>
+                    )
+                  )}
+                </section>
+                {/*//project-section*/}
                 <section className="resume-section experience-section mb-5">
                   <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
-                    Experience
+                    Work Experience
                   </h2>
                   <div className="resume-section-content">
                     <div className="resume-timeline position-relative">
-                      {data.allExpJson.edges.map(item => (
-                        <article
-                          className="resume-timeline-item position-relative"
-                          key={item.node.id}
-                        >
-                          <div className="resume-timeline-item-header mb-2">
-                            <div className="d-flex flex-column flex-md-row">
-                              <h3 className="resume-position-title font-weight-bold mb-1">
-                                {item.node.role}{" "}
-                                <small className="text-muted"></small>
-                              </h3>
+                      {data.allExpJson.nodes.map(
+                        ({ id, role, corp, time, desc }) => (
+                          <article
+                            className="resume-timeline-item position-relative"
+                            key={id}
+                          >
+                            <div className="resume-timeline-item-header mb-2">
+                              <div className="d-flex flex-column flex-md-row">
+                                <h3 className="resume-position-title font-weight-bold mb-1">
+                                  {role} <small className="text-muted"></small>
+                                </h3>
+                                <div className="resume-company-name ml-auto">
+                                  {corp}
+                                </div>
+                              </div>
+                              {/*//row*/}
+                              <div className="resume-position-time">{time}</div>
                             </div>
-                            {/*//row*/}
-                            <div className="resume-position-time">
-                              {item.node.time}
+                            {/*//resume-timeline-item-header*/}
+                            <div className="resume-timeline-item-desc">
+                              <ul>
+                                {desc.map((item, idx) => (
+                                  <li key={"desc" + idx}>{item}</li>
+                                ))}
+                              </ul>
                             </div>
-                          </div>
-                          {/*//resume-timeline-item-header*/}
-                          <div className="resume-timeline-item-desc">
-                            <p>{item.node.desc}</p>
-                            <h4 className="resume-timeline-item-desc-heading font-weight-bold">
-                              Technologies used:
-                            </h4>
-                            <ul className="list-inline">
-                              {item.node.techs.map((ele, idx) => (
-                                <li
-                                  className="list-inline-item"
-                                  key={item.node.id + "_tech_" + idx}
-                                >
-                                  <span className="badge badge-secondary badge-pill">
-                                    {ele}
-                                  </span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          {/*//resume-timeline-item-desc*/}
-                        </article>
-                      ))}
+                            {/*//resume-timeline-item-desc*/}
+                          </article>
+                        )
+                      )}
                       {/*//resume-timeline-item*/}
                     </div>
                     {/*//resume-timeline*/}
@@ -189,7 +230,7 @@ const ResumePage = () => {
                 </section>
                 {/*//experience-section*/}
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-3">
                 <section className="resume-section skills-section mb-5">
                   <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
                     Skills &amp; Tools
@@ -199,15 +240,21 @@ const ResumePage = () => {
                       Technical
                     </h4>
                     <ul className="list-unstyled">
-                      <li className="mb-2 badge badge-light">
-                        JavaScript/React
+                      <li className="mb-1 badge badge-light">
+                        JavaScript/CSS/HTML
                       </li>
-                      <li className="mb-2 badge badge-light">Node.js</li>
-                      <li className="mb-2 badge badge-light">
-                        Serverless/Cloud
+                      <li className="mb-1 badge badge-light">
+                        React/Redux/Gatsby
                       </li>
-                      <li className="mb-2 badge badge-light">Product Design</li>
-                      <li className="mb-2 badge badge-light">UI/UX Design</li>
+                      <li className="mb-1 badge badge-light">
+                        MaterialUI/Bootstrap/D3
+                      </li>
+                      <li className="mb-1 badge badge-light">
+                        Firebase/AWS/GoogleCloud
+                      </li>
+                      <li className="mb-1 badge badge-light">
+                        Node/Express/GraphQL/MongoDB
+                      </li>
                     </ul>
                   </div>
                   <div className="resume-skill-item">
@@ -215,12 +262,11 @@ const ResumePage = () => {
                       Professional
                     </h4>
                     <ul className="list-unstyled">
-                      <li className="mb-2 badge badge-light">
+                      <li className="mb-1 badge badge-light">
                         Efficient Learner
                       </li>
-                      <li className="mb-2 badge badge-light">Team Player</li>
-                      <li className="mb-2 badge badge-light">Self-Driven</li>
-                      <li className="mb-2 badge badge-light">Enthusiastic</li>
+                      <li className="mb-1 badge badge-light">Team Player</li>
+                      <li className="mb-1 badge badge-light">Self-Driven</li>
                     </ul>
                   </div>
                 </section>

@@ -42,6 +42,7 @@ body {
 .badge {
   padding: 0.35em 0.7em;
   padding-bottom: 0.4em;
+  margin: 5px;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -93,7 +94,7 @@ a.theme-btn-on-bg:active,
 .theme-btn-on-bg:hover,
 .theme-btn-on-bg:focus,
 .theme-btn-on-bg:active {
-  background: rgba(0, 0, 0, 0.4);
+  background: #dcdcdc;
   border-color: transparent;
   border: none;
 }
@@ -583,6 +584,11 @@ a.theme-btn-on-bg:active,
   color: white;
 }
 
+.name-sub {
+  font-size: 1.5rem;
+  text-transform: none;
+}
+
 .resume-social {
   font-size: 0.875rem;
 }
@@ -649,24 +655,27 @@ a.theme-btn-on-bg:active,
   height: 0.6rem;
 }
 
-.resume-company-name {
-  color: #58677c;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.resume-position-time {
-  font-size: 0.875rem;
-  color: #aab4c3;
-}
-
+.resume-project-name,
 .resume-position-title {
   font-size: 1.125rem;
   color: #434e5e;
 }
 
-.resume-timeline-item-desc-heading {
-  font-size: 1rem;
+.resume-project-for,
+.resume-company-name {
+  color: #aab4c3;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.resume-project-summa,
+.resume-timeline-item-desc {
+  font-size: 0.875rem;
+}
+
+.resume-position-time {
+  font-size: 0.875rem;
+  color: #aab4c3;
 }
 
 .resume-skills-cat {

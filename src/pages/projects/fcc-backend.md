@@ -5,12 +5,14 @@ name: "Backend Projects"
 madeFor: "freeCodeCamp"
 tagline: "5 backend projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/backend-thumb.jpg
-
 pics: [../../images/projects/backend-thumb.jpg]
 url: "//glitch.com/@laylapku/fcc-backend-projects"
 github: ""
 highlights:
 techs: ["Nodejs", "Express", "JavaScript", "MongoDB", "CSS", "Glitch"]
+summa: ""
+order: 105
+featured: false
 ---
 
 ## File Metadata

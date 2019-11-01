@@ -1,11 +1,10 @@
 ---
 path: "/portfolio/eloqua"
 type: ["Production", "Frontend", "Backend"]
-name: "Eloqua Speech App"
+name: "Eloqua Speech Listening App"
 madeFor: "Open Source"
 tagline: "Listen to great speeches on your smartphone"
 thumb: ../../images/projects/eloqua/thumb.png
-
 pics: [../../images/projects/eloqua/speechlist.png, ../../images/projects/eloqua/speakerlist.png, ../../images/projects/eloqua/ctglist.png, ../../images/projects/eloqua/script.png]
 url: "//speech-pwa.web.app/"
 github: "//github.com/laylapku/eloqua-pwa"
@@ -16,6 +15,9 @@ highlights: [
 "Speeches filterable by speaker, theme, or just a custom keyword.",
 "Common features like playlist, favorites list, loop/random toggle, playback speed switch, dark mode"]
 techs: ["PWA","React","JavaScript","Firebase","Redux","Material-UI","CSS","Webpack"]
+summa: "Co-creator of React progressive web app Eloqua, made in collaboration with my coding mentor Sean Lee. Highlights: full player control from notification, many-to-many relationship data on Firestore, filter through speaker/topic/keyword, playlist, favlist, loop, playback speed switch, dark mode."
+order: 100
+featured: true
 ---
 
 #### Table of Contents

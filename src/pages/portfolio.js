@@ -10,6 +10,7 @@ const PortfolioPage = () => {
     query {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { glob: "**/src/pages/projects/*.md" } }
+        sort: { fields: [frontmatter___order], order: ASC }
       ) {
         nodes {
           id
@@ -57,9 +58,8 @@ const PortfolioPage = () => {
           <div className="project-cards row mb-5">
             {data.allMarkdownRemark.nodes
               .filter(
-                item =>
-                  (ctgFilter &&
-                    item.frontmatter.type.indexOf(ctgFilter) !== -1) ||
+                ({ frontmatter: { type } }) =>
+                  (ctgFilter && type.indexOf(ctgFilter) !== -1) ||
                   ctgFilter === ""
               )
               .map(({ id, frontmatter }) => (

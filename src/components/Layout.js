@@ -4,11 +4,15 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faCheck,
+  faMeteor,
+  faExternalLinkAlt,
+  faMapMarkerAlt,
   faHome,
   faEnvelope,
-  faMeteor,
-  faDownload,
-  faExternalLinkAlt
+  faPhoneSquare,
+  faAngleDoubleRight,
+  faAngleRight,
+  faDownload
 } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style.css";
@@ -43,10 +47,14 @@ const Icons = function() {
   library.add(
     faGithub,
     faCheck,
-    faHome,
-    faEnvelope,
     faMeteor,
     faExternalLinkAlt,
+    faMapMarkerAlt,
+    faHome,
+    faEnvelope,
+    faPhoneSquare,
+    faAngleDoubleRight,
+    faAngleRight,
     faDownload
   );
   return null;
@@ -76,7 +84,7 @@ const CTA = function(data) {
           </a>{" "}
           or use the{" "}
           <Link className="link-on-bg" to="/contact/">
-            form on the contact page
+            contact form
           </Link>
           .
         </div>
@@ -87,7 +95,6 @@ const CTA = function(data) {
 };
 
 const Footer = function(data) {
-  /* addBackToTop(); */
   return (
     <footer className="footer text-light text-center py-2">
       <div>

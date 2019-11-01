@@ -1,8 +1,32 @@
 [
   {
-    "role": "Part-time Freelance Web Developer",
-    "time": "2018 - Present",
-    "desc": "Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.",
-    "techs": ["JavaScript", "React", "Redux", "Firebase", "GraphQL", "MongoDB"]
+    "role": "Part-time Web Developer",
+    "corp": "Freelance",
+    "time": "2018.09 - Present",
+    "desc": [
+      "Co-creator of open source project: Eloqua Speech App",
+      "Responsible for most of the coding work",
+      "Feature-driven product UI/UX design"
+    ]
+  },
+  {
+    "role": "Research Analyst",
+    "corp": "Broadlink Supply Chain Information Technology",
+    "time": "2017.10 - 2019.02",
+    "desc": [
+      "Developed and submitted analytical reports for corporate projects",
+      "Integrated customer demands with online platform design",
+      "Conferred with engineering colleagues to assure smooth development of web systems"
+    ]
+  },
+  {
+    "role": "tbd",
+    "corp": "Infiplay LLC",
+    "time": "2015.07 - 2017.07",
+    "desc": [
+      "Drafted business plans for corporate funding campaigns",
+      "Developed and administered project contracts with overseas business partners",
+      "Facilitated communication between domestic and overseas staff"
+    ]
   }
 ]

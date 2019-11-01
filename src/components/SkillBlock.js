@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SkillBlock = props => {
-  const { id, name, icon, value } = props.item.node;
+  const { id, name, icon, value } = props.item;
   // webpack feature: function mapping all *.svg paths to the actual data:image
   const reqSvgs = require.context("../images", true, /\.svg$/);
 
