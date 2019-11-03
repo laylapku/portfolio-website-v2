@@ -3,6 +3,7 @@ import { StaticQuery, Link, graphql } from "gatsby";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
+  faHandPointRight,
   faCheck,
   faMeteor,
   faExternalLinkAlt,
@@ -46,6 +47,7 @@ export default ({ children }) => (
 const Icons = function() {
   library.add(
     faGithub,
+    faHandPointRight,
     faCheck,
     faMeteor,
     faExternalLinkAlt,

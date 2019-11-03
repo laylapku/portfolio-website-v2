@@ -61,11 +61,14 @@ const ContactPage = () => {
             {/*//contact-intro*/}
             <form
               id="contact-form"
-              className="contact-form col-lg-8 mx-lg-auto"
+              name="contact-form"
               method="post"
-              action=""
-              data-netlify="true" /* for receiving submissions in Netlify admin panel */
+              className="contact-form col-lg-8 mx-lg-auto"
+              /* Netlify form handling config */
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
             >
+              <input type="hidden" name="form-name" value="contact-form" />
               <h3 className="text-center mb-3">Get In Touch</h3>
               <div className="form-row">
                 <div className="form-group col-md-6">

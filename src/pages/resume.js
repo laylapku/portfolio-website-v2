@@ -139,25 +139,29 @@ const ResumePage = () => {
                 SUMMARY
               </h2>
               <div className="resume-section-content">
-                I'm a: <br />
+                I'm: <br />
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  self-taught web developer working on my open source project:
+                  a self-taught web developer working on my open source project:
                   Eloqua - a progressive web app that enables listening to
                   famous speeches on smart phones;
                 </p>
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  efficient and avid learner skilled at front end core
-                  JavaScript, CSS and HTML, experienced with frameworks like
-                  React and Redux, enjoying learning about scale performance and
-                  data management with GraphQL and cloud tools;
+                  an efficient and avid learner skilled at front end core
+                  JavaScript, CSS and HTML, familiar with frameworks like React
+                  and Redux, enjoying learning about scale performance and data
+                  management with GraphQL and cloud tools;
                 </p>
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  confident and self-driven junior programmer currently looking
-                  for an opportunity to learn from experienced seniors and build
-                  great stuff together.
+                  a confident and self-driven junior programmer currently
+                  looking for an opportunity to learn from experienced seniors
+                  and build great stuff together.
+                </p>
+                <p className="mb-0">
+                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
+                  experienced and comfortable working in an international team.
                 </p>
               </div>
             </section>

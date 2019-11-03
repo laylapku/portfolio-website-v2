@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, Link, graphql } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import SkillBlock from "../components/SkillBlock";
@@ -73,6 +74,7 @@ const AboutPage = () => {
                 className="theme-btn-on-bg btn font-weight-bold theme-btn-cta"
                 to="/portfolio/"
               >
+                <FontAwesomeIcon className="mr-2" icon="hand-point-right" />
                 View Portfolio
               </Link>
             </div>

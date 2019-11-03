@@ -2,30 +2,31 @@
   {
     "role": "Part-time Web Developer",
     "corp": "Freelance",
-    "time": "2018.09 - Present",
+    "time": "2018 - Present",
     "desc": [
-      "Co-creator of open source project: Eloqua Speech App",
+      "Co-creator of open source project: Eloqua Speech Listening App",
       "Responsible for most of the coding work",
-      "Feature-driven product UI/UX design"
+      "Feature-driven product UI/UX design",
+      "Integration with thirty-party APIs and cloud platform like Firebase"
     ]
   },
   {
     "role": "Research Analyst",
-    "corp": "Broadlink Supply Chain Information Technology",
-    "time": "2017.10 - 2019.02",
+    "corp": "China Asia Economic Development Association",
+    "time": "2017 - 2019",
     "desc": [
-      "Developed and submitted analytical reports for corporate projects",
-      "Integrated customer demands with online platform design",
+      "Developed and submitted analytical reports for corporate overseas projects",
+      "Integrated demands of foreign customers with Chinese government regulations and market specifities",
       "Conferred with engineering colleagues to assure smooth development of web systems"
     ]
   },
   {
-    "role": "tbd",
+    "role": "Overseas Business Coordinator",
     "corp": "Infiplay LLC",
-    "time": "2015.07 - 2017.07",
+    "time": "2015 - 2017",
     "desc": [
+      "Developed and administered English project contracts with overseas business partners",
       "Drafted business plans for corporate funding campaigns",
-      "Developed and administered project contracts with overseas business partners",
       "Facilitated communication between domestic and overseas staff"
     ]
   }
