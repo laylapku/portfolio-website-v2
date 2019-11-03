@@ -135,8 +135,8 @@ const ResumePage = () => {
           </header>
           <div className="resume-body p-5">
             <section className="resume-section summary-section mb-5">
-              <h2 className="resume-section-title font-weight-bold pb-3 mb-3">
-                SUMMARY
+              <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                Summary
               </h2>
               <div className="resume-section-content">
                 I'm: <br />
@@ -170,7 +170,7 @@ const ResumePage = () => {
               <div className="col-lg-9">
                 <section className="resume-section project-section mb-5">
                   <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
-                    Projects
+                    Sample Projects
                   </h2>
                   {data.allMarkdownRemark.nodes.map(
                     ({ id, frontmatter: { path, name, madeFor, summa } }) => (

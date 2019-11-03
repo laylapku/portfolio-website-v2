@@ -62,7 +62,7 @@ const AboutPage = () => {
               src={ProfilePic}
             />
             <div className="media-body text-center text-md-left">
-              <div className="lead">Hi, I'm</div>
+              <div className="lead">Hello, my name is</div>
               <h3 className="mt-0 display-4 font-weight-bold">
                 {data.site.siteMetadata.author}
               </h3>
