@@ -1,27 +1,24 @@
 import React, { Component } from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
+import { reqSocialSvgs } from "../utils/svgs.util";
 
 export default () => (
   <StaticQuery
     query={graphql`
       query {
         allSocialsJson {
-          edges {
-            node {
-              id
-              url
-              icon
-            }
+          nodes {
+            id
+            url
+            icon
           }
         }
         allMenuJson {
-          edges {
-            node {
-              id
-              name
-              url
-            }
+          nodes {
+            id
+            name
+            url
           }
         }
       }
@@ -52,19 +49,17 @@ class MyNavbar extends Component {
   }
 
   render() {
-    // webpack feature: function mapping all *.svg paths to the actual data:image
-    const reqSvgs = require.context("../images/social-icons", true, /\.svg$/);
     return (
       <div className="container-fluid">
         <Navbar className="navbar-dark position-relative" expand="lg">
           <ul className="social-list list-inline mb-0">
-            {this.props.data.allSocialsJson.edges.map(item => (
-              <li className="list-inline-item" key={item.node.id}>
-                <a className="text-white" href={item.node.url}>
+            {this.props.data.allSocialsJson.nodes.map(({ id, url, icon }) => (
+              <li className="list-inline-item" key={id}>
+                <a className="text-white" href={url}>
                   <img
-                    alt={item}
+                    alt=""
                     className="img-fluid"
-                    src={reqSvgs(`./${item.node.icon.toLowerCase()}.svg`)}
+                    src={reqSocialSvgs(`./${icon.toLowerCase()}.svg`)}
                   />
                 </a>
               </li>
@@ -79,14 +74,10 @@ class MyNavbar extends Component {
             navbar
           >
             <Nav className="navbar-nav ml-lg-auto" navbar>
-              {this.props.data.allMenuJson.edges.map(item => (
-                <NavItem className="mr-lg-3" key={item.node.id}>
-                  <Link
-                    className="nav-link"
-                    activeClassName="active"
-                    to={item.node.url}
-                  >
-                    {item.node.name}
+              {this.props.data.allMenuJson.nodes.map(({ id, url, name }) => (
+                <NavItem className="mr-lg-3" key={id}>
+                  <Link className="nav-link" activeClassName="active" to={url}>
+                    {name}
                   </Link>
                 </NavItem>
               ))}

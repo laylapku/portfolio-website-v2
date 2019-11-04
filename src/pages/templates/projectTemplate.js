@@ -4,9 +4,7 @@ import Img from "gatsby-image";
 import { Carousel } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../../components/Layout";
-
-// webpack feature: function mapping all *.svg paths to the actual data:image
-const reqSvgs = require.context("../../images/webdev-icons", true, /\.svg$/);
+import { reqWebDevSvgs } from "../../utils/svgs.util";
 
 const ProjectTemplate = ({ data: { markdownRemark } }) => {
   if (markdownRemark) {
@@ -123,7 +121,7 @@ const ProjectTemplate = ({ data: { markdownRemark } }) => {
                           <img
                             alt={item}
                             className="img-fluid"
-                            src={reqSvgs(`./${item.toLowerCase()}.svg`)}
+                            src={reqWebDevSvgs(`./${item.toLowerCase()}.svg`)}
                           />
                         </div>
                       ))}

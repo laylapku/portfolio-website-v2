@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import ProfilePic from "../images/profile.png";
+import { reqSocialSvgs } from "../utils/svgs.util";
 
 const ResumePage = () => {
   const data = useStaticQuery(
@@ -26,7 +27,7 @@ const ResumePage = () => {
             }
           }
         }
-        allSocialsJson(limit: 4) {
+        allSocialsJson(limit: 5) {
           nodes {
             id
             url
@@ -52,8 +53,6 @@ const ResumePage = () => {
     `
   );
 
-  // webpack feature: function mapping all *.svg paths to the actual data:image
-  const reqSvgs = require.context("../images/social-icons", true, /\.svg$/);
   return (
     <Layout>
       <SEO title="Resume" />
@@ -76,20 +75,19 @@ const ResumePage = () => {
           <header className="resume-header pt-4 pt-md-0">
             <div className="media flex-column flex-md-row align-items-center">
               <img
-                className="mr-3 img-fluid picture mx-auto"
+                className="img-fluid picture mx-auto"
                 src={ProfilePic}
                 alt=""
               />
               <div className="media-body px-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                 <div className="primary-info">
-                  <h2 className="name mt-0 mb-3 text-white text-uppercase">
+                  <h2 className="name mb-2 text-white text-uppercase">
                     {data.site.siteMetadata.author}
-                    <span className="name-sub font-weight-normal">
-                      {" "}
-                      (web developer)
-                    </span>
                   </h2>
-                  <ul className="resume-social list-unstyled">
+                  <h5 className="title mb-3 font-weight-light">
+                    web developer
+                  </h5>
+                  <ul className="resume-social list-unstyled font-weight-light">
                     <li className="mb-2">
                       <FontAwesomeIcon className="mr-2" icon="map-marker-alt" />
                       China
@@ -100,7 +98,9 @@ const ResumePage = () => {
                     </li>
                     <li className="mb-2">
                       <FontAwesomeIcon className="mr-2" icon="envelope" />
-                      {data.site.siteMetadata.email}
+                      <a href="mailto:laylaoy@gmail.com">
+                        {data.site.siteMetadata.email}
+                      </a>
                     </li>
                     <li>
                       <FontAwesomeIcon className="mr-2" icon="home" />
@@ -109,16 +109,16 @@ const ResumePage = () => {
                   </ul>
                 </div>
                 {/*//primary-info*/}
-                <div className="secondary-info ml-md-auto mt-3">
+                <div className="secondary-info ml-md-auto">
                   <ul className="resume-social list-unstyled">
                     {data.allSocialsJson.nodes.map(({ id, url, icon }) => (
-                      <li className="mb-3" key={id}>
+                      <li className="my-3" key={id}>
                         <a href={url}>
                           <span className="fa-container text-center mr-2">
                             <img
                               alt={icon}
                               className="img-fluid"
-                              src={reqSvgs(`./${icon.toLowerCase()}.svg`)}
+                              src={reqSocialSvgs(`./${icon.toLowerCase()}.svg`)}
                             />
                           </span>
                           {url.slice(2)}
@@ -156,12 +156,8 @@ const ResumePage = () => {
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
                   a confident and self-driven junior programmer currently
-                  looking for an opportunity to learn from experienced seniors
-                  and build great stuff together.
-                </p>
-                <p className="mb-0">
-                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  experienced and comfortable working in an international team.
+                  looking for an opportunity to work in an international team
+                  with smart programmers building interesting stuff.
                 </p>
               </div>
             </section>

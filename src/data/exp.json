@@ -7,27 +7,26 @@
       "Co-creator of open source project: Eloqua Speech Listening App",
       "Responsible for most of the coding work",
       "Feature-driven product UI/UX design",
-      "Integration with thirty-party APIs and cloud platform like Firebase"
+      "Integration with thirty-party APIs and cloud tools like Firebase"
     ]
   },
   {
     "role": "Research Analyst",
-    "corp": "China Asia Economic Development Association",
-    "time": "2017 - 2019",
+    "corp": "Broadlink Supply Chain Information Technology",
+    "time": "2017.10 - 2019.05",
     "desc": [
       "Developed and submitted analytical reports for corporate overseas projects",
-      "Integrated demands of foreign customers with Chinese government regulations and market specifities",
-      "Conferred with engineering colleagues to assure smooth development of web systems"
+      "Worked in a small team to convert supplier needs questionnaires into online forms using polling apps like LimeSurvey",
+      "Conferred with engineering colleagues in development planning of e-commerce websites for customers"
     ]
   },
   {
-    "role": "Overseas Project Coordinator",
+    "role": "Project Coordinator",
     "corp": "Infiplay LLC",
-    "time": "2015 - 2017",
+    "time": "2015.07 - 2017.06",
     "desc": [
-      "Developed and administered English project contracts with overseas business partners",
-      "Drafted business plans for corporate funding campaigns",
-      "Facilitated communication between domestic and overseas staff"
+      "Developed and administered contracts with overseas business partners",
+      "Responsible for translation and quality assurance of project documentation in English"
     ]
   }
 ]

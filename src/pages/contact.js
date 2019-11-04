@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
+import { reqSocialSvgs } from "../utils/svgs.util";
 
 const ContactPage = () => {
   const data = useStaticQuery(
@@ -18,8 +19,6 @@ const ContactPage = () => {
     `
   );
 
-  // webpack feature: function mapping all *.svg paths to the actual data:image
-  const reqSvgs = require.context("../images/social-icons", true, /\.svg$/);
   return (
     <Layout>
       <SEO title="Contact" />
@@ -49,7 +48,7 @@ const ContactPage = () => {
                         <img
                           alt={icon}
                           className="img-fluid"
-                          src={reqSvgs(`./${icon.toLowerCase()}.svg`)}
+                          src={reqSocialSvgs(`./${icon.toLowerCase()}.svg`)}
                         />
                       </a>
                     </li>

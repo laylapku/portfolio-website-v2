@@ -1,10 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { reqGeneralSvgs } from "../utils/svgs.util";
 
 const SkillBlock = props => {
   const { id, name, icon, value } = props.item;
-  // webpack feature: function mapping all *.svg paths to the actual data:image
-  const reqSvgs = require.context("../images", true, /\.svg$/);
 
   return (
     <div className="skills-block col-12 col-lg-4 mb-5 mb-lg-0" key={id}>
@@ -14,7 +13,7 @@ const SkillBlock = props => {
           <img
             alt=""
             className="skills-icon"
-            src={reqSvgs(`./${icon.toLowerCase()}.svg`)}
+            src={reqGeneralSvgs(`./${icon.toLowerCase()}.svg`)}
           />
         </div>
         <ul className="skills-list list-unstyled text-secondary">
