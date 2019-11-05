@@ -1,7 +1,7 @@
 ---
 path: "/portfolio/fcc-dataviz"
 type: ["Practice", "Data-viz"]
-name: "Data Visualization Projects"
+name: "FCC Data Visualization Projects"
 madeFor: "freeCodeCamp"
 tagline: "5 data visualization projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/d3-thumb.png
@@ -10,9 +10,9 @@ url: "//codepen.io/collection/DYzrEd/"
 github: ""
 highlights: 
 techs: ["D3", "JavaScript", "CSS", "Codepen"]
-summa: ""
+summa: "5 data visualization built with D3"
 order: 104
-featured: false
+featured: true
 ---
 
 ## Choropleth Map

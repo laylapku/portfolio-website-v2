@@ -2,7 +2,7 @@
 path: "/portfolio/booklist-with-graphql"
 type: ["Practice", "Frontend", "Backend"]
 name: "Booklist App"
-madeFor: "TheNetNinja Practice"
+madeFor: "The Net Ninja"
 tagline: "A full-stack reading list app"
 thumb: ../../images/projects/booklist-thumb.jpg
 pics: [../../images/projects/booklist-inner-1.png, ../../images/projects/booklist-inner-2.png]

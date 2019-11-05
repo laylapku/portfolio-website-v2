@@ -1,7 +1,7 @@
 ---
 path: "/portfolio/fcc-backend"
 type: ["Practice", "Backend"]
-name: "Backend Projects"
+name: "FCC Backend Projects"
 madeFor: "freeCodeCamp"
 tagline: "5 backend projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/backend-thumb.jpg

@@ -5,6 +5,7 @@ import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import ProfilePic from "../images/profile.png";
 import { reqSocialSvgs } from "../utils/svgs.util";
+import pdf from "../assets/layla-developer-resume.pdf";
 
 const ResumePage = () => {
   const data = useStaticQuery(
@@ -59,13 +60,13 @@ const ResumePage = () => {
       <div className="header-intro header-intro-resume theme-bg-primary text-white py-5">
         <div className="container position-relative">
           <h2 className="page-heading mb-3">Resume</h2>
-          {/*  <a
-             className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto"
-             href="/"
-           >
-             <FontAwesomeIcon className="mr-2" icon="download" />
-             Download PDF Version
-           </a> */}
+          <a
+            className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto"
+            href={pdf}
+          >
+            <FontAwesomeIcon className="mr-2" icon="download" />
+            Download PDF Version
+          </a>
         </div>
         {/*//container*/}
       </div>
@@ -90,10 +91,10 @@ const ResumePage = () => {
                   <ul className="resume-social list-unstyled font-weight-light">
                     <li className="mb-2">
                       <FontAwesomeIcon className="mr-2" icon="map-marker-alt" />
-                      China
+                      Beijing, China
                     </li>
                     <li className="mb-2">
-                      <FontAwesomeIcon className="mr-2" icon="phone-square" />
+                      <FontAwesomeIcon className="mr-2" icon="mobile-alt" />
                       +86 156 5296 9844
                     </li>
                     <li className="mb-2">
@@ -103,7 +104,7 @@ const ResumePage = () => {
                       </a>
                     </li>
                     <li>
-                      <FontAwesomeIcon className="mr-2" icon="home" />
+                      <FontAwesomeIcon className="mr-2" icon="globe" />
                       <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
                     </li>
                   </ul>
@@ -135,7 +136,7 @@ const ResumePage = () => {
           </header>
           <div className="resume-body p-5">
             <section className="resume-section summary-section mb-5">
-              <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+              <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                 Summary
               </h2>
               <div className="resume-section-content">
@@ -155,9 +156,9 @@ const ResumePage = () => {
                 </p>
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  a confident and self-driven junior programmer currently
-                  looking for an opportunity to work in an international team
-                  with smart programmers building interesting stuff.
+                  a confident and self-driven junior developer currently looking
+                  for an opportunity to work in an international team with smart
+                  programmers building interesting stuff.
                 </p>
               </div>
             </section>
@@ -165,7 +166,7 @@ const ResumePage = () => {
             <div className="row">
               <div className="col-lg-9">
                 <section className="resume-section project-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                     Sample Projects
                   </h2>
                   {data.allMarkdownRemark.nodes.map(
@@ -188,7 +189,7 @@ const ResumePage = () => {
                 </section>
                 {/*//project-section*/}
                 <section className="resume-section experience-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                     Work Experience
                   </h2>
                   <div className="resume-section-content">
@@ -232,7 +233,7 @@ const ResumePage = () => {
               </div>
               <div className="col-lg-3">
                 <section className="resume-section skills-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                     Skills &amp; Tools
                   </h2>
                   <div className="resume-skill-item">
@@ -272,11 +273,17 @@ const ResumePage = () => {
                 </section>
                 {/*//skills-section*/}
                 <section className="resume-section education-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                     Education
                   </h2>
                   <div className="resume-section-content">
                     <ul className="list-unstyled">
+                      <li className="mb-2">
+                        <div className="resume-degree font-weight-bold">
+                          freeCodeCamp
+                        </div>
+                        <div className="resume-degree-time">2018</div>
+                      </li>
                       <li className="mb-2">
                         <div className="resume-degree font-weight-bold">
                           MA in English Literature
@@ -291,7 +298,7 @@ const ResumePage = () => {
                 </section>
                 {/*//education-section*/}
                 <section className="resume-section language-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                     Languages
                   </h2>
                   <div className="resume-section-content">
@@ -304,9 +311,6 @@ const ResumePage = () => {
                       <div className="resume-lang-name font-weight-bold">
                         English<span className="text-muted"> (Advanced)</span>
                       </div>
-                      <small className="font-weight-normal">
-                        Master Degree
-                      </small>
                     </div>
                     <div className="resume-lang-item">
                       <div className="resume-lang-name font-weight-bold">
@@ -328,13 +332,13 @@ const ResumePage = () => {
                 </section>
                 {/*//language-section*/}
                 <section className="resume-section interests-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                     Interests
                   </h2>
                   <div className="resume-section-content">
                     <ul className="list-unstyled resume-interests-list mb-0">
-                      <li className="mb-2 badge badge-light">Music</li>
                       <li className="mb-2 badge badge-light">Reading</li>
+                      <li className="mb-2 badge badge-light">Yoga</li>
                       <li className="mb-2 badge badge-light">Cooking</li>
                       <li className="mb-2 badge badge-light">Tennis</li>
                     </ul>

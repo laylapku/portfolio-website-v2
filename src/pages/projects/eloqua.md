@@ -15,7 +15,7 @@ highlights: [
 "Speeches filterable by speaker, theme, or just a custom keyword.",
 "Common features like playlist, favorites list, loop/random toggle, playback speed switch, dark mode"]
 techs: ["PWA","React","JavaScript","Firebase","Redux","Material-UI","CSS","Webpack"]
-summa: "Co-creator of React progressive web app Eloqua, made in collaboration with my coding mentor Sean Lee. Highlights: full player control from notification, many-to-many relationship data on Firestore, filter through speaker/topic/keyword, playlist, favlist, loop, playback speed switch, dark mode."
+summa: "Co-creator of open source project Eloqua, a React progressive web app for speech listening, made in collaboration with my coding mentor Sean Lee. Highlights: full player control from notification, many-to-many relationship data on Firestore, filter through speaker/topic/keyword, playlist, favlist, loop, playback speed switch, dark mode."
 order: 100
 featured: true
 ---

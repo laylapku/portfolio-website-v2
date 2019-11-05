@@ -13,6 +13,7 @@ const AboutPage = () => {
       query {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { glob: "**/src/pages/projects/*.md" } }
+          sort: { fields: [frontmatter___order], order: ASC }
         ) {
           nodes {
             id
@@ -111,9 +112,7 @@ const AboutPage = () => {
           </h3>
           <div className="project-cards row mb-5">
             {data.allMarkdownRemark.nodes
-              .filter(
-                ({ frontmatter: { order } }) => order === 100 || order === 101
-              )
+              .filter(({ frontmatter: { order } }) => order < 103)
               .map(({ id, frontmatter }) => (
                 <ProjectCard key={id} frontmatter={frontmatter} />
               ))}

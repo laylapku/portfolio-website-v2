@@ -8,9 +8,9 @@ import {
   faMeteor,
   faExternalLinkAlt,
   faMapMarkerAlt,
-  faHome,
+  faGlobe,
   faEnvelope,
-  faPhoneSquare,
+  faMobileAlt,
   faAngleDoubleRight,
   faAngleRight,
   faDownload
@@ -52,9 +52,9 @@ const Icons = function() {
     faMeteor,
     faExternalLinkAlt,
     faMapMarkerAlt,
-    faHome,
+    faGlobe,
     faEnvelope,
-    faPhoneSquare,
+    faMobileAlt,
     faAngleDoubleRight,
     faAngleRight,
     faDownload
