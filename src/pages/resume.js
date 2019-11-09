@@ -5,7 +5,7 @@ import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import ProfilePic from "../images/profile.png";
 import { reqSocialSvgs } from "../utils/svgs.util";
-import pdf from "../assets/layla-developer-resume.pdf";
+import pdf from "../assets/layla-ouyang-developer-resume.pdf";
 
 const ResumePage = () => {
   const data = useStaticQuery(
@@ -266,6 +266,7 @@ const ResumePage = () => {
                       <li className="mb-1 badge badge-light">
                         Efficient Learner
                       </li>
+                      <li className="mb-1 badge badge-light">Resilient</li>
                       <li className="mb-1 badge badge-light">Team Player</li>
                       <li className="mb-1 badge badge-light">Self-Driven</li>
                     </ul>
@@ -280,8 +281,9 @@ const ResumePage = () => {
                     <ul className="list-unstyled">
                       <li className="mb-2">
                         <div className="resume-degree font-weight-bold">
-                          freeCodeCamp
+                          1500 hrs coursework
                         </div>
+                        <div className="resume-degree-org">freeCodeCamp</div>
                         <div className="resume-degree-time">2018</div>
                       </li>
                       <li className="mb-2">
