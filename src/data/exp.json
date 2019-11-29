@@ -1,6 +1,6 @@
 [
   {
-    "role": "Front-end Web Developer",
+    "role": "Front End Developer",
     "corp": "Freelance",
     "time": "2018 - Present",
     "desc": [
@@ -13,20 +13,20 @@
   {
     "role": "Research Analyst",
     "corp": "Broadlink Supply Chain Information Technology",
-    "time": "2017.10 - 2019.05",
+    "time": "2017 - 2019",
     "desc": [
-      "Developed and submitted analytical reports for corporate overseas projects",
+      "Developed and submitted analytical reports for corporate project bids",
       "Worked in a small team to convert supplier needs questionnaires into online forms using polling apps like LimeSurvey",
-      "Conferred with engineering colleagues in development planning of e-commerce websites for customers"
+      "Conferred with engineering colleagues in development planning of e-commerce platforms for clients"
     ]
   },
   {
     "role": "Project Coordinator",
     "corp": "Infiplay LLC",
-    "time": "2015.07 - 2017.06",
+    "time": "2015 - 2017",
     "desc": [
-      "Developed and administered contracts with overseas business partners",
-      "Responsible for translation and quality assurance of project documentation in English"
+      "Drafted English contracts and administered monthly billing checks of launched games",
+      "Responsible for translation and quality assurance of English documentation"
     ]
   }
 ]

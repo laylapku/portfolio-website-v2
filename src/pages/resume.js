@@ -143,21 +143,23 @@ const ResumePage = () => {
                 I'm: <br />
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  a self-taught web developer working on my open source project:
-                  Eloqua - a progressive web app that enables listening to
-                  famous speeches on smart phones;
+                  a self-taught web developer with hands-on experience of
+                  buidling web apps from scratch, including my open source
+                  project: Eloqua (speech-pwa.web.app) - a progressive web app
+                  that enables listening to famous speeches on smartphones;
                 </p>
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  an efficient and avid learner skilled at front end core
-                  JavaScript, CSS and HTML, familiar with frameworks like React
-                  and Redux, enjoying learning about scale performance and data
-                  management with GraphQL and cloud tools;
+                  an efficient and avid learner skilled with front end core
+                  JavaScript, CSS and HTML, experienced with React and its
+                  ecosystem(Redux, Gatsby), and enjoying learning about scale
+                  performance and data management with tools like GraphQL and
+                  MongoDB;
                 </p>
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  a confident and self-driven junior developer currently looking
-                  for an opportunity to work in an international team with smart
+                  an aspiring and self-driven junior currently looking for an
+                  opportunity to work in an international team with smart
                   programmers building interesting stuff.
                 </p>
               </div>
