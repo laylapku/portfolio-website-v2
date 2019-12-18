@@ -31,7 +31,7 @@ body {
 }
 
 .footer {
-  background: #434e5e;
+  background: #5a6773;
 }
 
 .form-control {
@@ -74,11 +74,11 @@ a.link-on-bg:hover {
 }
 
 .theme-bg-primary {
-  background-color: #6f6db2;
+  background-color: #708090;
 }
 
 .theme-bg-primary-darken {
-  background-color: #424079;
+  background-color: #5a6773;
 }
 
 a.theme-btn-on-bg,
@@ -119,7 +119,7 @@ a.theme-btn-on-bg:active,
   text-align: center;
   border-radius: 50%;
   transition: all 0.4s ease-in-out;
-  background-color: #d3d3e7;
+  background-color: #c9cfdc;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -129,7 +129,7 @@ a.theme-btn-on-bg:active,
 }
 
 .social-list a:hover {
-  background: #f4f4f4;
+  background: #f0f0f0;
 }
 
 #navigation {
@@ -205,7 +205,7 @@ a.theme-btn-on-bg:active,
 }
 
 .skills-icon-holder {
-  background: #6f6db2;
+  background: #708090;
   width: 80px;
   height: 80px;
   padding-top: 1.25rem;
@@ -345,7 +345,7 @@ a.theme-btn-on-bg:active,
 
 .project-cards .card-img-overlay.overlay-content {
   margin-top: 600px;
-  background: rgba(75, 73, 138, 0.95);
+  background: #7e8d9b;
   text-decoration: none;
 }
 
@@ -375,12 +375,12 @@ a.theme-btn-on-bg:active,
 }
 
 .filters .type.active {
-  background: #6f6db2;
+  background: #708090;
   color: #fff;
 }
 
 .filters .type.active:hover {
-  background: #6f6db2;
+  background: #708090;
   color: #fff;
 }
 
@@ -556,7 +556,7 @@ a.theme-btn-on-bg:active,
 }
 
 .resume-header {
-  background: #434e5e;
+  background: #919daa;
   color: rgba(255, 255, 255, 0.9);
   height: auto;
 }
@@ -577,7 +577,7 @@ a.theme-btn-on-bg:active,
 }
 
 .resume-header a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .resume-header a:hover {
@@ -1139,7 +1139,7 @@ a.theme-btn-on-bg:active,
 }
 
 .sharing-providers > li.email {
-  background-color: #6f6db2;
+  background-color: #708090;
 }
 
 .sharing-providers > li.email:hover {
@@ -1288,7 +1288,7 @@ body {
 }
 
 .config-panel #color-options li.theme-6 a {
-  background-color: #6f6db2;
+  background-color: #708090;
 }
 
 .config-panel #color-options li.theme-7 a {
@@ -1333,7 +1333,7 @@ body {
 /* Link and button color override */
 
 a {
-  color: #6f6db2;
+  color: #708090;
 }
 
 a:hover {
@@ -1346,8 +1346,8 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #6f6db2;
-  border-color: #6f6db2;
+  background-color: #708090;
+  border-color: #708090;
 }
 
 .btn-primary:hover {
@@ -1436,7 +1436,7 @@ a:hover {
 
 /* project page tick color */
 .text-primary {
-  color: #6f6db2 !important;
+  color: #708090 !important;
 }
 
 /* tabs nav */
@@ -1449,8 +1449,8 @@ a:hover {
 .btn-light:not(:disabled):not(.disabled).active,
 .show > .btn-light.dropdown-toggle {
   color: #fff;
-  background-color: #6f6db2;
-  border-color: #6f6db2;
+  background-color: #708090;
+  border-color: #708090;
 }
 
 .project-media-body {

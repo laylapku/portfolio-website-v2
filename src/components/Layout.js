@@ -112,19 +112,6 @@ const Footer = function(data) {
           </a>
         </small>
       </div>
-      <div>
-        <small className="copyright">
-          Theme design from{" "}
-          <a
-            className="text-light"
-            href="//www.3rdwavemedia.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <em>3rdwavemedia</em>
-          </a>
-        </small>
-      </div>
     </footer>
   );
 };

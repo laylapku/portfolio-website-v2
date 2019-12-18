@@ -82,7 +82,7 @@ const ResumePage = () => {
               />
               <div className="media-body px-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                 <div className="primary-info">
-                  <h2 className="name mb-2 text-white text-uppercase">
+                  <h2 className="name my-3 text-white text-uppercase">
                     {data.site.siteMetadata.author}
                   </h2>
                   <h5 className="title mb-3 font-weight-light">
@@ -93,10 +93,10 @@ const ResumePage = () => {
                       <FontAwesomeIcon className="mr-2" icon="map-marker-alt" />
                       Beijing, China
                     </li>
-                    <li className="mb-2">
+                   {/*  <li className="mb-2">
                       <FontAwesomeIcon className="mr-2" icon="mobile-alt" />
                       +86 156 5296 9844
-                    </li>
+                    </li> */}
                     <li className="mb-2">
                       <FontAwesomeIcon className="mr-2" icon="envelope" />
                       <a href="mailto:laylaoy@gmail.com">
