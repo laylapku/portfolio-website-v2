@@ -86,7 +86,7 @@ const ResumePage = () => {
                     {data.site.siteMetadata.author}
                   </h2>
                   <h5 className="title mb-3 font-weight-light">
-                    web developer
+                    web engineer
                   </h5>
                   <ul className="resume-social list-unstyled font-weight-light">
                     <li className="mb-2">
