@@ -10,9 +10,9 @@ url: "//codepen.io/collection/DYzrEd/"
 github: ""
 highlights: 
 techs: ["D3", "JavaScript", "CSS", "Codepen"]
-summa: "5 data visualization built with D3"
-order: 104
-featured: true
+summa: "5 data visualization built with D3."
+order: 105
+featured: false
 ---
 
 ## Choropleth Map

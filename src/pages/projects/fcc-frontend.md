@@ -10,8 +10,8 @@ url: "//codepen.io/collection/nrGJLM/"
 github: ""
 highlights:
 techs: ["React", "JavaScript", "Bootstrap", "CSS", "Codepen"]
-summa: "5 frontend projects from freeCodeCamp's curriculum, using React for interative user interfaces and Bootstrap for styling"
-order: 103
+summa: "5 frontend projects from freeCodeCamp's curriculum, using React for interative user interfaces and Bootstrap for styling."
+order: 104
 featured: true
 ---
 

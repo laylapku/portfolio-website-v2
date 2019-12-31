@@ -20,7 +20,7 @@ order: 100
 featured: true
 ---
 
-#### Table of Contents
+<!-- #### Table of Contents
 
 - [Introduction](#introduction)
 - [Speeches View](#speeches-view)
@@ -31,6 +31,7 @@ featured: true
 - [Notification Controls](#notification-controls)
 - [Dark Mode](#dark-mode)
 - [Acknowledgment](#acknowledgment)
+ -->
 
 #### Introduction
 
