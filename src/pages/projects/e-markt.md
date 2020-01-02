@@ -1,6 +1,6 @@
 ---
 path: "/portfolio/e-markt"
-type: ["Production", "Frontend", "Backend"]
+type: ["Practice", "Frontend", "Backend"]
 name: "E-Markt E-commerce Site"
 madeFor: "Complete React Developer in 2020 (Udemy)"
 tagline: "a massive e-commerce app built with React, Redux, Firebase, GraphQL, Stripe"
