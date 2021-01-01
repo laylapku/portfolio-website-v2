@@ -8,8 +8,7 @@ thumb: ../../images/projects/futurice-thumb.png
 pics:
 url: 'https://futurice.com/'
 highlights: []
-techs:
-  ['JavaScript', 'TypeScript', 'React', 'Redux', 'Node.js', 'AWS', 'Docker']
+techs: ['JavaScript', 'TypeScript', 'React', 'Redux', 'Nodejs', 'AWS', 'Docker']
 summa: ''
 order: 100
 featured: false
