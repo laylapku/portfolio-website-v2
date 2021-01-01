@@ -92,7 +92,7 @@ const Footer = function (data) {
     <footer className='footer text-light text-center py-2'>
       <div>
         <small className='copyright'>
-          Copyright &copy; 2019 by{' '}
+          Copyright &copy; 2021 by{' '}
           <a
             className='text-light'
             href='//sean-lee.glitch.me'
