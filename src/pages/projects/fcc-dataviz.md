@@ -1,17 +1,17 @@
 ---
-path: "/portfolio/fcc-dataviz"
-type: ["Practice", "Data-viz"]
-name: "FCC Data Visualization Projects"
-madeFor: "freeCodeCamp"
+path: '/portfolio/fcc-dataviz'
+type: ['Practice', 'Data-viz']
+name: 'FCC Data Visualization Projects'
+madeFor: 'freeCodeCamp'
 tagline: "5 data visualization projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/d3-thumb.png
 pics: [../../images/projects/d3-thumb.png]
-url: "//codepen.io/collection/DYzrEd/"
-github: ""
-highlights: 
-techs: ["D3", "JavaScript", "CSS", "Codepen"]
-summa: "5 data visualization built with D3."
-order: 105
+url: '//codepen.io/collection/DYzrEd/'
+github: ''
+highlights:
+techs: ['D3', 'JavaScript', 'CSS', 'Codepen']
+summa: '5 data visualization built with D3.'
+order: 106
 featured: false
 ---
 

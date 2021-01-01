@@ -2,7 +2,16 @@
   {
     "name": "Languages & Runtimes",
     "icon": "blk1-icon",
-    "value": ["Javascript", "Node.js", "GraphQL", "HTML", "CSS", "SASS", "LESS"]
+    "value": [
+      "Javascript",
+      "Typescript",
+      "Node.js",
+      "GraphQL",
+      "HTML",
+      "CSS",
+      "SASS",
+      "LESS"
+    ]
   },
   {
     "name": "Frameworks",
@@ -10,23 +19,28 @@
     "value": [
       "React",
       "Redux",
-      "Gatsby",
+      "Cypress",
+      "Gatsby.js",
+      "Next.js",
       "Material-UI",
       "Bootstrap",
-      "Reactstrap"
+      "Styled-components",
+      "Tailwind"
     ]
   },
   {
-    "name": "Other Tools",
+    "name": "Tooling and Platforms",
     "icon": "blk3-icon",
     "value": [
-      "Github",
-      "Webpack",
+      "Storybook",
+      "Github/Gitlab",
+      "CI/CD",
+      "Docker",
       "Firebase",
       "MongoDB",
-      "Visual Studio",
-      "Codepen",
-      "Glitch"
+      "AWS: Amplify/S3/Lambda",
+      "Netlify",
+      "Heroku"
     ]
   }
 ]

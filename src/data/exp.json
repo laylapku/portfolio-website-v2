@@ -1,32 +1,40 @@
 [
   {
-    "role": "Web Engineer",
-    "corp": "Freelance",
+    "role": "Software Developer",
+    "corp": "Futurice GmbH",
+    "time": "04.2020 - Present",
+    "desc": [
+      "Software development, testing and documentation, project management, sales support in various client projects",
+      "Projects I worked on: the Digital Manual app in MAN's truck infotainment system"
+    ]
+  },
+  {
+    "role": "Self-taught Developer",
+    "corp": "",
     "time": "2018 - Present",
     "desc": [
       "Co-creator of open source project: Eloqua Speech Listening App",
-      "Responsible for most of the codebase",
-      "Feature-driven product UI/UX design",
-      "Integration with thirty-party APIs and cloud tools like Firebase"
+      "Main coder, app UI/UX design",
+      "Maintenance, continuous refactoring and iteration"
     ]
   },
   {
     "role": "Research Analyst",
     "corp": "Broadlink Supply Chain Information Technology",
-    "time": "2017 - 2019",
+    "time": "10.2017 - 08.2019",
     "desc": [
-      "Developed and submitted analytical reports for corporate project bids",
+      "Developed and submitted analytical reports for corporate overseas projects",
       "Worked in a small team to convert supplier needs questionnaires into online forms using polling apps like LimeSurvey",
-      "Conferred with engineering colleagues in development planning of e-commerce platforms for clients"
+      "Conferred with engineering colleagues in planning of development of e-commerce platform for corporate clients"
     ]
   },
   {
     "role": "Project Coordinator",
     "corp": "Infiplay LLC",
-    "time": "2015 - 2017",
+    "time": "07.2015 - 02.2017",
     "desc": [
-      "Drafted English contracts and administered monthly billing checks of launched games",
-      "Responsible for translation and quality assurance of English documentation"
+      "Developed and administered English contracts and monthly billing check of launched games",
+      "Translation and quality assurance of game documentation in English"
     ]
   }
 ]

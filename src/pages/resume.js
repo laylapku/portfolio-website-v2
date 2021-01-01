@@ -1,11 +1,11 @@
-import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SEO from "../components/SEO";
-import Layout from "../components/Layout";
-import ProfilePic from "../images/profile.png";
-import { reqSocialSvgs } from "../utils/svgs.util";
-import pdf from "../assets/layla-ouyang-developer-resume.pdf";
+import React from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SEO from '../components/SEO';
+import Layout from '../components/Layout';
+import ProfilePic from '../images/profile.png';
+import { reqSocialSvgs } from '../utils/svgs.util';
+import Resume from '../assets/layla-ouyang-developer-resume.pdf';
 
 const ResumePage = () => {
   const data = useStaticQuery(
@@ -56,69 +56,65 @@ const ResumePage = () => {
 
   return (
     <Layout>
-      <SEO title="Resume" />
-      <div className="header-intro header-intro-resume theme-bg-primary text-white py-5">
-        <div className="container position-relative">
-          <h2 className="page-heading mb-3">Resume</h2>
-          <a
-            className="btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto"
-            href={pdf}
+      <SEO title='Resume' />
+      <div className='header-intro header-intro-resume theme-bg-primary text-white py-5'>
+        <div className='container position-relative'>
+          <h2 className='page-heading mb-3'>Resume</h2>
+          {/* <a
+            className='btn theme-btn-on-bg download-resume position-absolute font-weight-bold mx-auto'
+            href={Resume}
           >
-            <FontAwesomeIcon className="mr-2" icon="download" />
+            <FontAwesomeIcon className='mr-2' icon='download' />
             Download PDF Version
-          </a>
+          </a> */}
         </div>
         {/*//container*/}
       </div>
       {/*//header-intro*/}
-      <article className="resume-wrapper text-center position-relative">
-        <div className="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-          <header className="resume-header pt-4 pt-md-0">
-            <div className="media flex-column flex-md-row align-items-center">
+      <article className='resume-wrapper text-center position-relative'>
+        <div className='resume-wrapper-inner mx-auto text-left bg-white shadow-lg'>
+          <header className='resume-header pt-4 pt-md-0'>
+            <div className='media flex-column flex-md-row align-items-center'>
               <img
-                className="img-fluid picture mx-auto"
+                className='img-fluid picture mx-auto'
                 src={ProfilePic}
-                alt=""
+                alt=''
               />
-              <div className="media-body px-3 d-flex flex-column flex-md-row mx-auto mx-lg-0">
-                <div className="primary-info">
-                  <h2 className="name my-3 text-white text-uppercase">
+              <div className='media-body px-3 d-flex flex-column flex-md-row mx-auto mx-lg-0'>
+                <div className='primary-info'>
+                  <h2 className='name my-3 text-white text-uppercase'>
                     {data.site.siteMetadata.author}
                   </h2>
-                  <h5 className="title mb-3 font-weight-light">
-                    web engineer
+                  <h5 className='title mb-3 font-weight-light'>
+                    software developer
                   </h5>
-                  <ul className="resume-social list-unstyled font-weight-light">
-                    <li className="mb-2">
-                      <FontAwesomeIcon className="mr-2" icon="map-marker-alt" />
-                      Beijing, China
+                  <ul className='resume-social list-unstyled font-weight-light'>
+                    <li className='mb-2'>
+                      <FontAwesomeIcon className='mr-2' icon='map-marker-alt' />
+                      Munich, Germany
                     </li>
-                   {/*  <li className="mb-2">
-                      <FontAwesomeIcon className="mr-2" icon="mobile-alt" />
-                      +86 156 5296 9844
-                    </li> */}
-                    <li className="mb-2">
-                      <FontAwesomeIcon className="mr-2" icon="envelope" />
-                      <a href="mailto:laylaoy@gmail.com">
+                    <li className='mb-2'>
+                      <FontAwesomeIcon className='mr-2' icon='envelope' />
+                      <a href='mailto:laylaoy@gmail.com'>
                         {data.site.siteMetadata.email}
                       </a>
                     </li>
                     <li>
-                      <FontAwesomeIcon className="mr-2" icon="globe" />
-                      <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
+                      <FontAwesomeIcon className='mr-2' icon='globe' />
+                      <a href='//laylaoy.netlify.com'>laylaoy.netlify.com</a>
                     </li>
                   </ul>
                 </div>
                 {/*//primary-info*/}
-                <div className="secondary-info ml-md-auto">
-                  <ul className="resume-social list-unstyled">
+                <div className='secondary-info ml-md-auto'>
+                  <ul className='resume-social list-unstyled'>
                     {data.allSocialsJson.nodes.map(({ id, url, icon }) => (
-                      <li className="my-3" key={id}>
+                      <li className='my-3' key={id}>
                         <a href={url}>
-                          <span className="fa-container text-center mr-2">
+                          <span className='fa-container text-center mr-2'>
                             <img
                               alt={icon}
-                              className="img-fluid"
+                              className='img-fluid'
                               src={reqSocialSvgs(`./${icon.toLowerCase()}.svg`)}
                             />
                           </span>
@@ -134,91 +130,95 @@ const ResumePage = () => {
             </div>
             {/*//media*/}
           </header>
-          <div className="resume-body p-5">
-            <section className="resume-section summary-section mb-5">
-              <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
+          <div className='resume-body p-5'>
+            <section className='resume-section summary-section mb-5'>
+              <h2 className='resume-section-title text-uppercase font-weight-bold pb-2 mb-2'>
                 Summary
               </h2>
-              <div className="resume-section-content">
-                I'm: <br />
-                <p className="mb-0">
-                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  a self-taught web developer with hands-on experience of
-                  buidling web apps from scratch, including my open source
-                  project: Eloqua (speech-pwa.web.app) - a progressive web app
-                  that enables listening to famous speeches on smartphones;
+              <div className='resume-section-content'>
+                I am: <br />
+                <p className='mb-0'>
+                  <FontAwesomeIcon className='mr-2' icon='angle-double-right' />
+                  a self-taught full-stack developer with hands-on experience of
+                  buidling web and mobile apps from scratch, including my open
+                  source project: Eloqua, an app with both web and native
+                  versions, that provides a good listening experience of famous
+                  English speeches;
                 </p>
-                <p className="mb-0">
-                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  an efficient and avid learner skilled with front end core
-                  JavaScript, CSS and HTML, experienced with React and its
-                  ecosystem(Redux, Gatsby), and enjoying learning about scale
-                  performance and data management with tools like GraphQL and
-                  MongoDB;
+                <p className='mb-0'>
+                  <FontAwesomeIcon className='mr-2' icon='angle-double-right' />
+                  an efficient and avid learner experienced with front end
+                  development using the JS/TS/React/Redux toolset, and
+                  contiuously improving on web backend skills;
                 </p>
-                <p className="mb-0">
-                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  an aspiring and self-driven junior currently looking for an
-                  opportunity to work in an international team with smart
-                  programmers building interesting stuff.
+                <p className='mb-0'>
+                  <FontAwesomeIcon className='mr-2' icon='angle-double-right' />
+                  an enthusiasist in software architecture design, and building
+                  usable/practical products with good design philosophy;
+                </p>
+                <p className='mb-0'>
+                  <FontAwesomeIcon className='mr-2' icon='angle-double-right' />
+                  an aspiring and self-driven individual currently working at
+                  Futurice GmbH, an digital innovation and engineering
+                  consultancy with Finnish roots and international outreach.
                 </p>
               </div>
             </section>
             {/*//summary-section*/}
-            <div className="row">
-              <div className="col-lg-9">
-                <section className="resume-section project-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
-                    Sample Projects
+            <div className='row'>
+              <div className='col-lg-9'>
+                <section className='resume-section project-section mb-5'>
+                  <h2 className='resume-section-title text-uppercase font-weight-bold pb-2 mb-2'>
+                    Personal Projects
                   </h2>
                   {data.allMarkdownRemark.nodes.map(
                     ({ id, frontmatter: { path, name, madeFor, summa } }) => (
-                      <div className="resume-section-content mb-3" key={id}>
-                        <div className="d-flex flex-column flex-md-row">
-                          <h3 className="resume-project-name font-weight-bold mb-1">
-                            <Link to={path} className="theme-link">
+                      <div className='resume-section-content mb-3' key={id}>
+                        <div className='d-flex flex-column flex-md-row'>
+                          <h3 className='resume-project-name font-weight-bold mb-1'>
+                            <Link to={path} className='theme-link'>
                               {name}
                             </Link>
                           </h3>
-                          <div className="resume-project-for ml-auto">
+                          <div className='resume-project-for ml-auto'>
                             {madeFor}
                           </div>
                         </div>
-                        <p className="resume-project-summa mb-2">{summa}</p>
+                        <p className='resume-project-summa mb-2'>{summa}</p>
                       </div>
                     )
                   )}
                 </section>
                 {/*//project-section*/}
-                <section className="resume-section experience-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
+                <section className='resume-section experience-section mb-5'>
+                  <h2 className='resume-section-title text-uppercase font-weight-bold pb-2 mb-2'>
                     Work Experience
                   </h2>
-                  <div className="resume-section-content">
-                    <div className="resume-timeline position-relative">
+                  <div className='resume-section-content'>
+                    <div className='resume-timeline position-relative'>
                       {data.allExpJson.nodes.map(
                         ({ id, role, corp, time, desc }) => (
                           <article
-                            className="resume-timeline-item position-relative"
+                            className='resume-timeline-item position-relative'
                             key={id}
                           >
-                            <div className="resume-timeline-item-header mb-2">
-                              <div className="d-flex flex-column flex-md-row">
-                                <h3 className="resume-position-title font-weight-bold mb-1">
-                                  {role} <small className="text-muted"></small>
+                            <div className='resume-timeline-item-header mb-2'>
+                              <div className='d-flex flex-column flex-md-row'>
+                                <h3 className='resume-position-title font-weight-bold mb-1'>
+                                  {role} <small className='text-muted'></small>
                                 </h3>
-                                <div className="resume-company-name ml-auto">
+                                <div className='resume-company-name ml-auto'>
                                   {corp}
                                 </div>
                               </div>
                               {/*//row*/}
-                              <div className="resume-position-time">{time}</div>
+                              <div className='resume-position-time'>{time}</div>
                             </div>
                             {/*//resume-timeline-item-header*/}
-                            <div className="resume-timeline-item-desc">
+                            <div className='resume-timeline-item-desc'>
                               <ul>
                                 {desc.map((item, idx) => (
-                                  <li key={"desc" + idx}>{item}</li>
+                                  <li key={'desc' + idx}>{item}</li>
                                 ))}
                               </ul>
                             </div>
@@ -233,95 +233,96 @@ const ResumePage = () => {
                 </section>
                 {/*//experience-section*/}
               </div>
-              <div className="col-lg-3">
-                <section className="resume-section skills-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
+              <div className='col-lg-3'>
+                <section className='resume-section skills-section mb-5'>
+                  <h2 className='resume-section-title text-uppercase font-weight-bold pb-2 mb-2'>
                     Skills &amp; Tools
                   </h2>
-                  <div className="resume-skill-item">
-                    <h4 className="resume-skills-cat font-weight-bold">
+                  <div className='resume-skill-item'>
+                    <h4 className='resume-skills-cat font-weight-bold'>
                       Technical
                     </h4>
-                    <ul className="list-unstyled">
-                      <li className="mb-1 badge badge-light">
-                        JavaScript/CSS/HTML
+                    <ul className='list-unstyled'>
+                      <li className='mb-1 badge badge-light'>
+                        JavaScript/Typescript/CSS/HTML
                       </li>
-                      <li className="mb-1 badge badge-light">
-                        React/Redux/Gatsby
+                      <li className='mb-1 badge badge-light'>
+                        React/Redux/Gatsby.js/Next.js
                       </li>
-                      <li className="mb-1 badge badge-light">
-                        MaterialUI/Bootstrap/D3
+                      <li className='mb-1 badge badge-light'>
+                        Storybook/MaterialUI/Bootstrap/D3
                       </li>
-                      <li className="mb-1 badge badge-light">
+                      <li className='mb-1 badge badge-light'>
                         Firebase/AWS/GoogleCloud
                       </li>
-                      <li className="mb-1 badge badge-light">
+                      <li className='mb-1 badge badge-light'>
                         Node/Express/GraphQL/MongoDB
                       </li>
                     </ul>
                   </div>
-                  <div className="resume-skill-item">
-                    <h4 className="resume-skills-cat font-weight-bold">
+                  <div className='resume-skill-item'>
+                    <h4 className='resume-skills-cat font-weight-bold'>
                       Professional
                     </h4>
-                    <ul className="list-unstyled">
-                      <li className="mb-1 badge badge-light">
+                    <ul className='list-unstyled'>
+                      <li className='mb-1 badge badge-light'>
                         Efficient Learner
                       </li>
-                      <li className="mb-1 badge badge-light">Resilient</li>
-                      <li className="mb-1 badge badge-light">Team Player</li>
-                      <li className="mb-1 badge badge-light">Self-Driven</li>
+                      <li className='mb-1 badge badge-light'>Resilient</li>
+                      <li className='mb-1 badge badge-light'>Team Player</li>
+                      <li className='mb-1 badge badge-light'>Self-Driven</li>
                     </ul>
                   </div>
                 </section>
                 {/*//skills-section*/}
-                <section className="resume-section education-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
+                <section className='resume-section education-section mb-5'>
+                  <h2 className='resume-section-title text-uppercase font-weight-bold pb-2 mb-2'>
                     Education
                   </h2>
-                  <div className="resume-section-content">
-                    <ul className="list-unstyled">
-                      <li className="mb-2">
-                        <div className="resume-degree font-weight-bold">
-                          1500 hrs coursework
+                  <div className='resume-section-content'>
+                    <ul className='list-unstyled'>
+                      <li className='mb-2'>
+                        <div className='resume-degree font-weight-bold'>
+                          1800 hrs coursework(full-stack)
                         </div>
-                        <div className="resume-degree-org">freeCodeCamp</div>
-                        <div className="resume-degree-time">2018</div>
+                        <div className='resume-degree-org'>freeCodeCamp</div>
+                        <div className='resume-degree-time'>2018</div>
                       </li>
-                      <li className="mb-2">
-                        <div className="resume-degree font-weight-bold">
+                      <li className='mb-2'>
+                        <div className='resume-degree font-weight-bold'>
                           MA in English Literature
                         </div>
-                        <div className="resume-degree-org">
+                        <div className='resume-degree-org'>
                           Peking University
                         </div>
-                        <div className="resume-degree-time">2012 - 2015</div>
+                        <div className='resume-degree-time'>2012 - 2015</div>
                       </li>
                     </ul>
                   </div>
                 </section>
                 {/*//education-section*/}
-                <section className="resume-section language-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
+                <section className='resume-section language-section mb-5'>
+                  <h2 className='resume-section-title text-uppercase font-weight-bold pb-2 mb-2'>
                     Languages
                   </h2>
-                  <div className="resume-section-content">
-                    <div className="resume-lang-item mb-2">
-                      <div className="resume-lang-name font-weight-bold">
-                        Chinese<span className="text-muted"> (Native)</span>
+                  <div className='resume-section-content'>
+                    <div className='resume-lang-item mb-2'>
+                      <div className='resume-lang-name font-weight-bold'>
+                        Chinese<span className='text-muted'> (Native)</span>
                       </div>
                     </div>
-                    <div className="resume-lang-item mb-2">
-                      <div className="resume-lang-name font-weight-bold">
-                        English<span className="text-muted"> (Advanced)</span>
+                    <div className='resume-lang-item mb-2'>
+                      <div className='resume-lang-name font-weight-bold'>
+                        English
+                        <span className='text-muted'> (Full Professional)</span>
                       </div>
                     </div>
-                    <div className="resume-lang-item">
-                      <div className="resume-lang-name font-weight-bold">
+                    <div className='resume-lang-item'>
+                      <div className='resume-lang-name font-weight-bold'>
                         German
-                        <span className="text-muted"> (Intermediate)</span>
+                        <span className='text-muted'> (B1)</span>
                       </div>
-                      <ul className="list-unstyled">
+                      <ul className='list-unstyled'>
                         <li>
                           <small>
                             Graduate Level 2nd Foreign Language Course
@@ -335,16 +336,17 @@ const ResumePage = () => {
                   </div>
                 </section>
                 {/*//language-section*/}
-                <section className="resume-section interests-section mb-5">
-                  <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
+                <section className='resume-section interests-section mb-5'>
+                  <h2 className='resume-section-title text-uppercase font-weight-bold pb-2 mb-2'>
                     Interests
                   </h2>
-                  <div className="resume-section-content">
-                    <ul className="list-unstyled resume-interests-list mb-0">
-                      <li className="mb-2 badge badge-light">Reading</li>
-                      <li className="mb-2 badge badge-light">Yoga</li>
-                      <li className="mb-2 badge badge-light">Cooking</li>
-                      <li className="mb-2 badge badge-light">Tennis</li>
+                  <div className='resume-section-content'>
+                    <ul className='list-unstyled resume-interests-list mb-0'>
+                      <li className='mb-2 badge badge-light'>Learning</li>
+                      <li className='mb-2 badge badge-light'>Reading</li>
+                      <li className='mb-2 badge badge-light'>Music</li>
+                      <li className='mb-2 badge badge-light'>Yoga</li>
+                      <li className='mb-2 badge badge-light'>Cooking</li>
                     </ul>
                   </div>
                 </section>
