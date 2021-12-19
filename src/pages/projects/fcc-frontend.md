@@ -1,17 +1,17 @@
 ---
-path: '/portfolio/fcc-frontend'
-type: ['Practice', 'Frontend']
-name: 'FCC Front-end Projects'
-madeFor: 'freeCodeCamp'
+path: "/portfolio/fcc-frontend"
+type: ["Practice", "Frontend"]
+name: "FCC Front-end Projects"
+madeFor: "freeCodeCamp"
 tagline: "5 frontend projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/frontend-thumb.png
 pics: [../../images/projects/frontend-thumb.png]
-url: '//codepen.io/collection/nrGJLM/'
-github: ''
+url: "//codepen.io/collection/nrGJLM/"
+github: ""
 highlights:
-techs: ['React', 'JavaScript', 'Bootstrap', 'CSS', 'Codepen']
+techs: ["React", "JavaScript", "Bootstrap", "CSS", "Codepen"]
 summa: "5 frontend projects from freeCodeCamp's curriculum, using React for interative user interfaces and Bootstrap for styling."
-order: 105
+order: 103
 featured: false
 ---
 

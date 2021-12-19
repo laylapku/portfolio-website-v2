@@ -24,26 +24,26 @@ techs:
     "GraphQL",
   ]
 summa: "Full-stack shopify-like website with Stripe payment processing. Highlights: online payment processing with Stripe API and Firebase Functions, state management with Redux, data stored on Firebase Firestore for real-time content updates, persisted shopping cart and user authentication."
-order: 103
+order: 101
 featured: true
 ---
 
 #### Home Page
 
-![Home View](../../images/projects/e-markt/home-page.png 'Home View')
+![Home View](../../images/projects/e-markt/home-page.png "Home View")
 
 #### Shop Page
 
-![Shop View](../../images/projects/e-markt/shop-page.png 'Shop View')
+![Shop View](../../images/projects/e-markt/shop-page.png "Shop View")
 
 #### Sign in/sign up Page
 
-![Sign-in View](../../images/projects/e-markt/signin-page.png 'Sign-in View')
+![Sign-in View](../../images/projects/e-markt/signin-page.png "Sign-in View")
 
 #### Checkout Page
 
-![Checkout View](../../images/projects/e-markt/checkout-page.png 'Checkout View')
+![Checkout View](../../images/projects/e-markt/checkout-page.png "Checkout View")
 
 #### Payment Page
 
-![Payment View](../../images/projects/e-markt/payment-page.png 'Payment View')
+![Payment View](../../images/projects/e-markt/payment-page.png "Payment View")

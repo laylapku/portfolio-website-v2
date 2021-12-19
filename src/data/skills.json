@@ -34,11 +34,10 @@
     "value": [
       "Storybook",
       "Github/Gitlab",
-      "CI/CD",
+      "AWS",
       "Docker",
       "Firebase",
       "MongoDB",
-      "AWS: Amplify/S3/Lambda",
       "Netlify",
       "Heroku"
     ]

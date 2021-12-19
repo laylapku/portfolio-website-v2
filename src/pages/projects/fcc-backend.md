@@ -1,17 +1,17 @@
 ---
-path: '/portfolio/fcc-backend'
-type: ['Practice', 'Backend']
-name: 'FCC Backend Projects'
-madeFor: 'freeCodeCamp'
+path: "/portfolio/fcc-backend"
+type: ["Practice", "Backend"]
+name: "FCC Backend Projects"
+madeFor: "freeCodeCamp"
 tagline: "5 backend projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/backend-thumb.jpg
 pics: [../../images/projects/backend-thumb.jpg]
-url: '//glitch.com/@laylapku/fcc-backend-projects'
-github: ''
+url: "//glitch.com/@laylapku/fcc-backend-projects"
+github: ""
 highlights:
-techs: ['Nodejs', 'Express', 'JavaScript', 'MongoDB', 'CSS', 'Glitch']
-summa: ''
-order: 107
+techs: ["Nodejs", "Express", "JavaScript", "MongoDB", "CSS", "Glitch"]
+summa: ""
+order: 104
 featured: false
 ---
 

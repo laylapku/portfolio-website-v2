@@ -8,7 +8,7 @@
 */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #f7f8fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -145,7 +145,7 @@ a.theme-btn-on-bg:active,
 }
 
 #navigation .dropdown-menu:before {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 0;
@@ -178,7 +178,7 @@ a.theme-btn-on-bg:active,
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background: url('./images/bars.svg') no-repeat left top;
+  background: url("./images/bars.svg") no-repeat left top;
   height: 20px;
   width: 24px;
 }
@@ -271,7 +271,7 @@ a.theme-btn-on-bg:active,
 }
 
 .testimonial-item:after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -567,13 +567,13 @@ a.theme-btn-on-bg:active,
 }
 
 .resume-header .name {
-  font-size: 2.25rem;
-  letter-spacing: 0.175rem;
-  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
 }
 
-.resume-header .title {
-  font-size: 1.5rem;
+.resume-header .title:last-child {
+  margin-bottom: 1rem;
 }
 
 .resume-header a {
@@ -610,7 +610,7 @@ a.theme-btn-on-bg:active,
 }
 
 .resume-section-title:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -628,7 +628,7 @@ a.theme-btn-on-bg:active,
 }
 
 .resume-timeline:before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 3px;
   height: 100%;
@@ -639,7 +639,7 @@ a.theme-btn-on-bg:active,
 }
 
 .resume-timeline-item:before {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   left: -32px;
@@ -725,7 +725,7 @@ a.theme-btn-on-bg:active,
 }
 
 .speech-bubble:before {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 0;
@@ -962,7 +962,7 @@ a.theme-btn-on-bg:active,
 
 .sharing-providers > li > a {
   text-decoration: none !important;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   width: 45px;
   height: 45px;
   line-height: 45px;
@@ -1412,7 +1412,7 @@ a:hover {
 }
 
 .nav-link:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 3px;

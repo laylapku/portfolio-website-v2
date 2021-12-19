@@ -11,6 +11,7 @@ const PortfolioPage = () => {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { glob: "**/src/pages/projects/*.md" } }
         sort: { fields: [frontmatter___order], order: ASC }
+        limit: 6
       ) {
         nodes {
           id
@@ -35,7 +36,7 @@ const PortfolioPage = () => {
   `);
 
   const [ctgFilter, setFilter] = useState("");
-  const handleFilterChange = ctgFilter => {
+  const handleFilterChange = (ctgFilter) => {
     setFilter(ctgFilter);
   };
 
@@ -75,15 +76,9 @@ const PortfolioPage = () => {
 export default PortfolioPage;
 
 const FilterBar = ({ onFilterChange }) => {
-  const TECH_LIST = [
-    "Frontend",
-    "Backend",
-    "Data-viz",
-    "Production",
-    "Practice"
-  ];
+  const TECH_LIST = ["Frontend", "Backend", "Production", "Practice"];
   const [rSelected, setrSelected] = useState("");
-  const onRadioBtnClick = rSelected => {
+  const onRadioBtnClick = (rSelected) => {
     setrSelected(rSelected);
     onFilterChange(rSelected);
   };
@@ -98,7 +93,7 @@ const FilterBar = ({ onFilterChange }) => {
         >
           All
         </Button>
-        {TECH_LIST.map(item => (
+        {TECH_LIST.map((item) => (
           <Button
             color="light"
             onClick={() => onRadioBtnClick(item)}

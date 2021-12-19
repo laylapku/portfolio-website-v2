@@ -15,7 +15,7 @@ highlights: [
 "One-to-many data model"]
 techs: ["React","JavaScript","Nodejs","Express","GraphQL","Apollo","MongoDB","CSS"]
 summa: "A mini full-stack single-page web application using GraphQL for data query and manipulation, MongoDB for data storage."
-order: 104
+order: 106
 featured: false
 ---
 

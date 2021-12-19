@@ -1,11 +1,11 @@
-import React from 'react';
-import { useStaticQuery, Link, graphql } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
-import SkillBlock from '../components/SkillBlock';
-import ProjectCard from '../components/ProjectCard';
-import ProfilePic from '../images/profile.png';
+import React from "react";
+import { useStaticQuery, Link, graphql } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SEO from "../components/SEO";
+import Layout from "../components/Layout";
+import SkillBlock from "../components/SkillBlock";
+import ProjectCard from "../components/ProjectCard";
+import ProfilePic from "../images/profile.png";
 
 const AboutPage = () => {
   const data = useStaticQuery(
@@ -54,30 +54,30 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title='Home' />
-      <div className='header-intro theme-bg-primary text-white py-5'>
-        <div className='container'>
-          <div className='profile-teaser media flex-column flex-md-row'>
+      <SEO title="Home" />
+      <div className="header-intro theme-bg-primary text-white py-5">
+        <div className="container">
+          <div className="profile-teaser media flex-column flex-md-row">
             <img
-              alt=''
-              className='profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto'
+              alt=""
+              className="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto"
               src={ProfilePic}
             />
-            <div className='media-body text-center text-md-left'>
-              <div className='lead'>Hello, my name is</div>
-              <h3 className='mt-0 display-4 font-weight-bold'>
+            <div className="media-body text-center text-md-left">
+              <div className="lead">Hello, my name is</div>
+              <h3 className="mt-0 display-4 font-weight-bold">
                 {data.site.siteMetadata.author}
               </h3>
-              <div className='bio mb-3'>
+              <div className="bio mb-3">
                 I'm a self-taught software developer. I design and build
                 web/mobile applications.
               </div>
               {/*//bio*/}
               <Link
-                className='theme-btn-on-bg btn font-weight-bold theme-btn-cta'
-                to='/portfolio/'
+                className="theme-btn-on-bg btn font-weight-bold theme-btn-cta"
+                to="/portfolio/"
               >
-                <FontAwesomeIcon className='mr-2' icon='hand-point-right' />
+                <FontAwesomeIcon className="mr-2" icon="hand-point-right" />
                 View Portfolio
               </Link>
             </div>
@@ -88,13 +88,13 @@ const AboutPage = () => {
         {/*//container*/}
       </div>
       {/*//header-intro*/}
-      <section className='skills-section section py-5'>
-        <div className='container'>
-          <h3 className='section-title font-weight-bold text-center mb-5'>
+      <section className="skills-section section py-5">
+        <div className="container">
+          <h3 className="section-title font-weight-bold text-center mb-5">
             Skills Overview
           </h3>
-          <div className='skills-blocks mx-auto pt-5'>
-            <div className='row'>
+          <div className="skills-blocks mx-auto pt-5">
+            <div className="row">
               {data.allSkillsJson.nodes.map((item, index) => (
                 <SkillBlock key={index} item={item} />
               ))}
@@ -107,12 +107,12 @@ const AboutPage = () => {
       </section>
       {/*//skills-section*/}
 
-      <section className='featured-projects-section py-5 bg-white'>
-        <div className='container'>
-          <h3 className='section-title font-weight-bold text-center mb-5'>
+      <section className="featured-projects-section py-5 bg-white">
+        <div className="container">
+          <h3 className="section-title font-weight-bold text-center mb-5">
             Featured Projects
           </h3>
-          <div className='project-cards row mb-5'>
+          <div className="project-cards row mb-5">
             {data.allMarkdownRemark.nodes
               .filter(({ frontmatter: { featured } }) => featured === true)
               .map(({ id, frontmatter }) => (
@@ -120,8 +120,8 @@ const AboutPage = () => {
               ))}
           </div>
           {/*//project-cards*/}
-          <div className='text-center'>
-            <Link className='btn btn-primary' to='/portfolio/'>
+          <div className="text-center">
+            <Link className="btn btn-primary" to="/portfolio/">
               View all projects
             </Link>
           </div>
