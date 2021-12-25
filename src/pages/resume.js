@@ -86,10 +86,10 @@ const ResumePage = () => {
                     {data.site.siteMetadata.author}
                   </h3>
                   <h5 className="title font-weight-light">
-                    full-stack developer
+                    Full Stack Developer
                   </h5>
                   <h5 className="title mb-3 font-weight-light">
-                    certified AWS developer/solutions architect associate
+                    AWS Certified Developer/Solutions Architect Associate
                   </h5>
                   <ul className="resume-social list-unstyled font-weight-light mb-0">
                     {/* <li className="mb-2">
@@ -287,7 +287,7 @@ const ResumePage = () => {
                           1800 hrs coursework(full-stack)
                         </div>
                         <div className="resume-degree-org">freeCodeCamp</div>
-                        <div className="resume-degree-time">2018</div>
+                        <div className="resume-degree-time">2018 - 2019</div>
                       </li>
                       <li className="mb-2">
                         <div className="resume-degree font-weight-bold">
