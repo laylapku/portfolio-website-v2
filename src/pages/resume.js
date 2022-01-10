@@ -321,7 +321,7 @@ const ResumePage = () => {
                     <div className="resume-lang-item">
                       <div className="resume-lang-name font-weight-bold">
                         German
-                        <span className="text-muted"> (B1)</span>
+                        <span className="text-muted"> (A2-B1)</span>
                       </div>
                       <ul className="list-unstyled">
                         <li>
