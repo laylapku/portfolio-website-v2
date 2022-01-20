@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Layla Ouyang's Website",
-    description: '',
-    author: 'Layla Ouyang',
-    email: 'laylaoy@gmail.com',
+    title: "Leilei Ouyang's Website",
+    description: "",
+    author: "Leilei Ouyang",
+    email: "Leileioy@gmail.com",
   },
   plugins: [
     {

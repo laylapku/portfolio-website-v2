@@ -5,7 +5,7 @@ import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import ProfilePic from "../images/profile.png";
 import { reqSocialSvgs } from "../utils/svgs.util";
-import Resume from "../assets/layla-ouyang-developer-resume.pdf";
+import Resume from "../assets/Leilei-ouyang-developer-resume.pdf";
 
 const ResumePage = () => {
   const data = useStaticQuery(
@@ -98,13 +98,13 @@ const ResumePage = () => {
                     </li> */}
                     <li className="mb-2">
                       <FontAwesomeIcon className="mr-2" icon="envelope" />
-                      <a href="mailto:laylaoy@gmail.com">
+                      <a href="mailto:Leileioy@gmail.com">
                         {data.site.siteMetadata.email}
                       </a>
                     </li>
                     <li>
                       <FontAwesomeIcon className="mr-2" icon="globe" />
-                      <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
+                      <a href="//Leileioy.netlify.com">Leileioy.netlify.com</a>
                     </li>
                   </ul>
                 </div>

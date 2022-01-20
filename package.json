@@ -1,6 +1,6 @@
 {
-  "name": "layla-ouyang-website",
-  "description": "Layla Ouyang's Website",
+  "name": "leilei-ouyang-website",
+  "description": "Leilei Ouyang's Website",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",

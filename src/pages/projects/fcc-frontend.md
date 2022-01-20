@@ -18,7 +18,7 @@ featured: false
 ## Pomodoro Clock
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="FCC: Frontend Projects- Pomodoro Clock" src="https://codepen.io/laylapku/embed/ExxNprZ?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/laylapku/pen/ExxNprZ'>FCC: Frontend Projects- Pomodoro Clock</a> by Layla
+  See the Pen <a href='https://codepen.io/laylapku/pen/ExxNprZ'>FCC: Frontend Projects- Pomodoro Clock</a> by Leilei Ouyang 
   (<a href='https://codepen.io/laylapku'>@laylapku</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
@@ -27,7 +27,7 @@ featured: false
 ## Calculator
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="FCC: Frontend Projects - Calculator" src="https://codepen.io/laylapku/embed/KKKNeEx?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/laylapku/pen/KKKNeEx'>FCC: Frontend Projects - Calculator</a> by Layla
+  See the Pen <a href='https://codepen.io/laylapku/pen/KKKNeEx'>FCC: Frontend Projects - Calculator</a> by Leilei Ouyang
   (<a href='https://codepen.io/laylapku'>@laylapku</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
@@ -36,7 +36,7 @@ featured: false
 ## Drum Machine
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="FCC: Frontend Projects - Drum Machine" src="https://codepen.io/laylapku/embed/XWWNBNJ?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/laylapku/pen/XWWNBNJ'>FCC: Frontend Projects - Drum Machine</a> by Layla
+  See the Pen <a href='https://codepen.io/laylapku/pen/XWWNBNJ'>FCC: Frontend Projects - Drum Machine</a> by Leilei Ouyang
   (<a href='https://codepen.io/laylapku'>@laylapku</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
@@ -45,7 +45,7 @@ featured: false
 ## Random Quote Machine
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="FCC: Frontend Projects- Random Quote Machine" src="https://codepen.io/laylapku/embed/GRRNBMx?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/laylapku/pen/GRRNBMx'>FCC: Frontend Projects- Random Quote Machine</a> by Layla
+  See the Pen <a href='https://codepen.io/laylapku/pen/GRRNBMx'>FCC: Frontend Projects- Random Quote Machine</a> by Leilei Ouyang
   (<a href='https://codepen.io/laylapku'>@laylapku</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
@@ -54,6 +54,6 @@ featured: false
 ## Markdown Previewer
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="FCC: Frontend Projects - Markdown Previewer" src="https://codepen.io/laylapku/embed/NWWbBYo?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/laylapku/pen/NWWbBYo'>FCC: Frontend Projects - Markdown Previewer</a> by Layla
+  See the Pen <a href='https://codepen.io/laylapku/pen/NWWbBYo'>FCC: Frontend Projects - Markdown Previewer</a> by Leilei Ouyang
   (<a href='https://codepen.io/laylapku'>@laylapku</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>

@@ -7,7 +7,7 @@ tagline: "a massive e-commerce app built with React, Redux, Firebase, GraphQL, S
 thumb: ../../images/projects/e-markt/thumb.png
 pics: [../../images/projects/e-markt/home-page.png, ../../images/projects/e-markt/shop-page.png, ../../images/projects/e-markt/signin-page.png, ../../images/projects/e-markt/checkout-page.png, ../../images/projects/e-markt/payment-page.png]
 url: "//e-markt.web.app/"
-github: "//github.com/laylapku/e-markt"
+github: "//github.com/Leileipku/e-markt"
 highlights: ["Online payment processing with Stripe API and Firebase Functions",
 "State management with Redux",
 "Data stored on Firebase Firestore for real-time content updates",
