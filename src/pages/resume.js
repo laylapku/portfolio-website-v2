@@ -5,7 +5,7 @@ import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import ProfilePic from "../images/profile.png";
 import { reqSocialSvgs } from "../utils/svgs.util";
-import Resume from "../assets/Leilei-ouyang-developer-resume.pdf";
+import Resume from "../assets/leilei-ouyang-developer-resume.pdf";
 
 const ResumePage = () => {
   const data = useStaticQuery(
@@ -104,7 +104,7 @@ const ResumePage = () => {
                     </li>
                     <li>
                       <FontAwesomeIcon className="mr-2" icon="globe" />
-                      <a href="//Leileioy.netlify.com">Leileioy.netlify.com</a>
+                      <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
                     </li>
                   </ul>
                 </div>
@@ -338,11 +338,10 @@ const ResumePage = () => {
                   </h2>
                   <div className="resume-section-content">
                     <ul className="list-unstyled resume-interests-list mb-0">
-                      <li className="mb-2 badge badge-light">Learning</li>
-                      <li className="mb-2 badge badge-light">Music</li>
+                      <li className="mb-2 badge badge-light">Learn</li>
+                      <li className="mb-2 badge badge-light">Ski</li>
                       <li className="mb-2 badge badge-light">Travel</li>
-                      <li className="mb-2 badge badge-light">Workout</li>
-                      <li className="mb-2 badge badge-light">Cooking</li>
+                      <li className="mb-2 badge badge-light">Cook</li>
                     </ul>
                   </div>
                 </section>

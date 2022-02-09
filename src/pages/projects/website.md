@@ -1,13 +1,13 @@
 ---
-path: "/portfolio/Leilei-website"
+path: "/portfolio/leilei-website"
 type: ["Production", "Frontend", "Backend"]
 name: "Developer Portfolio Website"
 madeFor: "Myself"
 tagline: "Static site built with Gatsby"
 thumb: ../../images/projects/website-thumb.png
 pics: [../../images/projects/website-inner.png]
-url: "//Leileioy.netlify.com"
-github: "//github.com/Leileipku/Leilei-website"
+url: "//laylaoy.netlify.com"
+github: "//github.com/laylapku"
 highlights:
 techs:
   ["Gatsby", "React", "GraphQL", "JavaScript", "Bootstrap", "CSS", "Webpack"]
