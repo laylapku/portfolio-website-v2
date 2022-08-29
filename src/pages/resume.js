@@ -86,7 +86,7 @@ const ResumePage = () => {
                     {data.site.siteMetadata.author}
                   </h3>
                   <h5 className="title font-weight-light">
-                    Full Stack Developer
+                    Software Engineer
                   </h5>
                   <h5 className="title mb-3 font-weight-light">
                     AWS Certified Developer/Solutions Architect Associate
@@ -321,13 +321,13 @@ const ResumePage = () => {
                     <div className="resume-lang-item">
                       <div className="resume-lang-name font-weight-bold">
                         German
-                        <span className="text-muted"> (A2-B1)</span>
+                        <span className="text-muted"> (B1)</span>
                       </div>
-                      <ul className="list-unstyled">
+                      {/* <ul className="list-unstyled">
                         <li>
                           <small>Duolingo German with Full Skill Levels</small>
                         </li>
-                      </ul>
+                      </ul> */}
                     </div>
                   </div>
                 </section>
@@ -338,7 +338,7 @@ const ResumePage = () => {
                   </h2>
                   <div className="resume-section-content">
                     <ul className="list-unstyled resume-interests-list mb-0">
-                      <li className="mb-2 badge badge-light">Learn</li>
+                      <li className="mb-2 badge badge-light">Music</li>
                       <li className="mb-2 badge badge-light">Ski</li>
                       <li className="mb-2 badge badge-light">Travel</li>
                       <li className="mb-2 badge badge-light">Cook</li>
