@@ -3,43 +3,36 @@
     "name": "Languages & Runtimes",
     "icon": "blk1-icon",
     "value": [
-      "Javascript",
-      "Typescript",
-      "Node.js",
-      "GraphQL",
+      "JavaScript",
+      "TypeScript",
+      "Python",
       "HTML",
-      "CSS",
-      "SASS",
-      "LESS"
+      "CSS"
     ]
   },
   {
-    "name": "Frameworks",
+    "name": "Web Development",
     "icon": "blk2-icon",
     "value": [
+      "Node.js",
+      "GraphQL",
       "React",
       "Redux",
+      "Jest",
       "Cypress",
-      "Gatsby.js",
-      "Next.js",
-      "Material-UI",
-      "Bootstrap",
-      "Styled-components",
-      "Tailwind"
+      "NoSQL"
     ]
   },
   {
-    "name": "Tooling and Platforms",
+    "name": "Cloud Platform & Operations",
     "icon": "blk3-icon",
     "value": [
-      "Storybook",
-      "Github/Gitlab",
       "AWS",
+      "Azure",
+      "GitLab CI",
+      "Terraform",
       "Docker",
-      "Firebase",
-      "MongoDB",
-      "Netlify",
-      "Heroku"
+      "Kubenetes"
     ]
   }
 ]

@@ -18,25 +18,5 @@
       "Main coder, app UI/UX design",
       "Maintenance and iteration"
     ]
-  },
-  {
-    "role": "Research Analyst",
-    "corp": "Broadlink Supply Chain Information Technology",
-    "time": "10.2017 - 10.2019",
-    "desc": [
-      "Produced analytical market reports and bid proposals for government funding opportunities",
-      "Communicated client needs with engineering colleagues to facilitate feature development of a B2B e-commerce platform",
-      "Investigated client needs and converted feedback into digital questionnaires using polling apps like LimeSurvey"
-    ]
-  },
-  {
-    "role": "Business Administration/Localization Support",
-    "corp": "Infiplay LLC",
-    "time": "07.2015 - 06.2017",
-    "desc": [
-      "English frame contracts administration and monthly billing processing of published games",
-      "Localization support for published games, incl. documentation translation and quality assurance in English language",
-      "Support on business proposal writing for company funding campaigns"
-    ]
   }
 ]
