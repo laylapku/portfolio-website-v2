@@ -1,22 +1,28 @@
 [
   {
-    "role": "Software Developer",
-    "corp": "Futurice GmbH",
-    "time": "04.2020 - Present",
+    "role": "AWS Cloud Engineer",
+    "corp": "Rackspace Technology",
+    "time": "12.2022 - Present",
     "desc": [
-      "Software development, testing and documentation, project management, sales support in various client projects",
-      "Frontend development for in-vehicle app in client's product infotainment system()",
-      "AWS cloud development and system integration for ML empowered corporate business solution"
+      "Cloud backend development with AWS services, Node.js, Python",
+      "Platform engineering: IaC, CI/CD, Access management, Logging & Monitoring"
     ]
   },
   {
-    "role": "Self-taught Developer",
-    "corp": "",
-    "time": "09.2018 - Present",
+    "role": "Consultant Software Developer",
+    "corp": "Thoughtworks GmbH",
+    "time": "06.2022 - 11.2022",
     "desc": [
-      "Co-creator of open source project: Eloqua Speech Listening App",
-      "Main coder, app UI/UX design",
-      "Maintenance and iteration"
+      "Cloud backend development with AWS serverless technologies"
+    ]
+  },
+  {
+    "role": "Software Engineer",
+    "corp": "Futurice GmbH",
+    "time": "04.2020 - Present",
+    "desc": [
+      "Full stack development, testing and documentation, sales support in various client projects",
+      "AWS cloud development and system integration for ML empowered corporate business solution"
     ]
   }
 ]

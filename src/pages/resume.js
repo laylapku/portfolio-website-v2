@@ -86,10 +86,10 @@ const ResumePage = () => {
                     {data.site.siteMetadata.author}
                   </h3>
                   <h5 className="title font-weight-light">
-                    Software Engineer
+                    Full Stack Software Engineer
                   </h5>
                   <h5 className="title mb-3 font-weight-light">
-                    AWS Certified Developer/Solutions Architect Associate
+                    AWS Certified Solutions Architect/DevOps Engineer Professional
                   </h5>
                   <ul className="resume-social list-unstyled font-weight-light mb-0">
                     {/* <li className="mb-2">
@@ -142,26 +142,19 @@ const ResumePage = () => {
                 I am: <br />
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  a self-taught full-stack developer with hands-on experience of
-                  buidling web and mobile apps from scratch, including my open
+                  a self-taught full-stack developer with 4 years of professional experience in web development and cloud engineering, including my open
                   source project: Eloqua, an app with both web and native
                   versions, that provides a good listening experience of famous
-                  English speeches;
+                  English speeches
                 </p>
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  a fast and avid learner experienced with full-stack
-                  development(JS/TS/React/Node)
-                </p>
-                <p className="mb-0">
-                  <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
-                  certified AWS developer/solutions architect associate,
-                  software architecture design enthusiasist
+                  a fast and avid learner with a tech focus on JS/TS/React/Node/Python/AWS services
                 </p>
                 <p className="mb-0">
                   <FontAwesomeIcon className="mr-2" icon="angle-double-right" />
                   an aspiring and self-driven individual always aiming at
-                  building usable/practical products with good design philosophy
+                  building practical end-user facing products using modern technologies
                 </p>
               </div>
             </section>
@@ -248,16 +241,16 @@ const ResumePage = () => {
                         JavaScript/Typescript/CSS/HTML
                       </li>
                       <li className="mb-1 badge badge-light">
-                        React/Redux/Gatsby.js/Next.js
+                        React/Redux/Next.js
                       </li>
                       <li className="mb-1 badge badge-light">
                         Storybook/MaterialUI/Bootstrap/D3
                       </li>
                       <li className="mb-1 badge badge-light">
-                        Firebase/AWS/GoogleCloud
+                        AWS/Azure
                       </li>
                       <li className="mb-1 badge badge-light">
-                        Node/Express/GraphQL/MongoDB
+                        Node/Python/REST/GraphQL/MongoDB
                       </li>
                     </ul>
                   </div>
@@ -269,9 +262,9 @@ const ResumePage = () => {
                       <li className="mb-1 badge badge-light">
                         Efficient Learner
                       </li>
-                      <li className="mb-1 badge badge-light">Resilient</li>
+                      <li className="mb-1 badge badge-light">Great communicator</li>
                       <li className="mb-1 badge badge-light">Team Player</li>
-                      <li className="mb-1 badge badge-light">Self-Driven</li>
+                      <li className="mb-1 badge badge-light">Resilient</li>
                     </ul>
                   </div>
                 </section>
@@ -291,7 +284,7 @@ const ResumePage = () => {
                       </li>
                       <li className="mb-2">
                         <div className="resume-degree font-weight-bold">
-                          MA in English Literature
+                          MA in English Language and Literature
                         </div>
                         <div className="resume-degree-org">
                           Peking University
@@ -338,10 +331,10 @@ const ResumePage = () => {
                   </h2>
                   <div className="resume-section-content">
                     <ul className="list-unstyled resume-interests-list mb-0">
+                      <li className="mb-2 badge badge-light">Skiing</li>
                       <li className="mb-2 badge badge-light">Music</li>
-                      <li className="mb-2 badge badge-light">Ski</li>
                       <li className="mb-2 badge badge-light">Travel</li>
-                      <li className="mb-2 badge badge-light">Cook</li>
+                      <li className="mb-2 badge badge-light">Cooking</li>
                     </ul>
                   </div>
                 </section>

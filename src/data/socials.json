@@ -1,11 +1,15 @@
 [
   {
+    "url": "//linkedin.com/in/leilei-ouyang",
+    "icon": "linkedin"
+  },
+  {
     "url": "//github.com/laylapku",
     "icon": "github"
   },
   {
-    "url": "//linkedin.com/in/leilei-ouyang",
-    "icon": "linkedin"
+    "url": "//freecodecamp.org/laylapku",
+    "icon": "free-code-camp"
   },
   {
     "url": "//codepen.io/laylapku",
@@ -14,9 +18,5 @@
   {
     "url": "//glitch.com/@laylapku",
     "icon": "glitch"
-  },
-  {
-    "url": "//freecodecamp.org/laylapku",
-    "icon": "free-code-camp"
   }
 ]

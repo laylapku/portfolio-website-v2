@@ -69,7 +69,7 @@ const AboutPage = () => {
                 {data.site.siteMetadata.author}
               </h3>
               <div className="bio mb-3">
-                I'm a self-taught software developer. I design and build
+                I'm a self-taught full stack software developer. I design and build
                 web/mobile applications.
               </div>
               {/*//bio*/}
