@@ -325,7 +325,7 @@ const ResumePage = () => {
                   </div>
                 </section>
                 {/*//language-section*/}
-                <section className="resume-section interests-section mb-5">
+                {/* <section className="resume-section interests-section mb-5">
                   <h2 className="resume-section-title text-uppercase font-weight-bold pb-2 mb-2">
                     Interests
                   </h2>
@@ -338,7 +338,7 @@ const ResumePage = () => {
                     </ul>
                   </div>
                 </section>
-                {/*//interests-section*/}
+                //interests-section */}
               </div>
             </div>
             {/*//row*/}
