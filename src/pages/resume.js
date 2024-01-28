@@ -102,10 +102,6 @@ const ResumePage = () => {
                         {data.site.siteMetadata.email}
                       </a>
                     </li>
-                    <li>
-                      <FontAwesomeIcon className="mr-2" icon="globe" />
-                      <a href="//laylaoy.netlify.com">laylaoy.netlify.com</a>
-                    </li>
                   </ul>
                 </div>
                 {/*//primary-info*/}
