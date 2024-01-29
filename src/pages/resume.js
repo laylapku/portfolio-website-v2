@@ -237,30 +237,29 @@ const ResumePage = () => {
                         JavaScript/Typescript/CSS/HTML
                       </li>
                       <li className="mb-1 badge badge-light">
-                        React/Redux/Next.js
+                        React/Redux/Next/Sass
                       </li>
                       <li className="mb-1 badge badge-light">
-                        Storybook/MaterialUI/Bootstrap/D3
+                        Storybook/MaterialUI/Bootstrap/styled-components
                       </li>
                       <li className="mb-1 badge badge-light">
-                        AWS/Azure
+                        AWS/Azure/Terraform/GitLab CI/Docker
                       </li>
                       <li className="mb-1 badge badge-light">
-                        Node/Python/REST/GraphQL/MongoDB
+                        Node.js/Python/REST/GraphQL/MongoDB/MySQL
                       </li>
                     </ul>
                   </div>
                   <div className="resume-skill-item">
                     <h4 className="resume-skills-cat font-weight-bold">
-                      Professional
+                      Non-Technical
                     </h4>
                     <ul className="list-unstyled">
                       <li className="mb-1 badge badge-light">
-                        Efficient Learner
+                        Fast Learner
                       </li>
-                      <li className="mb-1 badge badge-light">Great communicator</li>
+                      <li className="mb-1 badge badge-light">Excellent communicator</li>
                       <li className="mb-1 badge badge-light">Team Player</li>
-                      <li className="mb-1 badge badge-light">Resilient</li>
                     </ul>
                   </div>
                 </section>

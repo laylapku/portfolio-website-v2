@@ -4,8 +4,8 @@
     "corp": "Rackspace Technology",
     "time": "12.2022 - Present",
     "desc": [
-      "Cloud backend development with AWS services, Node.js, Python",
-      "Platform engineering: IaC, CI/CD, Access management, Logging & Monitoring"
+      "Cloud backend development(API, AuthO, NoSQL) with AWS, Azure, Node.js, Python",
+      "Platform engineering: IaC, CI/CD, Access Control & Management, Logging & Monitoring"
     ]
   },
   {
@@ -13,7 +13,7 @@
     "corp": "Thoughtworks GmbH",
     "time": "06.2022 - 11.2022",
     "desc": [
-      "Cloud backend development with AWS serverless technologies"
+      "Cloud backend development with AWS services(serverless technologies, VPC)"
     ]
   },
   {
@@ -21,8 +21,8 @@
     "corp": "Futurice GmbH",
     "time": "04.2020 - 04.2022",
     "desc": [
-      "Full stack development, testing and documentation, sales support in various client projects",
-      "AWS cloud development and system integration for ML empowered corporate business solution"
+      "Full stack development, testing and documentation, pre-sales support for various client projects",
+      "Develop business decision support solution using AWS cloud(serverless technologies, Machine Learning data model)"
     ]
   }
 ]

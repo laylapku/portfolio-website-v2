@@ -18,10 +18,10 @@
       "GraphQL",
       "React",
       "Redux",
+      "NoSQL",
+      "MySQL",
       "Jest",
-      "Cypress",
-      "SQL",
-      "NoSQL"
+      "Cypress"
     ]
   },
   {
@@ -30,7 +30,7 @@
     "value": [
       "AWS",
       "Azure",
-      "GitLab CI",
+      "GitLab CI/CD",
       "Terraform",
       "Docker",
       "Kubenetes"
