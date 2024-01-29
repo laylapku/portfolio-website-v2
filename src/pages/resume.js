@@ -240,13 +240,13 @@ const ResumePage = () => {
                         React/Redux/Next/Sass
                       </li>
                       <li className="mb-1 badge badge-light">
-                        Storybook/MaterialUI/Bootstrap/styled-components
+                        Storybook/MaterialUI/Bootstrap
                       </li>
                       <li className="mb-1 badge badge-light">
                         AWS/Azure/Terraform/GitLab CI/Docker
                       </li>
                       <li className="mb-1 badge badge-light">
-                        Node.js/Python/REST/GraphQL/MongoDB/MySQL
+                        Node.js/Python/REST/GraphQL/MongoDB
                       </li>
                     </ul>
                   </div>
