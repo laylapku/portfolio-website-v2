@@ -7,7 +7,7 @@ tagline: "Listen to great speeches on your smartphone"
 thumb: ../../images/projects/eloqua/thumb.png
 pics: [../../images/projects/eloqua/speechlist.png, ../../images/projects/eloqua/speakerlist.png, ../../images/projects/eloqua/ctglist.png, ../../images/projects/eloqua/script.png]
 url: "//speech-pwa.web.app/"
-github: "//github.com/Leileipku/eloqua-pwa"
+github: "//github.com/laylapku/eloqua-pwa"
 highlights: [
 "Multi layered many-to-many, one-to-many related data(speaker-theme-speech-text-audio) stored on Firebase Firestore for easier content updates.",
 "Full control of the player from notification bar/lockscreen with Media Session API",

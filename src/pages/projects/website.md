@@ -7,7 +7,7 @@ tagline: "Static site built with Gatsby"
 thumb: ../../images/projects/website-thumb.png
 pics: [../../images/projects/website-inner.png]
 url: "//laylaoy.netlify.com"
-github: "//github.com/laylapku"
+github: "//github.com/laylapku/portfolio-website-v2"
 highlights:
 techs:
   ["Gatsby", "React", "GraphQL", "JavaScript", "Bootstrap", "CSS", "Webpack"]

@@ -6,7 +6,7 @@ madeFor: "freeCodeCamp"
 tagline: "5 backend projects, part of freeCodeCamp's curriculum"
 thumb: ../../images/projects/backend-thumb.jpg
 pics: [../../images/projects/backend-thumb.jpg]
-url: "//glitch.com/@Leileipku/fcc-backend-projects"
+url: "//glitch.com/@laylapku/free-code-camp-back-end-projects"
 github: ""
 highlights:
 techs: ["Nodejs", "Express", "JavaScript", "MongoDB", "CSS", "Glitch"]
