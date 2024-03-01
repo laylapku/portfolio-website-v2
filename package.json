@@ -24,7 +24,7 @@
     "gatsby-remark-images": "^3.1.28",
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-json": "^2.2.15",
-    "gatsby-transformer-remark": "^2.6.30",
+    "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^2.3.0",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
